@@ -27,6 +27,10 @@
     "postinstall": "webpack --mode=production",
     "start": "webpack --watch --mode=development"
   },
+  "engines": {
+    "node": "12.5.0",
+    "npm": "6.9.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"

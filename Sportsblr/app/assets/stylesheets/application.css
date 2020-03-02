@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+
+.app-div {
+    /* background-color: lightblue; */
+    /* background-image: image_url('snowboarder_snowboard_snow_135160_1920x1080.jpg');
+    background-size: cover; */
+}
