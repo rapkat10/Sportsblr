@@ -21,7 +21,9 @@ class User < ApplicationRecord
     after_initialize :ensure_session_token
 
     def self.find_by_credentials(email, password)
-
+        user = User.find_by(email: email)
+        return nil unless user && user.is_password?(password)
+        return user
     end
 
     def is_password?(password)
@@ -35,13 +37,13 @@ class User < ApplicationRecord
     end
 
     def reset_session_token!
-        self.session_token = self.generate_session_token
+        self.session_token = self.class.generate_session_token
         self.save!
         self.session_token
     end
 
     def ensure_session_token
-        self.session_token ||= self.generate_session_token
+        self.session_token ||= self.class.generate_session_token
     end
 
     def self.generate_session_token
