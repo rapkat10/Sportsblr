@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import NavbarContainer from '../navbar/navbar_container';
 
 class Greeting extends React.Component {
 
@@ -11,11 +12,14 @@ class Greeting extends React.Component {
         const { currentUser, logOut } = this.props;
         const display = currentUser ? (
             <div>
-                <h3>Welcome {currentUser.username}!</h3>
-                <button className="logout" onClick={logOut}>Logout</button>
+                <h3 className="welcome">Welcome {currentUser.username}!</h3>
+                {/* <button className="logout" onClick={logOut}>Logout</button> */}
             </div>
         ) : (
                 <>
+                    <Link to="/">
+                        <h1 className="sportsblr">Sportsblr</h1>
+                    </Link>
                     <Link className="get-started" to="/signup">Get Started</Link>
                     <br/>
                     <br />
@@ -26,11 +30,13 @@ class Greeting extends React.Component {
     
         return (
             <div>
+                <div className="nav-container">
+                    <NavbarContainer />
+                </div>
+                <img className="backgroundImage" src={window.snowboardURL} />
                 <nav className="nav-home"> 
-                    <Link to="/">
-                        <h1 className="sportsblr">Sportsblr</h1>
-                    </Link>
-                    <ul className="ul-links">{display}</ul>
+                    
+                    <ul>{display}</ul>
                 </nav>
             </div>
         )

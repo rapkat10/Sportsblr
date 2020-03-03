@@ -1,0 +1,47 @@
+.logo:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 50px;
+    color: blue;
+    margin: 10px;
+}
+
+.navbar {
+    height: 60px;
+}
+
+.left-nav {
+    display: flex;
+    border-bottom: 2px solid rgb(53, 118, 138);
+}
+
+.search-box {
+    padding: 10px;
+    padding-left: 35px;
+    padding-right: 60px;
+    margin: 10px;
+    border: 0px transparent;
+    border-radius: 3px;
+    width: 300px;
+    background-color: rgba(163, 235, 240, 0.2);
+    font-size: 20px;
+}
+
+.search-box:focus {
+    background-color: white;
+    color: black;
+}
+
+// ---------------------------------
+
+.right-nav {
+    display: flex;
+    // justify-content: flex-end;
+    position: absolute;
+    top: 5%;
+    left: 93.5%;
+    transform: translate(-50%, -50%);
+}

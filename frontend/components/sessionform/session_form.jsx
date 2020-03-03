@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import NavbarContainer from '../navbar/navbar_container';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -44,13 +45,15 @@ class SessionForm extends React.Component {
 
     errors() {
         return (
-            <ul>
-                {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
-                        {error}
-                    </li>
-                ))}
-            </ul>
+            <div className="errors">
+                <ul>
+                    {this.props.errors.map((error, i) => (
+                        <li key={`error-${i}`}>
+                            {error}
+                        </li>
+                    ))}
+                </ul>
+            </div>
         );
     }
 
@@ -66,48 +69,52 @@ class SessionForm extends React.Component {
         let createUserForm;
         if (formType === "Create User") {
             formtype = 'Sign Up!';
-            linkTo = <Link to="/login">Log In</Link>;
+            linkTo = <Link className="link-to" to="/login">Log In</Link>;
             handlefunc = this.handleSignup;
-            createUserForm = <label>Username:
-                                <input
-                                    type="text"
-                                    value={this.state.username}
-                                    onChange={this.handleInput('username')}
-                                    required
-                                />
-                            </label>;
+            createUserForm = <input className="username"
+                type="text"
+                value={this.state.username}
+                onChange={this.handleInput('username')}
+                required="required"
+                placeholder="Username"
+            />;
         } else {
             formtype = 'Log In!';
-            linkTo = <Link to="/signup">Sign Up</Link>;
+            linkTo = <Link className="link-to" to="/signup">Sign Up</Link>;
             handlefunc = this.handleLogin; 
         }
 
         return (
-            <div>
-                <h2>{formtype}</h2>
+            <div className="form-container">
+                <img className="backgroundImage" src={window.snowboardURL} />
+                <NavbarContainer />
                 {linkTo}
-                <form>
-                    {this.errors()}
-                    <label>Email:
-                        <input
+                {/* <h2 className="formtype">{formtype}</h2> */}
+                <h2 className="Sportsblr">Sportsblr</h2>
+                {this.errors()}
+                <div className="form-box"> 
+                    <form className="form">
+                    
+                        <input className="email"
                             type="email"
                             value={this.state.email}
                             onChange={this.handleInput('email')}
-                            required
+                            required="required"
+                            placeholder="Email"
                         />
-                    </label>
-                    {createUserForm}
-                    <label>Password:
-                        <input
+                        {createUserForm}
+                            
+                        <input className="password"
                             type="password"
                             value={this.state.password}
                             onChange={this.handleInput('password')}
-                            required
+                            required="required"
+                            placeholder="Password"
                         />
                         <button onClick={handlefunc}>{formtype}</button>
                         <button onClick={this.handleDemoLogin}>Demo</button>
-                    </label>
-                </form>
+                    </form>
+                </div>
             </div>
         );
     }

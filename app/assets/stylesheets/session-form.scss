@@ -1,0 +1,88 @@
+.link-to {
+    background-color: rgb(227, 231, 233);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: black;
+    position: absolute;
+    top: 5%;
+    left: 93.5%;
+    transform: translate(-50%, -50%);
+}
+
+.form-container > h2 {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: rgb(242, 248, 248);
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form > input {
+    padding: 10px;
+    width: 300px;
+    font-size: 20px;
+}
+
+.email {
+    border: 0.5px solid black;
+    border-bottom: none;
+    border-radius: 3px;
+}
+
+.username {
+    border: 0.5px solid black;
+    border-bottom: none;
+    border-radius: 3px;
+}
+
+.password {
+    border: 0.5px solid black;
+    border-radius: 3px;
+}
+
+.errors {
+    width: 275px;
+    position: absolute;
+    top: 72%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+}
+
+.errors ul > li {
+    list-style: none;
+    border: 1px transparent;
+    border-radius: 1px;
+    background: rgb(171, 227, 236);
+    padding: 10px;
+    margin: 0px;
+    margin-left: 0;
+    color: rgb(243, 61, 61);
+}
+
+
+.form > button {
+    cursor: pointer;
+    margin: 3px 0;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px transparent;
+    border-radius: 3px;
+    width: 320px;
+    font-size: 20px;
+}

@@ -15,69 +15,10 @@
  */
 
 
-.app-div {
-    /* background-color: lightblue; */
-    /* background-image: image_url('snowboarder_snowboard_snow_135160_1920x1080.jpg');
-    background-size: cover; */
-}
-
-.logo {
-    font-size: 60px;
-    color: blue;
-    border: 3 px solid beige;
-    padding: 10px;
-}
-
 a {
     text-decoration: none;
 }
 
-.logo:hover, .logout:hover {
-    color: red;
-    cursor: pointer;
-}
 
-.backgroundImage {
-    position: fixed;
-    top: 1em;
-    right: 30%;
-    bottom: 0;
-    left: 30%;
-    margin: 0 -600px;
-    background-size: cover;
-    z-index: -1;
-}
 
-.nav-home {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    /* width: 500px; */
-    height: 300px;
-}
 
-.sportsblr {
-    color: antiquewhite;
-    font-size: 60px;
-    padding-top: 280px;
-    padding-left: 35px;
-}
-
-.get-started {
-    background-color: rgb(7, 145, 199);
-    padding: 10px;
-    padding-left: 100px;
-    padding-right: 100px;
-    border-radius: 5px;
-    color: antiquewhite;
-}
-
-.log-in {
-    background-color: rgb(227, 231, 233);
-    padding: 10px;
-    padding-left: 115px;
-    padding-right: 115px;
-    border-radius: 5px;
-    color: black;
-}

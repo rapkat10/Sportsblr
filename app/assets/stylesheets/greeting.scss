@@ -1,0 +1,51 @@
+.backgroundImage {
+    position: fixed;
+    top: 0;
+    right: 30%;
+    bottom: 0;
+    left: 30%;
+    margin: 0 -600px;
+    background-size: cover;
+    z-index: -1;
+}
+
+.nav-home {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+}
+
+.sportsblr {
+    color: antiquewhite;
+    height: 50px;
+    font-size: 60px;
+    padding-top: 375px;
+    padding-left: 15px;
+}
+
+.get-started {
+    background-color: rgb(7, 145, 199);
+    padding: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 5px;
+    color: antiquewhite;
+}
+
+.log-in {
+    background-color: rgb(227, 231, 233);
+    padding: 10px;
+    padding-left: 115px;
+    padding-right: 115px;
+    border-radius: 5px;
+    color: black;
+}
+
+.welcome {
+    position: absolute;
+    top: 2%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
