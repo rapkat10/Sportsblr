@@ -14,6 +14,6 @@ rapkat = User.create( email: 'rapkat99@sportsblr.com',
     username: 'rapkat99',
     password: 'hunter12')
 
-leyla = User.create( email: 'leyla@sportsblr.com',
-    username: 'leyla10',
+leyla = User.create( email: 'leyla_100@sportsblr.com',
+    username: 'leyla100',
     password: 'hunter10')

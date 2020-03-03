@@ -16,17 +16,21 @@ class Greeting extends React.Component {
             </div>
         ) : (
                 <>
-                    <Link to="/signup">Get Started</Link>
+                    <Link className="get-started" to="/signup">Get Started</Link>
+                    <br/>
                     <br />
                     <br />
-                    <Link to="/login">Log In</Link>
+                    <Link className="log-in" to="/login">Log In</Link>
                 </>
             );
     
         return (
             <div>
-                <nav>
-                    {display}
+                <nav className="nav-home"> 
+                    <Link to="/">
+                        <h1 className="sportsblr">Sportsblr</h1>
+                    </Link>
+                    <ul className="ul-links">{display}</ul>
                 </nav>
             </div>
         )
