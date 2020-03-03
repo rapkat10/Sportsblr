@@ -9,15 +9,15 @@ class Greeting extends React.Component {
     }
 
     render() {
-        const { currentUser, logOut } = this.props;
+        const { currentUser } = this.props;
         const display = currentUser ? (
             <div>
-                <img className="backgroundImage" src={window.fcb} />
-                <h3 className="welcome">Welcome {currentUser.username}!</h3>
-                {/* <button className="logout" onClick={logOut}>Logout</button> */}
+                {/* <img className="backgroundImage" src={window.fcb} /> */}
+                <h3 className="welcome">Welcome {currentUser.username}! from greeting</h3>
             </div>
         ) : (
                 <>
+                    <img className="backgroundImage" src={window.snowboardURL} />
                     <Link to="/">
                         <h1 className="sportsblr">Sportsblr</h1>
                     </Link>
@@ -34,11 +34,10 @@ class Greeting extends React.Component {
                 <div className="nav-container">
                     <NavbarContainer />
                 </div>
-                <img className="backgroundImage" src={window.snowboardURL} />
-                <nav className="nav-home"> 
-                    
+                <nav className="nav-home">                  
                     <ul>{display}</ul>
                 </nav>
+                <h1>Greeting</h1>
             </div>
         )
     }

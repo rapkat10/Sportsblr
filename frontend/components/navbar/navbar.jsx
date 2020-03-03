@@ -35,17 +35,14 @@ class Navbar extends React.Component {
                                 <li>
                                     {button}
                                 </li>
-                                <li>
-                                    hello
-                                </li>
                             </ul>                           
                         </div>
                     </li>
                 </ul>
-                <button className="logout" 
+                {/* <button className="logout" 
                     onClick={logOut}>
                     Logout
-                </button>                          
+                </button>                           */}
             </section>
         )
 
