@@ -44,9 +44,9 @@ class SessionForm extends React.Component {
         );
     }
 
-    componentDidMount() {
-        this.props.clearSessionErrors();
-    }
+    // componentDidMount() {
+    //     this.props.clearSessionErrors();
+    // }
 
     render() {
         const { formType } = this.props;
