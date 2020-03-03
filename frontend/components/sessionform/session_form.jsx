@@ -44,9 +44,9 @@ class SessionForm extends React.Component {
         );
     }
 
-    // componentDidMount() {
-    //     this.props.clearSessionErrors();
-    // }
+    componentDidMount() {
+        this.props.clearSessionErrors();
+    }
 
     render() {
         const { formType } = this.props;
@@ -58,11 +58,11 @@ class SessionForm extends React.Component {
             formtype = 'Sign Up!';
             linkTo = <Link to="/login">Log In</Link>;
             handlefunc = this.handleSignup;
-            createUserForm = <label>Email:
+            createUserForm = <label>Username:
                                 <input
-                                    type="email"
-                                    value={this.state.email}
-                                    onChange={this.handleInput('email')}
+                                    type="text"
+                                    value={this.state.username}
+                                    onChange={this.handleInput('username')}
                                     required
                                 />
                             </label>;
@@ -78,17 +78,15 @@ class SessionForm extends React.Component {
                 {linkTo}
                 <form>
                     {this.errors()}
-
-                    {createUserForm}
-
-                    <label>Username:
+                    <label>Email:
                         <input
-                            type="text"
-                            value={this.state.username}
-                            onChange={this.handleInput('username')}
+                            type="email"
+                            value={this.state.email}
+                            onChange={this.handleInput('email')}
                             required
                         />
                     </label>
+                    {createUserForm}
                     <label>Password:
                         <input
                             type="password"

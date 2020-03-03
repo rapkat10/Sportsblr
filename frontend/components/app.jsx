@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, Link } from 'react-router-dom';
+import { Route, Redirect, Switch, Link } from 'react-router-dom';
 import GreetingContainer from "./greeting/greeting_container";
 import LoginFormContainer from './sessionform/login_form_container';
 import SignupFormContainer from './sessionform/signup_form_container'
@@ -13,6 +13,7 @@ const App = () => (
                 <h1>Sportsblr</h1>
             </Link>
             {/* <GreetingContainer /> */}
+            {/* <AuthRoute exact path="/" component={GreetingContainer} /> */}
         </header>
         <Switch>
             <AuthRoute exact path="/login" component={LoginFormContainer} />

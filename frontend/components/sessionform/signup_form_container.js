@@ -1,6 +1,9 @@
 import {connect} from 'react-redux';
 import SessionForm from './session_form';
-import { create_User } from '../../actions/session_actions';
+import {
+    create_User,
+    clearSessionErrors
+} from '../../actions/session_actions';
 
 const mapStateToProps = ({ errors }) => {
     
@@ -11,6 +14,7 @@ const mapStateToProps = ({ errors }) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
+    clearSessionErrors: (errors) => dispatch(clearSessionErrors(errors)),
     createUser: (user) => dispatch(create_User(user))
 })
 
