@@ -11,6 +11,16 @@ class SessionForm extends React.Component {
         };
         this.handleSignup = this.handleSignup.bind(this);
         this.handleLogin = this.handleLogin.bind(this);
+        this.handleDemoLogin = this.handleDemoLogin.bind(this);
+    }
+
+    handleDemoLogin(e) {
+        e.preventDefault();
+        this.props.logIn({
+            email: "demo@sportsblr.com",
+            password: "password",
+            username: "DemoUser"
+        });
     }
 
     handleSignup(e) {
@@ -95,6 +105,7 @@ class SessionForm extends React.Component {
                             required
                         />
                         <button onClick={handlefunc}>{formtype}</button>
+                        <button onClick={this.handleDemoLogin}>Demo</button>
                     </label>
                 </form>
             </div>

@@ -20,3 +20,23 @@
     /* background-image: image_url('snowboarder_snowboard_snow_135160_1920x1080.jpg');
     background-size: cover; */
 }
+
+.logo {
+    font-size: 60px;
+    color: blue;
+    border: 3 px solid beige;
+    padding-left: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo:hover, .logout:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.Rapkat .fab {
+    font-size: 50px;
+}

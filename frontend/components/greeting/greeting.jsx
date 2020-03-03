@@ -5,33 +5,30 @@ class Greeting extends React.Component {
 
     constructor(props) {
         super(props);
-        this.links = <>
-            <Link to="/signup">Get Started</Link>
-            <br />
-            <br />
-            <Link to="/login">Log In</Link>
-        </>;
     }
 
     render() {
-        
         const { currentUser, logOut } = this.props;
         const display = currentUser ? (
             <div>
                 <h3>Welcome {currentUser.username}!</h3>
-                <button onClick={logOut}>Logout</button>
+                <button className="logout" onClick={logOut}>Logout</button>
             </div>
         ) : (
-                <div>{this.links}</div>
+                <>
+                    <Link to="/signup">Get Started</Link>
+                    <br />
+                    <br />
+                    <Link to="/login">Log In</Link>
+                </>
             );
     
         return (
-            <header>
-                <h1>Hello from Greeting</h1>
-                <div>
+            <div>
+                <nav>
                     {display}
-                </div>
-            </header>
+                </nav>
+            </div>
         )
     }
 }
