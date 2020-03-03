@@ -12,6 +12,7 @@ class Greeting extends React.Component {
         const { currentUser, logOut } = this.props;
         const display = currentUser ? (
             <div>
+                <img className="backgroundImage" src={window.fcb} />
                 <h3 className="welcome">Welcome {currentUser.username}!</h3>
                 {/* <button className="logout" onClick={logOut}>Logout</button> */}
             </div>
