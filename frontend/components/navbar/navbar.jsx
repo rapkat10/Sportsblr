@@ -9,8 +9,8 @@ class Navbar extends React.Component {
         this.handleIconClick = this.handleIconClick.bind(this);
     }
 
-    handleIconClick(value = (this.state.clicked ? false : true)) {
-        // const value = this.state.clicked ? false : true;
+    handleIconClick() {
+        const value = this.state.clicked ? false : true;
         this.setState({ clicked: value });
     }
 
@@ -23,26 +23,25 @@ class Navbar extends React.Component {
                 <Link to={logolink}><strong className="logo">S</strong></Link>
             </section>
         );
-
-        const button = <button className="logout-dropdown"
+        const button = <span className="logout-dropdown"
             onClick={logOut}> Logout
-        </button>;
-        const dropdown = <div className="user-dropdown">
+        </span>;
+        const dropdown = <div 
+            className="user-dropdown">
             <ul>
-                <li>
-                    {button}
-                </li>
+                <li className="li-button">{button}</li>
             </ul>
         </div>;
+        const wholepage = <div onClick={this.handleIconClick} className="click-it"></div>;
         const rightNav = (
             <section className="right-nav">
                 <ul>
                     <li className="icon-li">
                         <i onClick={this.handleIconClick} class="fas fa-user fa-2x"></i>
-                        {this.state.clicked ? dropdown : ""}
                         <p className="account">Account</p>
                     </li>
                 </ul>                          
+                {this.state.clicked ? dropdown : ""}                      
             </section>
         )
 
@@ -50,6 +49,7 @@ class Navbar extends React.Component {
             <nav className="navbar">
                 {leftNav}
                 {currentUser ? rightNav : ""}
+                {this.state.clicked ? wholepage : ""}
             </nav>
         )
     }

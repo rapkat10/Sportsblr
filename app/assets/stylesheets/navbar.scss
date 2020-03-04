@@ -15,6 +15,7 @@
 
 .left-nav {
     display: flex;
+    height: 60px;
 }
 
 .nav-loggedin {
@@ -41,30 +42,61 @@
     display: none;
 }
 
+.click-it {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#root {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
 .icon-li:hover .account {
     display: block;
     border: 2px solid rgb(228, 223, 223);
     position: absolute;
-    top: 7%;
-    left: 93.5%;
+    top: 6%;
+    left: 96.5%;
     transform: translate(-50%, -50%);
-    width: 100px;
+    background-color: gray;
+    color: white;
+    padding: 5px;
 }
 
-// .user-dropdown {
-//     display: none;
-// }
+.user-dropdown {
+    display: block;
+    border: 2px solid rgb(228, 223, 223);
+    position: absolute;
+    top: 12%;
+    left: 92.5%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 100px;
+    z-index: 2;
+    background-color: whitesmoke;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
 
-// .icon-li:hover .user-dropdown {
-//     display: block;
-//     border: 2px solid rgb(228, 223, 223);
-//     position: absolute;
-//     top: 7%;
-//     left: 93.5%;
-//     transform: translate(-50%, -50%);
-//     width: 100px;
-// }
+.li-button {
+    position: absolute;
+    top: 8.8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lightgrey;
+    border-radius: 3px;
+    padding-left: 78px;
+    padding-right: 78px;
+}
 
-// .user-dropdown:hover .logout-dropdown {
-//     display: block;
-// }
+.logout-dropdown {
+    cursor: pointer;
+}
