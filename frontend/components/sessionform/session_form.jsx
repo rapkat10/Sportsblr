@@ -89,9 +89,9 @@ class SessionForm extends React.Component {
                 <img className="backgroundImage" src={window.basketball} />
                 <NavbarContainer />
                 {linkTo}
-                <h2 className="Sportsblr">Sportsblr</h2>
                 <div className="form-box"> 
                     <form className="form">
+                        <h2 className="Sportsblr">Sportsblr</h2>
                         <div className="input-div">
                             <input className="email"
                                 type="email"

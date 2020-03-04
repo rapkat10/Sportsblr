@@ -9,7 +9,7 @@
     z-index: -3;
 }
 
-.nav-home {
+.splash-home {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -18,21 +18,28 @@
     z-index: -2;
 }
 
-// #root {
-//     position: fixed;
-//     top: 0;
-//     bottom: 0;
-//     right: 0;
-//     left: 0;
-//     // overflow-y: scroll;
-// }
+#root {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    // overflow-y: scroll;
+}
 
-.nav-home {
+.splash-home {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 150px;
+}
+
+.splash-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
 }
 
 .sportsblr {
@@ -47,6 +54,7 @@
     padding-right: 100px;
     border-radius: 5px;
     color: antiquewhite;
+    margin: 20px;
 }
 
 .log-in {

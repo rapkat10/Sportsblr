@@ -18,15 +18,7 @@
     overflow-y: scroll;
 }
 
-.Sportsblr {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    font-size: 60px;
-    color: rgba(17, 69, 238, .7);
-    padding-top: 100px;
-}
+
 
 .form-box {
     display: flex;
@@ -40,6 +32,16 @@
    justify-content: center;
    flex-direction: column;
    align-items: center;
+}
+
+.Sportsblr {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 60px;
+    color: rgba(17, 69, 238, .7);
+    padding-top: 100px;
 }
 
 .input-div {

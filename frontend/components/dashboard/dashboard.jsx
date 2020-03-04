@@ -13,16 +13,11 @@ class Dashboard extends React.Component {
 
         return (
             <div className="dashboard-div">              
+                <img className="backgroundImage" src={window.dashboard} />
                 <div className="nav-container">
                     <NavbarContainer />
+                    <h1 className="dashboard">Dashboard</h1>
                 </div>
-
-                <nav className="nav-home">
-                    <div>
-                        <img className="backgroundImage" src={window.dashboard} />
-                    </div>
-                </nav>
-                <h1 className="dashboard">Dashboard</h1>
             </div>
         )
     }

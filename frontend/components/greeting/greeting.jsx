@@ -11,23 +11,20 @@ class Greeting extends React.Component {
     render() {
         const { currentUser } = this.props;
         const display = <>
-            <img className="backgroundImage" src={window.snowboardURL} />
             <h1 className="sportsblr">Sportsblr</h1>
-            <Link className="get-started" to="/signup">Get Started</Link>
-            <br/>
-            <br />
-            <br />
+            <Link className="get-started" to="/signup">Get Started</Link>        
             <Link className="log-in" to="/login">Log In</Link>
         </>
     
         return (
             <div className="splash-div">
+                <img className="backgroundImage" src={window.snowboardURL} />
                 <div className="nav-container">
                     <NavbarContainer />
                 </div>
-                <nav className="nav-home">                  
-                    <ul>{display}</ul>
-                </nav>
+                <div className="splash-home">                  
+                    <div className="splash-box">{display}</div>
+                </div>
             </div>
         )
     }
