@@ -14,10 +14,13 @@
 }
 
 .logo {
-    font-size: 50px;
+    position: absolute;
+    top: 3%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
     color: white;
-    margin: 10px;
-    margin-left: 180px;
+    // margin: 10px;
     font-weight: bolder;
     font-family: sans-serif;
 }
@@ -38,11 +41,8 @@
     font-weight: bold;
 }
 
-.navbar {
-    // height: 60px;
-}
-
 .nav-loggedin {
+    height: 60px;
     border-bottom: 1px solid rgb(145, 193, 207);
 }
 
