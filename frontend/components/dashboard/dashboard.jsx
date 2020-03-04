@@ -16,7 +16,6 @@ class Dashboard extends React.Component {
                 <img className="backgroundImage" src={window.dashboard} />
                 <div className="nav-container">
                     <NavbarContainer />
-                    <h1 className="dashboard">Dashboard</h1>
                 </div>
             </div>
         )

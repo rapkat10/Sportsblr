@@ -15,69 +15,51 @@ class Navbar extends React.Component {
     }
 
     render() {
+        
         const { currentUser, logOut } = this.props;
-        const loggedin = currentUser ? "left-nav nav-loggedin" : "left-nav";
-        // const loggedin = currentUser ? "navbar nav-loggedin" : "left-nav";
+        const loggedin = currentUser ? "main-nav nav-loggedin" : "main-nav";
         const logolink = currentUser ? ("/dashboard") : ("/");
 
-        // const button = <span className="logout-dropdown"
-        //     onClick={logOut}> Logout
-        // </span>;
-        // const dropdown = <div
-        //     className="user-dropdown">
-        //     <ul>
-        //         <li className="li-button">{button}</li>
-        //     </ul>
-        // </div>;
-        // const wholepage = <div onClick={this.handleIconClick} className="click-it"></div>;
-        // const rightNav = (
-        //     // <section className="right-nav">
-        //     <>
-        //         <li className="dashboard">Dashboard</li>
-        //         <li className="icon-li">
-        //             <i onClick={this.handleIconClick} className="fas fa-user fa-lg"></i>
-        //             <p className="account">Account</p>
-        //         </li>
-        //         <li>
-        //             {this.state.clicked ? dropdown : <></>}
-        //         </li>
-        //     </>
-        // )
+        const dashboardbutton = <Link to="/dashboard">
+            <strong className="dashboard">Dashboard</strong>
+        </Link>;
 
-        const leftNav = (
-            <section className={loggedin}>
-                <ul>
-                    <Link to={logolink}><strong className="logo">S</strong></Link>
-                    {/* {currentUser ? rightNav : <></>} */}
-                </ul>
-            </section>
-        );
-        const button = <span className="logout-dropdown"
+        const button = <span className="logout-dropdown-button"
             onClick={logOut}> Logout
         </span>;
-        const dropdown = <div 
-            className="user-dropdown">
-            <ul>
-                <li className="li-button">{button}</li>
-            </ul>
-        </div>;
+
+        const dropdown = <>
+            <div className="user-dropdown-div">
+                <li className="logout-dropdown-li">{button}</li>
+                <li className="account-dropdown"><span>Account</span></li>
+            </div>
+        </>;
+
         const wholepage = <div onClick={this.handleIconClick} className="click-it"></div>;
+        
         const rightNav = (
-            <section className="right-nav">
+            <>
                 <ul>
                     <li className="icon-li">
                         <i onClick={this.handleIconClick} className="fas fa-user fa-lg"></i>
                         <p className="account">Account</p>
                     </li>
+                    {this.state.clicked ? dropdown : <></>}
                 </ul>                          
-                {this.state.clicked ? dropdown : <></>}                      
+            </>
+        );
+
+        const leftNav = (
+            <section className={loggedin}>
+                <Link to={logolink}><strong className="logo">S</strong></Link>
+                {currentUser ? dashboardbutton : <></>}
+                {currentUser ? rightNav : <></>}
             </section>
-        )
+        );
 
         return (
-            <nav className="navbar-box">
+            <nav className="navbar">
                 {leftNav}
-                {currentUser ? rightNav : <></>}
                 {this.state.clicked ? wholepage : <></>}
             </nav>
         )

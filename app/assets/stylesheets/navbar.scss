@@ -1,3 +1,13 @@
+
+.dashboard-div {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow-y: scroll;
+}
+
 .logo:hover {
     color: red;
     cursor: pointer;
@@ -10,96 +20,6 @@
     margin-left: 180px;
     font-weight: bolder;
     font-family: sans-serif;
-}
-
-.navbar {
-    height: 60px;
-}
-
-.left-nav {
-    display: flex;
-}
-
-.nav-loggedin {
-    border-bottom: 1px solid rgb(145, 193, 207);
-}
-
-.fas {
-    color: white;
-    position: absolute;
-    top: 2.7%;
-    left: 89%;
-    transform: translate(-50%, -50%);
-}
-
-.icon-li:hover {
-    cursor: pointer;
-}
-
-.account {
-    display: none;
-}
-
-.click-it {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 1;
-}
-
-.dashboard-div {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    overflow-y: scroll;
-}
-
-.icon-li:hover .account {
-    display: block;
-    border: 2px solid rgb(228, 223, 223);
-    position: absolute;
-    top: 5.5%;
-    left: 91.9%;
-    transform: translate(-50%, -50%);
-    background-color: gray;
-    color: white;
-    padding: 5px;
-}
-
-.user-dropdown {
-    display: block;
-    border: 2px solid rgb(228, 223, 223);
-    position: absolute;
-    top: 10%;
-    left: 89%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-    height: 100px;
-    z-index: 2;
-    background-color: whitesmoke;
-    border: 1px solid lightgray;
-    border-radius: 3px;
-}
-
-.li-button {
-    position: absolute;
-    top: 15.6%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: lightgrey;
-    border-radius: 3px;
-    padding-bottom: 10px;
-    padding-top: 5px;
-    padding-left: 78px;
-    padding-right: 78px;
-}
-
-.logout-dropdown {
-    cursor: pointer;
 }
 
 .dashboard {
@@ -116,4 +36,96 @@
     font-size: 15px;
     font-family: sans-serif;
     font-weight: bold;
+}
+
+.navbar {
+    height: 60px;
+}
+
+.nav-loggedin {
+    border-bottom: 1px solid rgb(145, 193, 207);
+}
+
+.icon-li {
+    position: absolute;
+    top: 3%;
+    left: 89%;
+    transform: translate(-50%, -50%);
+}
+
+.fas {
+    color: white;
+}
+
+.fas:hover {
+    cursor: pointer;
+}
+
+.account {
+    display: none;
+}
+
+.click-it {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.icon-li:hover .account {
+    display: block;
+    position: absolute;
+    top: 125%;
+    left: 125%;
+    border: 2px solid rgb(228, 223, 223);
+    background-color: gray;
+    color: white;
+    padding: 5px;
+}
+
+.user-dropdown-div {
+    display: block;
+    border: 2px solid rgb(228, 223, 223);
+    position: absolute;
+    top: 11%;
+    left: 89%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 100px;
+    z-index: 2;
+    background-color: whitesmoke;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
+
+.logout-dropdown-li {
+    position: absolute;
+    top: 15.6%;
+    left: 67%;
+    transform: translate(-50%, -50%);
+    background-color: lightgrey;
+    border-radius: 3px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-left: 78px;
+    padding-right: 8px;
+}
+
+.account-dropdown {
+    background-color: lightgrey;
+    border-radius: 3px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-left: 8px;
+    padding-right: 78px;
+}
+
+.logout-dropdown-button {
+    cursor: pointer;
+}
+
+.account-dropdown > span {
+    cursor: default;
 }
