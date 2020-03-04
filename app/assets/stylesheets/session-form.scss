@@ -1,21 +1,29 @@
-.link-to {
-    background-color: rgb(227, 231, 233);
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: black;
-    position: absolute;
-    top: 3%;
-    left: 85%;
-    transform: translate(-50%, -50%);
-}
 
 .form-container {
-    position: fixed;
+    position: relative;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    overflow-y: scroll;
+}
+
+.linkto-flex {
+    position: absolute;
+    display: flex;
+    max-width: 120px;
+    top: 1%;
+    right: 5%;
+
+}
+
+.link-to {
+    background-color: rgba(227, 231, 233, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 800;
 }
 
 .form-box {
@@ -44,6 +52,10 @@
     margin: 40px;
     font-family: sans-serif;
     font-weight: bolder;
+}
+
+.Sportsblr:hover {
+    cursor: default;
 }
 
 .input-div {
@@ -89,10 +101,11 @@
     font-size: 20px;
     font-family: sans-serif;
     font-weight: bold;
+    color: white;
 }
 
 .signup-session {
-    background-color: rgba(117, 120, 122, 0.7);
+    background-color: #00b8ff;
 }
 
 .demo {

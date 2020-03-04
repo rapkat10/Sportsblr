@@ -13,6 +13,7 @@
     .backgroundImage {
         left: 50%;
         margin-left: -512px; /* 50% */
+        z-index: -3;
     }
 }
 
@@ -76,26 +77,11 @@
 // width: 100%;
 // height: 100%;
 
-.splash-div {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    overflow-y: scroll;
-}
-
 .splash-home {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: -2;
-    overflow-y: scroll;
-}
+    // background-image: image-url("snowbord.jpg");
+    // background-size: cover;
+    // background-position: center;
 
-#root {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -125,13 +111,18 @@
     font-weight: bolder;
 }
 
+.sportsblr:hover {
+    cursor: default;
+}
+
 .get-started {
-    background-color: rgb(7, 145, 199);
+    // background-color: rgb(7, 145, 199);
+    background-color: #00b8ff;
     padding: 10px;
     padding-left: 100px;
     padding-right: 100px;
     border-radius: 5px;
-    color: antiquewhite;
+    color: white;
     margin: 20px;
     font-size: 16px;
     font-weight: bold;
@@ -139,7 +130,7 @@
 }
 
 .log-in {
-    background-color: rgb(227, 231, 233);
+    background-color: white;
     padding: 10px;
     padding-left: 118px;
     padding-right: 119px;
