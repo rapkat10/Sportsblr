@@ -4,7 +4,7 @@
     border-radius: 5px;
     color: black;
     position: absolute;
-    top: 5%;
+    top: 3%;
     left: 93.5%;
     transform: translate(-50%, -50%);
 }
@@ -18,8 +18,6 @@
     overflow-y: scroll;
 }
 
-
-
 .form-box {
     display: flex;
     justify-content: center;
@@ -32,6 +30,7 @@
    justify-content: center;
    flex-direction: column;
    align-items: center;
+   margin-right: 70px;
 }
 
 .Sportsblr {
@@ -41,7 +40,10 @@
     align-items: center;
     font-size: 60px;
     color: rgba(17, 69, 238, .7);
-    padding-top: 100px;
+    padding-top: 120px;
+    margin: 40px;
+    font-family: sans-serif;
+    font-weight: bolder;
 }
 
 .input-div {
@@ -54,7 +56,7 @@
 
 .input-div > input {
     padding: 10px;
-    width: 300px;
+    width: 295px;
     font-size: 20px;
 }
 
@@ -63,17 +65,17 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
 }
 
 .errors > ul {
-    background-color: rgba(211, 211, 211, 0.8);
+    background-color: rgba(211, 211, 211, 0.9);
     border-radius: 3px;
 }
 
 .errors ul > li {
-    list-style: none;
     padding: 10px;
-    color: rgb(243, 61, 61);
+    color: rgb(247, 17, 17);
 }
 
 .form > button {
@@ -85,4 +87,14 @@
     border-radius: 3px;
     width: 320px;
     font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.signup-session {
+    background-color: rgba(117, 120, 122, 0.7);
+}
+
+.demo {
+    background-color: rgba(55, 139, 235, .9);
 }

@@ -110,8 +110,8 @@ class SessionForm extends React.Component {
                                 placeholder="Password"
                             />
                         </div>
-                        <button onClick={handlefunc}>{formtype}</button>
-                        <button onClick={this.handleDemoLogin}>Demo</button>
+                        <button className="signup-session" onClick={handlefunc}>{formtype}</button>
+                        <button className="demo" onClick={this.handleDemoLogin}>Demo</button>
                         {this.errors()} 
                     </form>
                 </div>

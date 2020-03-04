@@ -1,12 +1,88 @@
 .backgroundImage {
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
     position: fixed;
     top: 0;
-    right: 31%;
-    bottom: 0;
-    left: 31%;
-    margin: 0 -600px;
-    background-size: cover;
+    left: 0;
     z-index: -3;
+}
+
+@media screen and (max-width: 1024px) {
+    .backgroundImage {
+        left: 50%;
+        margin-left: -512px; /* 50% */
+    }
+}
+
+// /* Mobile Styles */
+// @media only screen and (max-width: 400px) {
+// }
+
+// /* Tablet Styles */
+// @media only screen and (min-width: 401px) and (max-width: 960px) {
+// }
+
+// /* Desktop Styles */
+// @media only screen and (min-width: 961px) {
+// }
+
+// @media screen and (max-width: 320px) {
+
+//     /* comes into effect for screens less than or equal to 320 pixels */
+//     #somethingorother {
+//         width: 120px;
+//     }
+// }
+
+// @media screen and (min-width: 321px) and (max-width: 480px) {
+
+//     /* comes into effect for screens between 321 and 480 pixels (inclusive) */
+//     #somethingorother {
+//         width: 320px;
+//     }
+// }
+
+// @media screen and (min-width: 481px) {
+
+//     /* comes into effect for screens larger than or equal to 481 pixels */
+//     #somethingorother {
+//         width: 480px;
+//     }
+// }
+// @viewport {
+//     width: device-width;
+//     zoom: 1.0;
+// }
+
+
+
+// .backgroundImage {
+//     position: fixed;
+//     top: 0;
+//     right: 31%;
+//     bottom: 0;
+//     left: 31%;
+//     margin: 0 -600px;
+//     background-size: cover;
+//     z-index: -3;
+// }
+
+// background-position: center center;
+// background-size: cover;
+// position: fixed;
+// background-repeat: no-repeat;
+// width: 100%;
+// height: 100%;
+
+.splash-div {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow-y: scroll;
 }
 
 .splash-home {
@@ -16,6 +92,7 @@
     right: 0;
     left: 0;
     z-index: -2;
+    overflow-y: scroll;
 }
 
 #root {
@@ -24,7 +101,6 @@
     bottom: 0;
     right: 0;
     left: 0;
-    // overflow-y: scroll;
 }
 
 .splash-home {
@@ -39,12 +115,14 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 100px;
 }
 
 .sportsblr {
     color: antiquewhite;
-    font-size: 68px;
+    font-size: 64px;
+    margin: 20px;
+    font-family: sans-serif;
+    font-weight: bolder;
 }
 
 .get-started {
@@ -55,13 +133,20 @@
     border-radius: 5px;
     color: antiquewhite;
     margin: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: sans-serif;
 }
 
 .log-in {
     background-color: rgb(227, 231, 233);
     padding: 10px;
-    padding-left: 115px;
-    padding-right: 115px;
+    padding-left: 118px;
+    padding-right: 119px;
     border-radius: 5px;
     color: black;
+    margin-bottom: 120px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: sans-serif;
 }

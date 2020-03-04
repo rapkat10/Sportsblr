@@ -18,11 +18,11 @@ class Greeting extends React.Component {
     
         return (
             <div className="splash-div">
-                <img className="backgroundImage" src={window.snowboardURL} />
                 <div className="nav-container">
                     <NavbarContainer />
                 </div>
                 <div className="splash-home">                  
+                <img className="backgroundImage" src={window.snowboardURL} />
                     <div className="splash-box">{display}</div>
                 </div>
             </div>
