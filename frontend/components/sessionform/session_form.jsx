@@ -90,28 +90,29 @@ class SessionForm extends React.Component {
                 <NavbarContainer />
                 {linkTo}
                 <h2 className="Sportsblr">Sportsblr</h2>
-                {this.errors()}
                 <div className="form-box"> 
                     <form className="form">
-                    
-                        <input className="email"
-                            type="email"
-                            value={this.state.email}
-                            onChange={this.handleInput('email')}
-                            required="required"
-                            placeholder="Email"
-                        />
-                        {createUserForm}
-                            
-                        <input className="password"
-                            type="password"
-                            value={this.state.password}
-                            onChange={this.handleInput('password')}
-                            required="required"
-                            placeholder="Password"
-                        />
+                        <div className="input-div">
+                            <input className="email"
+                                type="email"
+                                value={this.state.email}
+                                onChange={this.handleInput('email')}
+                                required="required"
+                                placeholder="Email"
+                            />
+                            {createUserForm}
+                                
+                            <input className="password"
+                                type="password"
+                                value={this.state.password}
+                                onChange={this.handleInput('password')}
+                                required="required"
+                                placeholder="Password"
+                            />
+                        </div>
                         <button onClick={handlefunc}>{formtype}</button>
                         <button onClick={this.handleDemoLogin}>Demo</button>
+                        {this.errors()} 
                     </form>
                 </div>
             </div>

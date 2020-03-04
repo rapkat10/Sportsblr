@@ -9,72 +9,70 @@
     transform: translate(-50%, -50%);
 }
 
-.form-container > h2 {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.form-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow-y: scroll;
+}
+
+.Sportsblr {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     font-size: 60px;
-    color: rgb(53, 216, 216);
+    color: rgba(17, 69, 238, .7);
+    padding-top: 100px;
 }
 
 .form-box {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    flex-direction: column;
+    align-items: center;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
 }
 
-.form > input {
+.input-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(181, 191, 192);
+}
+
+.input-div > input {
     padding: 10px;
     width: 300px;
     font-size: 20px;
 }
 
-.email {
-    border: 0.5px solid black;
-    border-bottom: none;
-    border-radius: 3px;
-}
-
-.username {
-    border: 0.5px solid black;
-    border-bottom: none;
-    border-radius: 3px;
-}
-
-.password {
-    border: 0.5px solid black;
-    border-radius: 3px;
-}
-
 .errors {
-    width: 275px;
-    position: absolute;
-    top: 72%;
-    left: 49%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.errors > ul {
+    background-color: rgba(211, 211, 211, 0.8);
+    border-radius: 3px;
 }
 
 .errors ul > li {
     list-style: none;
-    border: 1px transparent;
-    border-radius: 1px;
-    background: rgb(171, 227, 236);
     padding: 10px;
-    margin: 0px;
-    margin-left: 0;
     color: rgb(243, 61, 61);
 }
-
 
 .form > button {
     cursor: pointer;

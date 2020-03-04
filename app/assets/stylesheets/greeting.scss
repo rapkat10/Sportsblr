@@ -1,28 +1,43 @@
 .backgroundImage {
     position: fixed;
     top: 0;
-    right: 30%;
+    right: 31%;
     bottom: 0;
-    left: 30%;
+    left: 31%;
     margin: 0 -600px;
     background-size: cover;
-    z-index: -1;
+    z-index: -3;
 }
+
+.nav-home {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -2;
+}
+
+// #root {
+//     position: fixed;
+//     top: 0;
+//     bottom: 0;
+//     right: 0;
+//     left: 0;
+//     // overflow-y: scroll;
+// }
 
 .nav-home {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 300px;
+    padding-bottom: 150px;
 }
 
 .sportsblr {
     color: antiquewhite;
-    height: 50px;
-    font-size: 60px;
-    padding-top: 375px;
-    padding-left: 15px;
+    font-size: 68px;
 }
 
 .get-started {
@@ -41,26 +56,4 @@
     padding-right: 115px;
     border-radius: 5px;
     color: black;
-}
-
-.welcome {
-    position: absolute;
-    top: 2%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    color: rgb(178, 245, 178);
-}
-
-.dashboard {
-    position: absolute;
-    top: 1.3%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(40, 106, 145, 0.8);
-    color: whitesmoke;
-    border-radius: 5px;
-    // padding: 5px;
-    padding-left: 60px;
-    padding-right: 60px;
-    
 }

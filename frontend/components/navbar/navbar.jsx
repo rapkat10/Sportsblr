@@ -37,19 +37,19 @@ class Navbar extends React.Component {
             <section className="right-nav">
                 <ul>
                     <li className="icon-li">
-                        <i onClick={this.handleIconClick} class="fas fa-user fa-2x"></i>
+                        <i onClick={this.handleIconClick} className="fas fa-user fa-2x"></i>
                         <p className="account">Account</p>
                     </li>
                 </ul>                          
-                {this.state.clicked ? dropdown : ""}                      
+                {this.state.clicked ? dropdown : <></>}                      
             </section>
         )
 
         return (
             <nav className="navbar">
                 {leftNav}
-                {currentUser ? rightNav : ""}
-                {this.state.clicked ? wholepage : ""}
+                {currentUser ? rightNav : <></>}
+                {this.state.clicked ? wholepage : <></>}
             </nav>
         )
     }

@@ -21,7 +21,7 @@ class Greeting extends React.Component {
         </>
     
         return (
-            <div>
+            <div className="splash-div">
                 <div className="nav-container">
                     <NavbarContainer />
                 </div>
