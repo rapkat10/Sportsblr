@@ -15,6 +15,15 @@
         margin-left: -512px; /* 50% */
         z-index: -3;
     }
+
+    .flex-box-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 200px;
+        // border: 1px solid rgb(60, 255, 0);
+        margin-left: 20px;
+    }
 }
 
 // /* Mobile Styles */
