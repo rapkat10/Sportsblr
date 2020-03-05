@@ -26,6 +26,7 @@ class Api::PostsController < ApplicationController
 
     def create
         @post = Post.new(post_params)
+        # debugger
         @post.user_id = current_user.id
         # @posts = filteredposts
         @posts = allposts
