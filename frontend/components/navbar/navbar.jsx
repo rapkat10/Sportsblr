@@ -90,17 +90,13 @@ class Navbar extends React.Component {
         const loggedin = currentUser ? "main-nav nav-loggedin" : "";
         const logolink = currentUser ? ("/dashboard") : ("/");
 
-        const dashboardbutton = <Link to="/dashboard">
-            <strong className="dashboard">Dashboard</strong>
-        </Link>;
-
         const button = <span className="logout-dropdown-button"
-            onClick={logOut}> Logout
+            onClick={logOut}> Log out
         </span>;
 
         const dropdown = <>
             <div className="user-dropdown-div">
-                <li className="account-dropdown"><span>Account</span></li>
+                <li className="account-dropdown"><span>ACCOUNT</span></li>
                 <li className="logout-dropdown-li">{button}</li>
             </div>
         </>;
@@ -110,9 +106,9 @@ class Navbar extends React.Component {
         const rightNav = (
             <>
                 <ul>
-                    <li className="icon-li">
+                    <li title="Account" className="icon-li">
                         <i onClick={this.handleIconClick} className="fas fa-user fa-lg"></i>
-                        <p className="account">Account</p>
+                        {/* <p className="account">Account</p> */}
                     </li>
                     {this.state.clicked ? dropdown : <></>}
                 </ul>

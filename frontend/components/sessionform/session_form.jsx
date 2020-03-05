@@ -103,7 +103,6 @@ class SessionForm extends React.Component {
                                 placeholder="Email"
                             />
                             {createUserForm}
-                                
                             <input className="password"
                                 type="password"
                                 value={this.state.password}

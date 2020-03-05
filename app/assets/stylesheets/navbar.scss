@@ -21,32 +21,24 @@
 .main-nav {
     display: flex;
     justify-content: space-around;
-    // align-items: center;
 }
 
 .flex-box-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // min-width: 1480px;
     width: 95%;
     max-width: 1500px;
-    // border: 1px solid rgb(60, 255, 0);
-}
-
-
-.flex-logo {
-    // border: 1px solid red;
 }
 
 .logo-splash {
+    margin-top: 10px;
     margin-left: 40px;
 }
 
 .flex-icon {
     width: 300px;
     height: 40px;
-    // border: 1px solid red;
     margin-right: 70px;
     display: flex;
     justify-content: flex-end;
@@ -66,26 +58,14 @@
     font-family: sans-serif;
 }
 
-.dashboard {
-    background-color: rgba(40, 106, 145, 0.8);
-    color: whitesmoke;
-    border-radius: 5px;
-    padding: 5px;
-    padding-left: 60px;
-    padding-right: 60px;
-    font-size: 15px;
-    font-family: sans-serif;
-    font-weight: bold;
-}
-
 .nav-loggedin {
     height: 60px;
     border-bottom: 1px solid rgb(145, 193, 207);
 }
 
-.account {
-    display: none;
-}
+// .account {
+//     display: none;
+// }
 
 .click-it {
     position: fixed;
@@ -96,17 +76,17 @@
     z-index: -1;
 }
 
-.icon-li:hover .account {
-    display: block;
-    position: absolute;
-    bottom: -50%;
-    right: -23%;
-    border: 2px solid rgb(228, 223, 223);
-    background-color: gray;
-    color: white;
-    padding: 5px;
-    cursor: default;
-}
+// .icon-li:hover .account {
+//     display: block;
+//     position: absolute;
+//     bottom: -50%;
+//     right: -23%;
+//     border: 2px solid rgb(228, 223, 223);
+//     background-color: gray;
+//     color: white;
+//     padding: 5px;
+//     cursor: default;
+// }
 
 .fas {
     color: white;
@@ -119,13 +99,15 @@
 .user-dropdown-div {
     display: block;
     position: absolute;
-    bottom: -260%;
-    right: -27%;
+    // bottom: -260%;
+    bottom: -270%;
+    right: -33.5%;
     border: 2px solid rgb(228, 223, 223);
-    width: 200px;
+    width: 250px;
     height: 100px;
     z-index: 2;
-    background-color: whitesmoke;
+    background-color: white;
+    // background-color: rgba(0, 0, 0, .1);
     border: 1px solid lightgray;
     border-radius: 3px;
 
@@ -136,15 +118,26 @@
 }
 
 .logout-dropdown-li {
-    background-color: lightgrey;
-    padding: 10px;
-    padding-left: 40px;
+    background-color: #f2f2f2;
+    padding-top: 9.5px;
+    padding-bottom: 9.5px;
+    padding-left: 64px;
+    padding-right: 20px;
+    color: #8f8f8f;
+    font-size: 13px;
+    font-family: sans-serif;
+    border-bottom: 0.5px solid rgb(221, 216, 216);
 }
 
 .account-dropdown {
-    background-color: lightgrey;
+    background-color: #f2f2f2;
+    color: rgba(0, 0, 0, .65);
     padding: 10px;
-    padding-right: 40px;
+    padding-right: 52.6px;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-bottom: 0.5px solid rgb(221, 216, 216);
 }
 
 .account-dropdown > span {

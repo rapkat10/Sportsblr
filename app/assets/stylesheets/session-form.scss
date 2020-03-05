@@ -11,7 +11,7 @@
     position: absolute;
     display: flex;
     max-width: 120px;
-    top: 1%;
+    top: 3%;
     right: 5%;
 
 }
@@ -38,7 +38,7 @@
    justify-content: center;
    flex-direction: column;
    align-items: center;
-   margin-right: 70px;
+   margin-right: 160px;
 }
 
 .Sportsblr {
@@ -48,7 +48,7 @@
     align-items: center;
     font-size: 60px;
     color: rgba(17, 69, 238, .7);
-    padding-top: 120px;
+    padding-top: 50%;
     margin: 40px;
     font-family: sans-serif;
     font-weight: bolder;
@@ -63,7 +63,30 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    border: 1px solid rgb(181, 191, 192);
+}
+
+.email {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 0.5px solid lightgray;
+    border-radius: 3px 3px 0 0;
+}
+
+.username {
+    // margin: 10px;
+    border-top: 0.5px solid lightgray;
+    border-left: none;
+    border-right: none;
+    border-bottom: 0.5px solid lightgray;
+}
+
+.password {
+    border-top: 0.5px solid lightgray;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 0 0 3px 3px;
 }
 
 .input-div > input {
@@ -86,18 +109,17 @@
 }
 
 .errors ul > li {
-    padding: 10px;
+    padding: 10px 5px;
     color: rgb(247, 17, 17);
 }
 
 .form > button {
     cursor: pointer;
-    margin: 3px 0;
-    margin-top: 5px;
+    margin-top: 15px;
     padding: 10px;
     border: 1px transparent;
     border-radius: 3px;
-    width: 320px;
+    width: 315px;
     font-size: 20px;
     font-family: sans-serif;
     font-weight: bold;
