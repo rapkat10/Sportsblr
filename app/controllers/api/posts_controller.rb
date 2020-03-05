@@ -24,7 +24,9 @@ class Api::PostsController < ApplicationController
 
     def create
         @post = Post.new(post_params)
+        # debugger
         @post.user_id = current_user.id
+        # @post.user_id = params[:id]
         @posts = filteredposts
         if @post.save
             render 'api/posts/index'
@@ -52,7 +54,7 @@ class Api::PostsController < ApplicationController
 
     private
     def post_params
-        params.require(:post).permit(:title, :body, :type) 
+        params.require(:post).permit(:title, :body, :post_type) 
     end
 
 end
