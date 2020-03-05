@@ -118,15 +118,15 @@ class Navbar extends React.Component {
                 </ul>
             </>
         );
-
+        
+        const flexLogo = currentUser ? "flex-logo" : "logo-splash";
         const leftNav = (
             <section className={loggedin}>
                 <div className="flex-box-nav">
 
-                    <div className="flex-logo">
+                    <div className={flexLogo}>
                         <Link to={logolink}><strong className="logo">S</strong></Link>
                     </div>
-
                     <div className="flex-icon">
                         {currentUser ? rightNav : <></>}
                     </div>

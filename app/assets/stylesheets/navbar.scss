@@ -20,29 +20,34 @@
 
 .main-nav {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    // align-items: center;
 }
 
 .flex-box-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-width: 1500px;
+    // min-width: 1480px;
+    width: 95%;
+    max-width: 1500px;
     // border: 1px solid rgb(60, 255, 0);
-    margin-left: 20px;
 }
+
 
 .flex-logo {
     // border: 1px solid red;
-    margin-left: 20px;
+}
+
+.logo-splash {
+    margin-left: 40px;
 }
 
 .flex-icon {
     width: 300px;
     height: 40px;
     // border: 1px solid red;
-    margin-right: 100px;
+    margin-right: 70px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
