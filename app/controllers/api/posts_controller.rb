@@ -1,5 +1,7 @@
 class Api::PostsController < ApplicationController
 
+    # before_action :require_logged_in, only: [:create, :update, :destroy]
+
     def filteredposts
         @posts ||= Post.order(id: :DESC).includes(:user).all
     end
@@ -24,12 +26,11 @@ class Api::PostsController < ApplicationController
 
     def create
         @post = Post.new(post_params)
-        # debugger
         @post.user_id = current_user.id
-        # @post.user_id = params[:id]
         @posts = filteredposts
         if @post.save
-            render 'api/posts/index'
+            # render 'api/posts/index'
+            render 'api/posts/show'
         else 
             render json: @user.errors.full_messages, status: 422
         end
@@ -39,9 +40,11 @@ class Api::PostsController < ApplicationController
         @post = currentpost
         @posts = filteredposts
         if @post.update(post_params)
-            render 'api/posts/index'
-        else
-            render 'api/posts/index'
+            # render 'api/posts/index'
+            render 'api/posts/show'
+        else 
+            render json: @user.errors.full_messages, status: 422
+            # render 'api/posts/index'
         end
     end
 
@@ -54,7 +57,10 @@ class Api::PostsController < ApplicationController
 
     private
     def post_params
-        params.require(:post).permit(:title, :body, :post_type) 
+        # params.require(:post).permit(:title, :body, :post_type)
+        params.require(:post).permit(
+            :title, :body, :post_type, :photo, :video, :audio
+        )
     end
 
 end
