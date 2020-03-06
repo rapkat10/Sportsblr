@@ -1,0 +1,151 @@
+.post-form-box {
+    position: relative;
+    display: block;
+    width: 540px;
+    border-radius: 4px;
+    background-color: white;
+    max-height: 80%;
+    overflow-y: scroll;
+}
+
+.user_name {
+    width: 332px;
+    height: 20px;
+    font-size: 13px;
+    padding: 15px 15px 10px 20px;
+    color: black;
+}
+
+.title-text {
+    font-size: 35px;
+    width: 500px;
+    padding: 5px 20px;
+    min-height: 37px;
+    border: none;
+}
+
+.body-text {
+    width: 500px;
+    padding: 7px 20px;
+    min-height: 20px;
+    border: none;
+    font-size: 13px;
+    resize: none;
+}
+
+.post-form-footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 15px 20px;
+    text-align: center;
+    border-top: 1px solid lightgray;
+    border-radius: 0 0 5px 5px;
+}
+
+.close-modal {
+    width: 51px;
+    height: 30px;
+    padding: 5px 7px;
+    background-color: #9DA6AF;
+    border: none;
+    border-radius: 2px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.submit-post {
+    width: 62px;
+    height: 28px;
+    padding: 5px 10px;
+    background-color: #00B8FF;
+    border: none;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 13px;
+    color: white;
+}
+
+
+.click {
+    background-color: black;
+}
+
+/* photo */
+.photo-post {
+    width: 100%;
+}
+
+.upload {
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -2;
+}
+
+.upload-file {
+    color: black;
+    text-align: center;
+    font-size: 14px;
+    width: 500px;
+    padding: 5px 20px;
+    border-top: 1px dashed grey;
+    border-bottom: 1px dashed grey;
+    background-color: rgb(242, 242, 242);
+    height: 170px;
+}
+
+.fa-camera-retro {
+    font-size: 45px;
+    padding: 20px 0 15px 0;
+}
+
+.fa-laugh-squint {
+    font-size: 20px;
+    padding: 30px 0 0 0;
+}
+
+.image-prev {
+    display: block;
+    margin: 0 auto;
+    width: 540px;
+    /* max-height: 450px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* quote */
+
+.quote-text {
+    font-family: cursive;
+    font-size: 25px;
+    padding: 2px 20px;
+    width: 500px;
+    word-wrap: break-word;
+    border: none;
+    /* outline: none; */
+    font-size: 30px;
+
+}
+
+/* link */
+
+
+.link-text {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+    text-align: center;
+    font-size: 14px;
+    width: 538px;
+    border: none;
+    border-top: 1px dashed grey;
+    border-bottom: 1px dashed grey;
+    background-color: rgb(242, 242, 242);
+    height: 170px;
+}

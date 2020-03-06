@@ -19,10 +19,21 @@ class User < ApplicationRecord
     attr_reader :password
 
     after_initialize :ensure_session_token
+    after_create :default_photo
 
     has_many :posts,
         foreign_key: :user_id,
         class_name: :Post
+
+    has_one_attached :photo
+
+    def default_photo
+        if !self.photo.attached?
+            file = File.open('app/assets/images/default_user_pic.jpg')
+            self.photo.attach(io: file,
+            filename: 'default_user_pic.jpg', content_type: 'image/jpg')
+        end
+    end
 
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)

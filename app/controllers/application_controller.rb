@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
-    skip_before_action :verify_authenticity_token
+    # skip_before_action :verify_authenticity_token
+    # protect_from_forgery with: :exception
+
     helper_method :current_user, :logged_in?
 
     private
@@ -21,6 +23,10 @@ class ApplicationController < ActionController::Base
         current_user.reset_session_token!
         session[:session_token] = nil
         @current_user = nil
+    end
+
+    def require_logged_in
+        render json: ["Unauthorized"], status: 401 unless logged_in?
     end
 
 end

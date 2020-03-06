@@ -1,0 +1,38 @@
+.modal-background {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 502;
+}
+
+.modal-child {
+    margin: 0 auto;
+    position: relative;
+    overflow-y: auto;
+    top: 80px;
+    left: -53px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5S forwards;
+}
+
+@-webkit-keyframes slide-in {
+    0% {
+        transform: translateY(-30%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.close {
+    cursor: pointer;
+}

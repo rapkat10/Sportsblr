@@ -1,0 +1,80 @@
+
+.icons-box {
+    border: 5px solid red;
+}
+
+.post_buttons {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 5px;
+    width: 580px;
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post_buttons > li {
+    cursor: pointer;
+    padding: 0 20px;
+    border-right: 1px solid rgba(240, 235, 235, 0.6);
+}
+
+.post_buttons > li:last-child {
+    border: none;
+}
+
+.post_buttons > li > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: sans-serif;
+}
+
+.post_button {
+    font-size: 38px;
+}
+
+.text {
+    color: black;
+    font-weight: bold;
+}
+
+.fa-camera {
+    color: #ff492f;
+
+}
+
+.fa-quote-left {
+    color: #ff8a00;
+
+}
+
+.fa-link {
+    color: #00cf35;
+
+}
+
+.fa-comment-alt {
+    color: #00b8ff;
+    transform: rotate(-90deg);
+}
+
+.fa-headphones {
+    color: #7c5cff
+}
+
+.fa-video {
+    color: #ff62ce
+}
+
+.post_buttons > li:hover .post_button {
+    transform: translateY(-3px);
+}
+
+.post_buttons > li > div > span {
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 15px;
+    padding-top: 10px;
+    text-align: center;
+}
