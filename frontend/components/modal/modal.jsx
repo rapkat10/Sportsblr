@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { openModal, closeModal } from '../../actions/modal_actions';
+import { closeModal } from '../../actions/modal_actions';
 
 import CreateTextPostsContainer from '../posts/posts_forms/create_text_posts_form_container';
 import CreateMediaPostsContainer from '../posts/posts_forms/create_media_posts_form_container';
@@ -35,23 +35,21 @@ const Modal = ({ modal, closeModal }) => {
         case 'Video Form':
             component = <CreateMediaPostsContainer formType="Video Form"/>;
             break;
-        case 'edit-text':
-        case 'edit-chat':
-        case 'edit-link':
-        case 'edit-quote':
-            component = <EditTextContainer postId={modal.postId} />;
-            break;
-        case 'edit-photo':
-        case 'edit-video':
-        case 'edit-audio':
-            component = <EditMediaContainer postId={modal.postId} />;
-            break;
+        // case 'edit-text':
+        // case 'edit-chat':
+        // case 'edit-link':
+        // case 'edit-quote':
+        //     
+        // case 'edit-photo':
+        // case 'edit-audio':
+        // case 'edit-video':
+        //     
         default:
             return null;
     }
     return (
         <div className="modal-background" onClick={closeModal}>
-            <div className="modal-child" onClick={e => e.stopPropagation()}>
+            <div className="modal-box" onClick={e => e.stopPropagation()}>
                 {component}
             </div>
         </div>
@@ -69,8 +67,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return ({
-        closeModal: () => dispatch(closeModal()),
-        openModal: () => dispatch(openModal())
+        closeModal: () => dispatch(closeModal())
     })
 };
 

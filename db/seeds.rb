@@ -6,19 +6,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-demo = User.create!( 
+demo = User.new( 
     email: 'demo@sportsblr.com',
     username: 'DemoUser',
     password: 'password'
 )
 
-rapkat = User.create!( 
+rapkat = User.new( 
     email: 'rapkat99@sportsblr.com',
     username: 'rapkat99',
     password: 'hunter12'
 )
 
-leyla = User.create!( 
+leyla = User.new( 
     email: 'leyla_100@sportsblr.com',
     username: 'leyla100',
     password: 'hunter10'
@@ -34,6 +34,10 @@ rapkat.photo.attach(io: file2, filename: 'soccerball.jpg')
 file3 = File.open('app/assets/images/motorcycle.jpg')
 leyla.photo.attach(io: file3, filename: 'motorcycle.jpg')
 
+demo.save!
+rapkat.save!
+leyla.save!
+
 
 post1 = Post.create!(
     title: "Champions league Final Game is soon!", 
@@ -42,7 +46,7 @@ post1 = Post.create!(
     user_id: demo.id
 )
 
-post2 = Post.create!(
+post2 = Post.new(
     body: "Beautiful Stadium",
     post_type: "photo",
     user_id: rapkat.id
@@ -50,6 +54,7 @@ post2 = Post.create!(
 
 file4 = File.open('app/assets/images/fcb.jpg')
 post2.photo.attach(io: file4, filename: 'fcb.jpg')
+post2.save!
 
 post3 = Post.create!(
     title: "Soccer Skills", 

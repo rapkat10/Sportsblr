@@ -27,15 +27,15 @@ const removePost = (id) => {
     }
 }
 
-const clearPostsAction = () => {
-    return {
-        type: CLEAR_POSTS
-    };
-};
+// const clearPostsAction = () => {
+//     return {
+//         type: CLEAR_POSTS
+//     };
+// };
 
-export const clearPosts = () => dispatch => {
-    return dispatch(clearPostsAction());
-};
+// export const clearPosts = () => dispatch => {
+//     return dispatch(clearPostsAction());
+// };
 
 export const getPosts = () => dispatch => {
     return PostsApiUtil.getPosts().then((posts) => {
@@ -55,8 +55,8 @@ export const createPost = (post) => dispatch => {
     });
 };
 
-export const updatePost = (post, postId) => dispatch => {
-    return PostsApiUtil.updatePost(post, postId).then((post) => {
+export const updatePost = (post) => dispatch => {
+    return PostsApiUtil.updatePost(post).then((post) => {
         return dispatch(receivePost(post));
     });
 };
@@ -67,12 +67,9 @@ export const deletePost = (postId) => dispatch => {
     });
 };
 
-
-
-// media
 export const createMediaPost = (formData) => dispatch => {
     return MediaApiUtil.createMediaPost(formData).then((post) => {
-        return dispatch(receivePost(post.post))
+        return dispatch(receivePost(post))
     })
 };
 

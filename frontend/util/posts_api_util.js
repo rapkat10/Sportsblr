@@ -38,24 +38,3 @@ export const deletePost = (id) => {
         method: "DELETE"
     })
 }
-
-
-// export const createPost = formData => {
-//     return $.ajax({
-//         method: 'POST',
-//         url: 'api/posts',
-//         data: formData,
-//         contentType: false,
-//         processData: false
-//     });
-// };
-
-// export const updatePost = (formData, postId) => {
-//     return $.ajax({
-//         method: 'PATCH',
-//         url: `api/posts/${postId}`,
-//         data: formData,
-//         contentType: false,
-//         processData: false
-//     });
-// };

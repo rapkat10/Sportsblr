@@ -7,22 +7,20 @@ import {
 
 
 export default (state = {}, action) => {
+    let newState = Object.assign({}, state);
     Object.freeze(state);
-    debugger;
-    let newState = {};
+
     switch (action.type) {
         case RECEIVE_POSTS:
-            return action.posts;
+            return Object.assign({}, state, action.posts)
         case RECEIVE_POST:
+            // debugger;
             return Object.assign({}, state, 
                 {[action.post.id]: action.post}
             );
         case REMOVE_POST:
-            newState = Object.assign({}, state);
             delete newState[action.postId];
             return newState;
-        case CLEAR_POSTS:
-            return [];
         default:
             return state;
     }

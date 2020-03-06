@@ -2,6 +2,7 @@ import {connect} from 'react-redux';
 import Dashboard from './dashboard';
 import { logOut, clearErrors } from '../../actions/session_actions';
 import { openModal } from '../../actions/modal_actions';
+import { getPosts } from '../../actions/post_actions';
 
 const mapStateToProps = (state) => {
     const posts = Object.values(state.entities.posts);
@@ -14,8 +15,11 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => ({
     logOut: () => dispatch(logOut()),
-    clearErrors: () => dispatch(clearErrors())
-    // openModal: (modal, postId) => dispatch(openModal(modal, postId))
+    openModal: (modal, postId) => dispatch(openModal(modal, postId)),
+    getPosts: () => dispatch(getPosts()),
+
+    
+    // clearErrors: () => dispatch(clearErrors()),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);

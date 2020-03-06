@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import { logOut } from '../../actions/session_actions';
-import { clearPosts } from '../../actions/post_actions';
 import Navbar from './navbar';
 
 const mapStateToProps = (state) => {
@@ -11,8 +10,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-    logOut: () => dispatch(logOut()),
-    clearPosts: () => dispatch(clearPosts())
+    logOut: () => dispatch(logOut())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

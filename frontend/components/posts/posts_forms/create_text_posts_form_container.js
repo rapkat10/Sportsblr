@@ -4,15 +4,16 @@ import { createPost } from '../../../actions/post_actions';
 import { closeModal } from '../../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
+    const formType = ownProps.formType;
     const currentUser = state.entities.users[state.session.id];
     return ({
         post: {
             title: "",
             body: "",
-            post_type: "text",
+            post_type: formType,
             user_id: currentUser.id
         },
-        formType: "Post",
+        formType: formType,
         currentUser: currentUser
     });
 }

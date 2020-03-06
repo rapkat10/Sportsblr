@@ -8,8 +8,13 @@ class Greeting extends React.Component {
         super(props);
     }
 
+    componentDidMount() {
+        this.props.getPosts();
+    }
+
+
     render() {
-        const { currentUser } = this.props;
+        const { currentUser, posts } = this.props;
         const display = <>
             <h1 className="sportsblr">Sportsblr</h1>
             <Link className="get-started" to="/signup">Get Started</Link>        

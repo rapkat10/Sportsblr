@@ -30,4 +30,5 @@ const PostNav = ({ currentUser, openModal }) => {
         </div>
     )
 }
+
 export default PostNav;
