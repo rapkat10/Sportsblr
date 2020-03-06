@@ -26,13 +26,13 @@ leyla = User.create!(
 
     
 file1 = File.open('app/assets/images/default_user_pic.jpg')
-demo.photo.attach(io: file, filename: 'default_user_pic.jpg')
+demo.photo.attach(io: file1, filename: 'default_user_pic.jpg')
 
 file2 = File.open('app/assets/images/soccerball.jpg')
-rapkat.photo.attach(io: file, filename: 'soccerball.jpg')
+rapkat.photo.attach(io: file2, filename: 'soccerball.jpg')
 
 file3 = File.open('app/assets/images/motorcycle.jpg')
-leyla.photo.attach(io: file, filename: 'motorcycle.jpg')
+leyla.photo.attach(io: file3, filename: 'motorcycle.jpg')
 
 
 post1 = Post.create!(
@@ -49,7 +49,7 @@ post2 = Post.create!(
 )
 
 file4 = File.open('app/assets/images/fcb.jpg')
-post2.photo.attach(io: file, filename: 'fcb.jpg')
+post2.photo.attach(io: file4, filename: 'fcb.jpg')
 
 post3 = Post.create!(
     title: "Soccer Skills", 
