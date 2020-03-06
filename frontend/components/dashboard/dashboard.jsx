@@ -20,20 +20,41 @@ class Dashboard extends React.Component {
         if (posts.length === 0) return null;
         const img_url = currentUser.img_url;
         const postsList = posts.reverse().map((post, i) => {
-            if (post.img_url) {
+            if (post.post_type === "Photo Form") {
                 return (
-                <li key={i * i} className="post-1" key={post.id}>
-                    <img className="post-img" src={post.img_url} />
-                </li >
+                    <li key={i * i} className="post-photo">
+                        <img className="post-img" src={post.img_url} />
+                        {post.body}
+                    </li >
                 )
+            } else if (post.post_type === "Quote Form") {
+                return (
+                    <li key={Math.random() + 1} className="post-quote">
+                        {post.title}
+                    </li>
+                )
+            } else if (post.post_type === "Link Form") {
+                <li key={Math.random() + 1} className="post-link">
+                    <a href={post.title} target="_blank">
+                        {post.title}
+                    </a>
+                </li>
             } else {
                 return (
-                <div key={post.title.length + i} className="post-1">
-                    <li key={post.body.length + 1}>{post.title}</li>
-                    <li key={post.id + 2 + i}>{post.body}</li>
-                </div>
+                    <li key={Math.random() + i} className="post-text">
+                        {post.title}
+                        {post.body}
+                    </li>
                 )
             }
+        });
+
+        const postsUserPhoto = posts.reverse().map((post, i) => {
+            return (
+                <div key={i * i} className="post-user-pic">
+                    <img className="post-user-img" src={post.img_url} />
+                </div >
+            )
         });
 
         return (
@@ -54,11 +75,8 @@ class Dashboard extends React.Component {
                     </div>
 
                     <div className="posts-index-div">
-                        <div className="post-user-pic">
-                            {/* <img className="user-img"
-                                src={img_url}
-                            /> */}
-                            <div></div>
+                        <div className="pic-column">
+                            {postsUserPhoto}
                         </div>
                         <ul className="posts-index-list">
                             {postsList}

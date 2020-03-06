@@ -20,7 +20,8 @@
     margin-bottom: 40px;
 }
 
-.current-user-pic, .user-img {
+// .current-user-pic, 
+.user-img {
     display: flex;
     justify-content: start;
     height: 64px;
@@ -31,6 +32,7 @@
     background-size: cover;
     background-position: center;
     margin-right: 15px;
+    border-radius: 5px;
 }
 
 .posts-index-div {
@@ -41,8 +43,8 @@
 
 .posts-index-list {
     // border: 5px solid red;
-    width: 580px;
-    max-width: 580;
+    // width: 580px;
+    // max-width: 580;
     min-height: 200px;
     background-size: cover;
     background-position: center;
@@ -50,38 +52,76 @@
     flex-direction: column;
 }
 
-.posts-index-list > li {
-    background-color: yellow;
-    border: 1px solid black;
-    height: 500px;
+.posts-index-list > * {
+    background-color: rgb(255, 255, 0);
+    // border: 5px solid black;
+    max-width: 580;
+    min-height: 500px;
+    max-height: 500px;
     margin-bottom: 30px;
+    border-radius: 5px;
 }
-
 
 .post-img {
     display: flex;
     justify-content: start;
-    height: 500px;
-    width: 580px;
+    padding-top: 40px;
+    height: 400px;
+    max-width: 580px;
     background-size: cover;
     background-position: center;
+}
+
+.pic-column {
+    display: flex;
+    flex-direction: column;
 }
 
 .post-user-pic {
     display: flex;
-    height: 64px;
-    width: 64px;
-    // border: 5px solid purple;
+    height: 500px;
+    width: 70px;
+    // border: 2px solid purple;
     margin-right: 5px;
     background-size: cover;
     background-position: center;
+    margin-bottom: 30px;
+}
+
+
+
+.post-user-img {
+    display: flex;
+    height: 64px;
+    width: 64px;
+    background-color: rgba(90, 230, 90, .8);
+    // background-image: image-url("stadium.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-right: 15px;
+    border-radius: 3px;
+}
+
+.post-user-pic-img:first-child {
+    border: none;
+
 }
 
 .post-1 {
-    font-size: 40px;
+    font-size: 30px;
     background-color: white;
     height: 300px;
-    width: 580px;
+    max-width: 580px;
+    align-items: center;
+    align-content: center;
+    
+}
+
+.post-text {
+    font-size: 30px;
+    background-color: white;
+    height: 300px;
+    max-width: 580px;
     align-items: center;
     align-content: center;
 }
