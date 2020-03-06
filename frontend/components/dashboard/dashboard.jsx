@@ -19,10 +19,21 @@ class Dashboard extends React.Component {
         const { currentUser, posts, logOut } = this.props;
         if (posts.length === 0) return null;
         const img_url = currentUser.img_url;
-        const postsList = posts.reverse().map(post => {
-            return <li key={post.id}>
-                <img className="post-img" src={post.img_url}/>
-            </li>
+        const postsList = posts.reverse().map((post, i) => {
+            if (post.img_url) {
+                return (
+                <li key={i * i} className="post-1" key={post.id}>
+                    <img className="post-img" src={post.img_url} />
+                </li >
+                )
+            } else {
+                return (
+                <div key={post.title.length + i} className="post-1">
+                    <li key={post.body.length + 1}>{post.title}</li>
+                    <li key={post.id + 2 + i}>{post.body}</li>
+                </div>
+                )
+            }
         });
 
         return (
@@ -51,12 +62,6 @@ class Dashboard extends React.Component {
                         </div>
                         <ul className="posts-index-list">
                             {postsList}
-                            <li>post1</li>
-                            {/* <li>post2</li>
-                            <li>post3</li>
-                            <li>post4</li>
-                            <li>post5</li> */}
-                            {/* {postsList} */}
                         </ul>
                         {/* <PostIndexContainer /> */}
                     </div>
