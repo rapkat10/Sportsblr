@@ -27,6 +27,11 @@ export const clearSessionErrors = () => ({
     type: CLEAR_SESSION_ERRORS
 })
 
+export const clearErrors = () => {
+    return dispatch => {
+        dispatch(clearErrorsErrors());
+    };
+};
 
 export const create_User = user => dispatch => (createUser(user)
     .then(user => (

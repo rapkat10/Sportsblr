@@ -106,6 +106,11 @@ class Navbar extends React.Component {
         const rightNav = (
             <>
                 <ul>
+                    {/* <li>
+                        <Link to="/dashboard">
+                            <i className="fa fa-home" />
+                        </Link>
+                    </li> */}
                     <li title="Account" className="icon-li">
                         <i onClick={this.handleIconClick} className="fas fa-user fa-lg"></i>
                         {/* <p className="account">Account</p> */}

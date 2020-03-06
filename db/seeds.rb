@@ -7,21 +7,53 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 demo = User.create!( 
-        email: 'demo@sportsblr.com',
-        username: 'DemoUser',
-        password: 'password'
-    )
+    email: 'demo@sportsblr.com',
+    username: 'DemoUser',
+    password: 'password'
+)
 
 rapkat = User.create!( 
-        email: 'rapkat99@sportsblr.com',
-        username: 'rapkat99',
-        password: 'hunter12'
-    )
+    email: 'rapkat99@sportsblr.com',
+    username: 'rapkat99',
+    password: 'hunter12'
+)
 
 leyla = User.create!( 
-        email: 'leyla_100@sportsblr.com',
-        username: 'leyla100',
-        password: 'hunter10'
-    )
+    email: 'leyla_100@sportsblr.com',
+    username: 'leyla100',
+    password: 'hunter10'
+)
+
+    
+file1 = File.open('app/assets/images/default_user_pic.jpg')
+demo.photo.attach(io: file, filename: 'default_user_pic.jpg')
+
+file2 = File.open('app/assets/images/soccerball.jpg')
+rapkat.photo.attach(io: file, filename: 'soccerball.jpg')
+
+file3 = File.open('app/assets/images/motorcycle.jpg')
+leyla.photo.attach(io: file, filename: 'motorcycle.jpg')
 
 
+post1 = Post.create!(
+    title: "Champions league Final Game is soon!", 
+    body: "The game is goin to be in Istanbul",
+    post_type: "text",
+    user_id: demo.id
+)
+
+post2 = Post.create!(
+    body: "Beautiful Stadium",
+    post_type: "photo",
+    user_id: rapkat.id
+)
+
+file4 = File.open('app/assets/images/fcb.jpg')
+post2.photo.attach(io: file, filename: 'fcb.jpg')
+
+post3 = Post.create!(
+    title: "Soccer Skills", 
+    body: "https://www.youtube.com/watch?v=rT-8s97CMfI",
+    post_type: "link",
+    user_id: rapkat.id
+)

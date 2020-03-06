@@ -26,7 +26,8 @@ class ApplicationController < ActionController::Base
     end
 
     def require_logged_in
-        render json: ["Unauthorized"], status: 401 unless logged_in?
+        # render json: ["Unauthorized"], status: 401 unless logged_in?
+        redirect_to new_session_url if !logged_in?
     end
 
 end

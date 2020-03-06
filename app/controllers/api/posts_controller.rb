@@ -6,9 +6,9 @@ class Api::PostsController < ApplicationController
         @posts ||= Post.order(id: :DESC).includes(:user).all
     end
 
-    # def allposts
-    #     @posts ||= Post.all
-    # end
+    def allposts
+        @posts ||= Post.all
+    end
 
     def currentpost
         @post ||= Post.find_by(id: params[:id])
@@ -27,7 +27,8 @@ class Api::PostsController < ApplicationController
     def create
         @post = Post.new(post_params)
         @post.user_id = current_user.id
-        @posts = filteredposts
+        # @posts = filteredposts
+        @posts = allposts
         if @post.save
             # render 'api/posts/index'
             render 'api/posts/show'
@@ -44,7 +45,6 @@ class Api::PostsController < ApplicationController
             render 'api/posts/show'
         else 
             render json: @user.errors.full_messages, status: 422
-            # render 'api/posts/index'
         end
     end
 
@@ -59,7 +59,7 @@ class Api::PostsController < ApplicationController
     def post_params
         # params.require(:post).permit(:title, :body, :post_type)
         params.require(:post).permit(
-            :title, :body, :post_type, :photo, :video, :audio
+            :title, :body, :post_type, :photo, :audio, :video
         )
     end
 
