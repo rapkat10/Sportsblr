@@ -6,6 +6,15 @@
     zoom: 1.0;
 }
 @media only screen and (max-width: 600px) {
+
+    .form-container {
+        position: absolute;
+        top: 0;
+        bottom: 40%;
+        right: 0;
+        left: 40%;
+    }
+
     .posts-main-div {
         position: absolute;
         top: 0;
@@ -36,15 +45,11 @@
 
     }
     .modal-box {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
-        right: 80%;
         bottom: 0;
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        max-width: 300px;
+        max-width: 200px;
         overflow-y: auto;
         z-index: 5;
     }
