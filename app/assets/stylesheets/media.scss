@@ -10,8 +10,8 @@
     .form-container {
         padding-top: 0px;
         padding-right: 0px;
-        padding-bottom: 150px;
-        padding-left: 100px;        
+        padding-bottom: 600px;
+        padding-left: 150px;
 
     }
 
@@ -28,7 +28,7 @@
         z-index: -1;
     }
     .icons-box {
-        // width: 80%;
+        width: 80%;
         z-index: 4;
     }
     .posts-index-list {
@@ -44,14 +44,20 @@
         right: 20%;
 
     }
+
+    .modal-background {
+        display: flex;
+        justify-content: start;
+        padding-top: 0px;
+        padding-right: 150px;
+        padding-bottom: 600px;
+        padding-left: 0px;
+    }
+
     .modal-box {
         overflow-y: auto;
         z-index: 5;
-        padding-right: 75px;
-        margin-right: 75px;
-        width: 150px;
-        align-items: center;
-        align-content: center;
+        padding-right: 150px;
     }
 }
 
