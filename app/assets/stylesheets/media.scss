@@ -1,27 +1,11 @@
-
 // /* Mobile Styles */
 // @media only screen and (max-width: 400px) {
 // }
-
 @viewport {
     width: device-width;
     zoom: 1.0;
 }
-
-
 @media only screen and (max-width: 600px) {
-
-    .form-container, .form-box, .form {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 20%;
-        display: flex;
-        flex-direction: column;
-        max-width: 300px;
-    }
-    
     .posts-main-div {
         position: absolute;
         top: 0;
@@ -34,12 +18,10 @@
         max-width: 300px;
         z-index: -1;
     }
-
     .icons-box {
         width: 80%;
         z-index: 4;
     }
-
     .posts-index-list {
         top: 20%;
     }
@@ -52,59 +34,12 @@
         max-width: 300px;
         right: 20%;
 
-    .post-img-main {
-        background-color: white;
-        width: 80%;
-        max-width: 300px;
-        display: flex;
-        flex-direction: column;
-        border-radius: 5px;
-    }
-
-    .post-img {
-        min-height: 300px;
-        max-height: 950px;
-        max-width: 350px;
-        right: 20%;
-        width: 80%;
-        background-size: cover;
-        background-position: center;
-    }
-
-    .post-quo-main {
-        background-color: white;
-        right: 20%;
-        width: 80%;
-        max-width: 350px;
-        display: flex;
-        flex-direction: column;
-        border-radius: 5px;
-    }
-
-    .post-link-main {
-        background-color: white;
-        right: 20%;
-        width: 80%;
-        max-width: 350px;
-        display: flex;
-        flex-direction: column;
-        border-radius: 5px;
-    }
-
-    .post-chat-main {
-        background-color: white;
-        right: 20%;
-        width: 80%;
-        max-width: 300px;
-        display: flex;
-        flex-direction: column;
-        border-radius: 5px;
     }
     .modal-box {
         position: absolute;
         top: 0;
         left: 0;
-        right: 20%;
+        right: 80%;
         bottom: 0;
         display: flex;
         flex-direction: column;
@@ -113,7 +48,6 @@
         overflow-y: auto;
         z-index: 5;
     }
-
 }
 
 // /* Tablet Styles */
