@@ -11,42 +11,33 @@
 
 @media only screen and (max-width: 600px) {
 
-    .form-box {
-        width: 80%;
-        max-width: 350px;
-    }
-
-    .form {
+    .form-container, .form-box, .form {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 20%;
         display: flex;
-        justify-content: center;
         flex-direction: column;
-        align-items: center;
-        margin-right: 0px;
-        width: 80%;
-        top: 0vh;
+        max-width: 300px;
     }
-
-    .Sportsblr {
-        max-width: 350px;
-        top: 0vh;
-        width: 80%;
-    }
-
     
     .posts-main-div {
         position: absolute;
         top: 0;
         bottom: 0;
+        left: 0;
+        right: 20%;
         margin-top: 120px;
         display: flex;
         flex-direction: column;
-        max-width: 350px;
+        max-width: 300px;
         z-index: -1;
     }
 
     .icons-box {
         width: 80%;
-        z-index: 5;
+        z-index: 4;
     }
 
     .posts-index-list {
@@ -58,12 +49,13 @@
         min-height: 300px;
         font-family: sans-serif;
         width: 80%;
-        max-width: 350px;
+        max-width: 300px;
+        right: 20%;
 
     .post-img-main {
         background-color: white;
         width: 80%;
-        max-width: 350px;
+        max-width: 300px;
         display: flex;
         flex-direction: column;
         border-radius: 5px;
@@ -73,6 +65,7 @@
         min-height: 300px;
         max-height: 950px;
         max-width: 350px;
+        right: 20%;
         width: 80%;
         background-size: cover;
         background-position: center;
@@ -80,6 +73,7 @@
 
     .post-quo-main {
         background-color: white;
+        right: 20%;
         width: 80%;
         max-width: 350px;
         display: flex;
@@ -89,6 +83,7 @@
 
     .post-link-main {
         background-color: white;
+        right: 20%;
         width: 80%;
         max-width: 350px;
         display: flex;
@@ -98,24 +93,25 @@
 
     .post-chat-main {
         background-color: white;
-        // border: 1px solid green;
+        right: 20%;
         width: 80%;
-        max-width: 350px;
+        max-width: 300px;
         display: flex;
         flex-direction: column;
         border-radius: 5px;
     }
     .modal-box {
-        // border: 3px solid rgb(37, 4, 129);
         position: absolute;
         top: 0;
+        left: 0;
+        right: 20%;
         bottom: 0;
         display: flex;
         flex-direction: column;
         width: 80%;
-        max-width: 350px;
+        max-width: 300px;
         overflow-y: auto;
-        border-radius: 5px;
+        z-index: 5;
     }
 
 }
