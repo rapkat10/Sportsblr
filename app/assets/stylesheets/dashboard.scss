@@ -231,7 +231,9 @@
 }
 
 .post-img {
-    max-height: 600px;
+    min-width: 580px;
+    min-height: 300px;
+    max-height: 950px;
     max-width: 580px;
     background-size: cover;
     background-position: center;
