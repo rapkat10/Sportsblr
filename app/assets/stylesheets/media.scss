@@ -12,6 +12,7 @@
 @media only screen and (max-width: 600px) {
 
     .form-box {
+        width: 80%;
         max-width: 350px;
     }
 
@@ -21,42 +22,47 @@
         flex-direction: column;
         align-items: center;
         margin-right: 0px;
+        width: 80%;
+        top: 0vh;
     }
 
     .Sportsblr {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        font-size: 60px;
-        color: rgba(17, 69, 238, .7);
-        padding-top: 0%;
-        margin: 40px;
-        font-family: sans-serif;
-        font-weight: bolder;
+        max-width: 350px;
+        top: 0vh;
+        width: 80%;
     }
 
+    
     .posts-main-div {
         position: absolute;
         top: 0;
         bottom: 0;
-        margin-top: 80px;
+        margin-top: 120px;
         display: flex;
         flex-direction: column;
         max-width: 350px;
         z-index: -1;
     }
 
+    .icons-box {
+        width: 80%;
+        z-index: 5;
+    }
+
+    .posts-index-list {
+        top: 20%;
+    }
     .posts-index-list> * {
         margin-bottom: 30px;
         border-radius: 5px;
         min-height: 300px;
         font-family: sans-serif;
+        width: 80%;
         max-width: 350px;
 
     .post-img-main {
         background-color: white;
-        // border: 1px solid green;
+        width: 80%;
         max-width: 350px;
         display: flex;
         flex-direction: column;
@@ -64,16 +70,17 @@
     }
 
     .post-img {
-        max-width: 350px;
         min-height: 300px;
         max-height: 950px;
         max-width: 350px;
+        width: 80%;
         background-size: cover;
         background-position: center;
     }
 
     .post-quo-main {
         background-color: white;
+        width: 80%;
         max-width: 350px;
         display: flex;
         flex-direction: column;
@@ -82,6 +89,7 @@
 
     .post-link-main {
         background-color: white;
+        width: 80%;
         max-width: 350px;
         display: flex;
         flex-direction: column;
@@ -91,13 +99,25 @@
     .post-chat-main {
         background-color: white;
         // border: 1px solid green;
+        width: 80%;
         max-width: 350px;
         display: flex;
         flex-direction: column;
         border-radius: 5px;
     }
+    .modal-box {
+        // border: 3px solid rgb(37, 4, 129);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        max-width: 350px;
+        overflow-y: auto;
+        border-radius: 5px;
+    }
 
-}
 }
 
 // /* Tablet Styles */
@@ -131,3 +151,5 @@
 //         width: 480px;
 //     }
 // }
+// 
+}
