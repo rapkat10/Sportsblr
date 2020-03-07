@@ -9,10 +9,10 @@
 
     .form-container {
         position: absolute;
-        top: 0;
-        bottom: 40%;
-        right: 0;
-        left: 40%;
+        top: 40%;
+        bottom: 0%;
+        right: 40%;
+        left: 0%;
     }
 
     .posts-main-div {
@@ -45,13 +45,12 @@
 
     }
     .modal-box {
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
+        // width: 100%;
         max-width: 200px;
         overflow-y: auto;
         z-index: 5;
+        padding-right: 20px;
+        margin-right: 20px;
     }
 }
 
