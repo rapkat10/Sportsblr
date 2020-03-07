@@ -1,20 +1,13 @@
 @media only screen and (max-width: 600px) {
-    .form-box {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        height: 100vh;
-        width: 100vw;
-        right: 0vw;
+    
+    .form-container {
+        left: 50%;
+        margin-left: 50%;
     }
 
-    .form-container {
-        position: relative;
-        height: 100vh;
-        width: 100vw;
-        align-content: center;
-        top: 0vh;
+    .form-box {
+        left: 50%;
+        margin-left: 50%;
     }
 
     .post-form-box {
@@ -23,16 +16,194 @@
     }
 
     .posts-main-div {
-        height: 100vh;
-        width: 100vw;
-        left: 0vh;
+        height: 80vh;
+        width: 80%;
     }
 
     .posts-index-list > * {
-        margin-bottom: 10%;
-        border-radius: 5px;
-        font-family: sans-serif;
         left: 0vw;
-        align-content: center;
     }
+    .posts-form-div {
+        left: 50%;
+        margin-left: 50%;
+        margin-bottom: 10px;
+
+    }
+
+    .post_buttons {
+        width: fit-content;
+    }
+
+    .posts-index {
+        left: 50%;
+        margin-left: 50%;
+    }
+
+    .posts-index > * {
+        left: 50%;
+        margin-left: 50%;
+    }
+}
+
+
+// /* Mobile Styles */
+@media only screen and (max-width: 400px) {
+    .form-container {
+        left: 50%;
+        margin-left: 50%;
+    }
+
+    .form-box {
+        left: 50%;
+        margin-left: 50%;
+    }
+
+    .post-form-box {
+        display: flex;
+        align-self: center;
+    }
+
+    .posts-main-div {
+        height: 80vh;
+        width: 80%;
+    }
+
+    .posts-index-list>* {
+        left: 0vw;
+    }
+
+    .posts-form-div {
+        left: 50%;
+        margin-left: 50%;
+        margin-bottom: 10px;
+
+    }
+
+    .post_buttons {
+        width: fit-content;
+    }
+
+    .posts-index {
+        left: 50%;
+        margin-left: 50%;
+    }
+
+    .posts-index>* {
+        left: 50%;
+        margin-left: 50%;
+    }
+}
+
+// /* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    .form-container {
+        left: 50%;
+        margin-left: 50%;
+    }
+
+    .form-box {
+        left: 50%;
+        margin-left: 50%;
+    }
+
+    .post-form-box {
+        display: flex;
+        align-self: center;
+    }
+
+    .posts-main-div {
+        height: 80vh;
+        width: 80%;
+    }
+
+    .posts-index-list>* {
+        left: 0vw;
+    }
+
+    .posts-form-div {
+        left: 50%;
+        margin-left: 50%;
+        margin-bottom: 10px;
+
+    }
+
+    .post_buttons {
+        width: fit-content;
+    }
+
+    .posts-index {
+        left: 50%;
+        margin-left: 50%;
+    }
+
+    .posts-index>* {
+        left: 50%;
+        margin-left: 50%;
+    }
+}
+
+// /* Desktop Styles */
+// @media only screen and (min-width: 961px) {
+// }
+
+// @media screen and (max-width: 320px) {
+
+//     /* comes into effect for screens less than or equal to 320 pixels */
+//     #somethingorother {
+//         width: 120px;
+//     }
+// }
+
+@media screen and (min-width: 321px) and (max-width: 480px) {
+
+    // /* comes into effect for screens between 321 and 480 pixels (inclusive) */
+    // #somethingorother {
+    //     width: 320px;
+    // }
+
+    .form-container {
+        width: 320px;
+    }
+
+    .form-box {
+        width: 320px;
+    }
+
+    .post-form-box {
+        width: 320px;
+        display: flex;
+        align-self: center;
+    }
+
+    .posts-main-div {
+       width: 320px;
+    }
+
+    .posts-index-list > * {
+        width: 320px;
+    }
+    .posts-form-div {
+      width: 320px;
+    }
+
+    .posts-index {
+       width: 320px;
+    }
+
+    .posts-index > * {
+        width: 320px;
+    }
+}
+
+// @media screen and (min-width: 481px) {
+
+//     /* comes into effect for screens larger than or equal to 481 pixels */
+//     #somethingorother {
+//         width: 480px;
+//     }
+// }
+
+@viewport {
+    width: device-width;
+    zoom: 1.0;
 }
