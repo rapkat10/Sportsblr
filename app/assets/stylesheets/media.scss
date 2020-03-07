@@ -5,7 +5,23 @@
 //     width: device-width;
 //     zoom: 1.0;
 // }
-// @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
+    .icons-box {
+        z-index: 4;
+    }
+    .posts-main-div {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        max-width: 660px;
+        z-index: -1;
+    }
+    .posts-index-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
 
 // /* Tablet Styles */
 // @media only screen and (min-width: 401px) and (max-width: 960px) {
