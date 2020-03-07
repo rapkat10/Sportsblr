@@ -1,8 +1,29 @@
 .post-form-box {
     display: flex;
-    justify-content: flex-end;
+    // justify-content: flex-end;
+    justify-content: space-between;
     min-width: 650px;
     // border: 3px solid green;
+}
+
+.text-form-modal-user-pic-div {
+    display: flex;
+    width: 70px;
+    // border: 2px solid purple;
+}
+
+.text-form-modal-user-pic {
+    display: flex;
+    height: 64px;
+    width: 64px;
+    min-height: 64px;
+    min-width: 64px;
+    background-size: cover;
+    background-position: center;
+    // margin-right: 15px;
+    border-radius: 5px;
+    // position: sticky;
+    // top: 10%;
 }
 
 .text-form {
@@ -34,7 +55,7 @@
 .body-text {
     width: 540px;
     padding: 20px 20px;
-    height: 150px;
+    height: 75px;
     border: none;
     font-size: 13px;
     resize: none;
@@ -76,6 +97,13 @@
     color: white;
 }
 
+.photo-form {
+    // border: 3px solid red;
+    width: 580px;
+    background-color: white;
+    // border-radius: 5px;
+}
+
 // .photo-post {
 //     width: 100%;
 // }
@@ -87,24 +115,21 @@
 }
 
 .upload-file {
-    color: black;
+    color: #989898;
     text-align: center;
     font-size: 14px;
     width: 540px;
     padding: 5px 20px;
     border-top: 1px dashed grey;
     border-bottom: 1px dashed grey;
-    background-color: rgb(242, 242, 242);
+    background-color: #f2f2f2;
     height: 170px;
+    cursor: pointer;
 }
 
 .post-camera {
     font-size: 45px;
-    padding: 20px 0 15px 0;
-}
-
-.photo-form {
-    background-color: white;
+    padding: 50px 0 15px 0;
 }
 
 .photo-body-text {
@@ -117,14 +142,18 @@
 }
 
 .fa-smile {
-    font-size: 20px;
-    padding: 30px 0 0 0;
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 15px;
+    color: #989898;
+    cursor: pointer;
 }
 
-.image-prev {
+.media-prev {
     display: block;
     margin: 0 auto;
     width: 540px;
+    
     background-size: cover;
     background-repeat: no-repeat;
 }

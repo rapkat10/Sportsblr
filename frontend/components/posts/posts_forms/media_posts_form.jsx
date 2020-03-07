@@ -17,6 +17,14 @@ class MediaPostsForm extends React.Component {
     this.handleSubmitPhoto = this.handleSubmitPhoto.bind(this);
     this.handleFileVideo = this.handleFileVideo.bind(this);
     this.handleSubmitVideo = this.handleSubmitVideo.bind(this);
+    this.handleFileAudio = this.handleFileAudio.bind(this);
+    this.handleSubmitAudio = this.handleSubmitAudio.bind(this);
+  }
+
+  disableSubmit() {
+    return (e) => {
+      e.target.setAttribute('disabled', 'disabled');
+    };
   }
 
   handleInput(field) {
@@ -26,7 +34,6 @@ class MediaPostsForm extends React.Component {
   }
 
   handleFilePhoto(e) {
-    // ability to preview a file before upload
     const file = e.currentTarget.files[0];
     const fileReader = new FileReader();
     fileReader.onloadend = () => {
@@ -40,7 +47,6 @@ class MediaPostsForm extends React.Component {
   }
 
   handleFileVideo(e) {
-    // ability to preview a file before upload
     const file = e.currentTarget.files[0];
     const fileReader = new FileReader();
     fileReader.onloadend = () => {
@@ -53,11 +59,24 @@ class MediaPostsForm extends React.Component {
     }
   }
 
+  handleFileAudio(e) {
+    const file = e.currentTarget.files[0];
+    const fileReader = new FileReader();
+    fileReader.onloadend = () => {
+      this.setState({ audioFile: file, audioUrl: fileReader.result })
+    };
+    if (file) {
+      fileReader.readAsDataURL(file);
+    } else {
+      this.setState({ audioUrl: "", audioFile: null });
+    }
+  }
+
   handleSubmitPhoto(e) {
     e.preventDefault();
     const formData = new FormData();
     if (this.state.photoFile) {
-      formData.append('post[post_type]', "photo");
+      formData.append('post[post_type]', "Photo Form");
       if (this.state.body) formData.append('post[body]', this.state.body);
       formData.append('post[id]', this.state.post.id)
       formData.append('post[photo]', this.state.photoFile);
@@ -70,7 +89,7 @@ class MediaPostsForm extends React.Component {
     e.preventDefault();
     const formData = new FormData();
     if (this.state.photoFile) {
-      formData.append('post[post_type]', "video");
+      formData.append('post[post_type]', "Video Form");
       if (this.state.body) formData.append('post[body]', this.state.body);
       formData.append('post[id]', this.state.post.id)
       formData.append('post[video]', this.state.videoFile);
@@ -79,8 +98,20 @@ class MediaPostsForm extends React.Component {
     }
   }
 
+  handleSubmitAudio(e) {
+    e.preventDefault();
+    const formData = new FormData();
+    if (this.state.photoFile) {
+      formData.append('post[post_type]', "Audio Form");
+      if (this.state.body) formData.append('post[body]', this.state.body);
+      formData.append('post[id]', this.state.post.id)
+      formData.append('post[audio]', this.state.audioFile);
+      // debugger;
+      this.props.action(formData, this.state.post).then(this.props.closeModal());
+    }
+  }
+
   render() {
-    const preview = this.state.photoUrl ? <img className="image-prev" src={this.state.photoUrl} /> : null;
 
     const photoForm = <div> 
       <input className="upload"
@@ -92,8 +123,8 @@ class MediaPostsForm extends React.Component {
         <label htmlFor="file">
           <div className="upload-file">
             <p><i className="post-camera fas fa-camera"></i></p>
-            <p>Upload a photo</p>
-            <p><i className="far fa-smile"></i></p>
+            <p>Upload photos</p>
+            <p><i className="far fa-smile">Take a selfie</i></p>
           </div>
         </label>
     </div>
@@ -107,53 +138,80 @@ class MediaPostsForm extends React.Component {
         />
     )
     
-    // const videoForm = <div>
-    //   <input className="upload"
-    //     type="file"
-    //     name="file"
-    //     id="file"
-    //     onChange={this.handleFileVideo}
-    //   />
-    //   <label htmlFor="file">
-    //     <div className="upload-file">
-    //       <p><i className="post-camera fas fa-video"></i></p>
-    //       <p>Upload a video</p>
-    //     </div>
-    //   </label>
-    // </div>
+    const videoForm = <div>
+      <input className="upload"
+        type="file"
+        name="file"
+        id="file"
+        onChange={this.handleFileVideo}
+      />
+      <label htmlFor="file">
+        <div className="upload-file">
+          <p><i className="post-camera fas fa-video"></i></p>
+          <p>Upload a video</p>
+        </div>
+      </label>
+    </div>
 
-    // let selectedForm;
-    // let selectedSubmitfunc;
-    // let selectedPreview;
+    const audioForm = <div>
+      <input className="upload"
+        type="file"
+        name="file"
+        id="file"
+        onChange={this.handleFileAudio}
+      />
+      <label htmlFor="file">
+        <div className="upload-file">
+          <p><i className="post-camera fas fa-headphones"></i></p>
+          <p>Upload a audio</p>
+        </div>
+      </label>
+    </div>
 
-    // const { formType } = this.props;
+    let selectedForm;
+    let selectedSubmitfunc;
+    let selectedPreview;
 
-    // if (formType === 'Photo Form') {
-    //   selectedForm = photoForm;
-    //   selectedSubmitfunc = this.handleSubmitPhoto;
-    //   selectedPreview = this.state.photoUrl ? <img className="image-prev" src={this.state.photoUrl} /> : null;
+    const { formType } = this.props;
 
-    // }
-    // if (formType === 'Audio Form') {
-    //   selectedForm = audioForm;
-    // }
-    // if (formType === 'Video Form') {
-    //   selectedForm = videoForm;
-    //   selectedSubmitfunc = this.handleSubmitVideo; 
-    //   selectedPreview = this.state.videoUrl ? <img className="image-prev" src={this.state.videoUrl} /> : null;
-    // }
+    if (formType === 'Photo Form') {
+      selectedForm = photoForm;
+      selectedSubmitfunc = this.handleSubmitPhoto;
+      selectedPreview = this.state.photoUrl ? <img className="media-prev" src={this.state.photoUrl} /> : null;
+
+    }
+    if (formType === 'Audio Form') {
+      selectedForm = audioForm;
+      selectedSubmitfunc = this.handleSubmitAudio;
+      selectedPreview = this.state.audioUrl ?
+      <audio className="media-prev" controls>
+        <source src={this.state.audioUrl} />
+      </audio>  
+      : null;
+    }
+    if (formType === 'Video Form') {
+      selectedForm = videoForm;
+      selectedSubmitfunc = this.handleSubmitVideo; 
+      selectedPreview = this.state.videoUrl ? 
+      <video className="media-prev" controls>
+        <source src={this.state.videoUrl} />
+      </video>
+      : null;
+    }
 
     return (
       <div className="post-form-box">
-        <form className="photo-form" onSubmit={this.handleSubmitPhoto}>
+        <div className="text-form-modal-user-pic-div">
+          <img className="text-form-modal-user-pic"
+            src={this.props.currentUser.img_url}
+          />
+        </div>
+        <form className="photo-form" onSubmit={selectedSubmitfunc}>
           <div className="post-form-header">
             {this.props.currentUser.username}
           </div>
-          {/* {selectedPreview}
+          {selectedPreview}
           {selectedForm}
-          {inputContent} */}
-          {preview}
-          {photoForm}
           {inputContent}
           <div className="post-form-footer">
             <button onClick={this.props.closeModal} 
@@ -162,7 +220,7 @@ class MediaPostsForm extends React.Component {
             <input className="submit-button" 
               type="submit" 
               value="Post" 
-            />
+            /> 
           </div>
         </form>
       </div>

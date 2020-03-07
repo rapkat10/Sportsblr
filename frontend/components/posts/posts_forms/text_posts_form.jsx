@@ -14,12 +14,6 @@ class TextPostsForm extends React.Component {
         });
     }
 
-    // update(field) {
-    //     return (e) => {
-    //         this.setState({ [field]: e.currentTarget.value });
-    //     };
-    // }
-
     handleSubmit(e) {
         e.preventDefault();
         this.props.action(this.state).then(this.props.closeModal());
@@ -65,6 +59,12 @@ class TextPostsForm extends React.Component {
                 onChange={this.handleInput("title")}
                 placeholder="Type or Paste a URL"
             />
+            <textarea className="body-text"
+                type="text"
+                value={this.state.body}
+                onChange={this.handleInput("body")}
+                placeholder="You can write something!"
+            />
         </>;
 
         const chatForm = <>
@@ -94,13 +94,14 @@ class TextPostsForm extends React.Component {
         return (
 
             <div className="post-form-box">
-                {/* <div className="user_name">
-                    {this.props.currentUser.username}
-                </div> */}
+                <div className="text-form-modal-user-pic-div">
+                    <img className="text-form-modal-user-pic" 
+                        src={this.props.currentUser.img_url} 
+                    />
+                </div>
                 <form className="text-form" onSubmit={this.handleSubmit}>
                     <div className="post-form-header">
                         {this.props.currentUser.username}
-                    
                     </div>
                     {selectedform}
                     <div className="post-form-footer">

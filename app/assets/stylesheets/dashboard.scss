@@ -1,3 +1,125 @@
+// .posts-main-div {
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 22%;
+//     // border: 3px solid red;
+//     margin-top: 80px;
+//     display: flex;
+//     flex-direction: column;
+//     min-width: 650px;
+//     max-width: 800px;
+//     z-index: -1;
+//     // padding: 20px;
+// }
+
+// .posts-form-div {
+//     display: flex;
+//     justify-content: flex-end;
+//     // border: 3px solid green;
+//     margin-bottom: 40px;
+// }
+
+// // .current-user-pic, 
+// .user-img {
+//     display: flex;
+//     justify-content: start;
+//     height: 64px;
+//     width: 64px;
+//     // border: 5px solid purple;
+//     // margin-right: 5px;
+//     // background-image: image-url("default_user_pic.jpg");
+//     background-size: cover;
+//     background-position: center;
+//     margin-right: 15px;
+//     border-radius: 5px;
+// }
+
+// .posts-index-div {
+//     border: 3px solid green;
+//     display: flex;
+//     justify-content: flex-end;
+// }
+
+// .posts-index-list {
+//     // border: 2px solid red;
+//     // width: 580px;
+//     // max-width: 580;
+//     min-height: 200px;
+//     background-size: cover;
+//     background-position: center;
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// .posts-index-list>* {
+//     background-color: rgb(255, 255, 0);
+//     // border: 2px solid black;
+//     max-width: 580px;
+//     min-height: 500px;
+//     max-height: 500px;
+//     margin-bottom: 30px;
+//     border-radius: 5px;
+// }
+
+// .post-img {
+//     display: flex;
+//     justify-content: start;
+//     padding-top: 40px;
+//     height: 400px;
+//     max-width: 580px;
+//     background-size: cover;
+//     background-position: center;
+// }
+
+// .pic-column {
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// .post-user-pic {
+//     display: flex;
+//     height: 500px;
+//     width: 70px;
+//     border: 2px solid purple;
+//     margin-right: 5px;
+//     background-size: cover;
+//     background-position: center;
+//     margin-bottom: 30px;
+// }
+
+
+
+// .post-user-img {
+//     display: flex;
+//     height: 64px;
+//     width: 64px;
+//     min-height: 64px;
+//     min-width: 64px;
+//     background-color: rgba(90, 230, 90, .8);
+//     background-image: image-url("motorcycle.jpg");
+//     background-size: cover;
+//     background-position: center;
+//     margin-right: 15px;
+//     border-radius: 3px;
+// }
+
+// .post-user-pic-img:first-child {
+//     border: none;
+
+// }
+
+// .post-text {
+//     font-size: 30px;
+//     background-color: white;
+//     height: 300px;
+//     max-width: 580px;
+//     align-items: center;
+//     align-content: center;
+// }
+
+
+
 .posts-main-div {
     position: absolute;
     top: 0;
@@ -7,10 +129,8 @@
     margin-top: 80px;
     display: flex;
     flex-direction: column;
-    min-width: 650px;
-    max-width: 800px;
+    max-width: 660px;
     z-index: -1;
-    // padding: 20px;
 }
 
 .posts-form-div {
@@ -20,7 +140,6 @@
     margin-bottom: 40px;
 }
 
-// .current-user-pic, 
 .user-img {
     display: flex;
     justify-content: start;
@@ -42,86 +161,375 @@
 }
 
 .posts-index-list {
-    // border: 5px solid red;
+    // border: 2px solid red;
     // width: 580px;
     // max-width: 580;
-    min-height: 200px;
-    background-size: cover;
-    background-position: center;
+    // min-height: 200px;
+    // background-size: cover;
+    // background-position: center;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .posts-index-list > * {
-    background-color: rgb(255, 255, 0);
-    // border: 5px solid black;
-    max-width: 580;
-    min-height: 500px;
-    max-height: 500px;
     margin-bottom: 30px;
     border-radius: 5px;
+    min-height: 300px;
+    font-family: sans-serif;
+}
+// ---------------------------------------------------------------
+.post-photo {
+    // border: 5px solid yellow;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.post-img {
+.post-img-user-pic-div {
     display: flex;
-    justify-content: start;
-    padding-top: 40px;
-    height: 400px;
-    max-width: 580px;
-    background-size: cover;
-    background-position: center;
-}
-
-.pic-column {
-    display: flex;
-    flex-direction: column;
-}
-
-.post-user-pic {
-    display: flex;
-    height: 500px;
     width: 70px;
     // border: 2px solid purple;
-    margin-right: 5px;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 30px;
 }
 
-
-
-.post-user-img {
+.post-img-user-pic {
     display: flex;
     height: 64px;
     width: 64px;
-    background-color: rgba(90, 230, 90, .8);
-    // background-image: image-url("stadium.jpg");
+    min-height: 64px;
+    min-width: 64px;
     background-size: cover;
     background-position: center;
     margin-right: 15px;
-    border-radius: 3px;
+    border-radius: 5px;
+    position: sticky;
+    top: 10%;
 }
 
-.post-user-pic-img:first-child {
-    border: none;
-
-}
-
-.post-1 {
-    font-size: 30px;
+.post-img-main {
     background-color: white;
-    height: 300px;
+    // border: 1px solid green;
+    min-width: 580px;
     max-width: 580px;
-    align-items: center;
-    align-content: center;
-    
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
 }
+
+.post-img-header-div {
+    max-height: 50px;
+    min-height: 30px;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.post-img-div {
+    // display: flex;
+    // justify-content: flex-end;
+}
+
+.post-img {
+    max-height: 600px;
+    max-width: 580px;
+    background-size: cover;
+    background-position: center;
+}
+
+.post-img-body-div {
+    min-height: 75px;
+    max-width: 580px;
+    padding-left: 10px;
+    font-size: 25px;
+}
+
+.post-img-footer-div {
+    max-height: 50px;
+    min-height: 30px;
+    max-width: 580px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+// --------------------------------------------------------------
+
+.post-quote {
+    // border: 5px solid yellow;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    min-height: 100px;
+}
+
+.post-quo-user-pic-div {
+    display: flex;
+    width: 70px;
+    // border: 2px solid purple;
+}
+
+.post-quo-user-pic {
+    display: flex;
+    height: 64px;
+    width: 64px;
+    min-height: 64px;
+    min-width: 64px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 15px;
+    border-radius: 5px;
+    position: sticky;
+    top: 10%;
+}
+
+.post-quo-main {
+    background-color: white;
+    // border: 1px solid green;
+    min-width: 580px;
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.post-quo-header-div {
+    max-height: 50px;
+    min-height: 30px;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.post-quo-title-div {
+    min-height: 75px;
+    max-width: 580px;
+    padding-left: 10px;
+}
+
+.post-quo-body-div {
+    min-height: 75px;
+    max-width: 580px;
+    padding-left: 10px;
+    font-size: 25px;
+}
+
+.post-quo-footer-div {
+    max-height: 50px;
+    min-height: 30px;
+    max-width: 580px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+// -----------------------------------------------------------------
+
+.post-link {
+    // border: 5px solid yellow;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    min-height: 100px;
+}
+
+.post-link-user-pic-div {
+    display: flex;
+    width: 70px;
+    // border: 2px solid purple;
+}
+
+.post-link-user-pic {
+    display: flex;
+    height: 64px;
+    width: 64px;
+    min-height: 64px;
+    min-width: 64px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 15px;
+    border-radius: 5px;
+    position: sticky;
+    top: 10%;
+}
+
+.post-link-main {
+    background-color: white;
+    // border: 1px solid green;
+    min-width: 580px;
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.post-link-header-div {
+    max-height: 50px;
+    min-height: 30px;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.post-link-title-div {
+    min-height: 50px;
+    max-width: 580px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.post-link-body-div {
+    min-height: 10px;
+    max-width: 580px;
+    padding-left: 10px;
+    font-size: 25px;
+}
+
+.post-link-footer-div {
+    max-height: 50px;
+    min-height: 30px;
+    max-width: 580px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+
+// --------------------------------------------------------------------
 
 .post-text {
+    // border: 5px solid yellow;
     font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    min-height: 100px;
+}
+
+.post-text-user-pic-div {
+    display: flex;
+    width: 70px;
+    // border: 2px solid purple;
+}
+
+.post-text-user-pic {
+    display: flex;
+    height: 64px;
+    width: 64px;
+    min-height: 64px;
+    min-width: 64px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 15px;
+    border-radius: 5px;
+    position: sticky;
+    top: 10%;
+}
+
+.post-text-main {
     background-color: white;
-    height: 300px;
+    // border: 1px solid green;
+    min-width: 580px;
     max-width: 580px;
-    align-items: center;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.post-text-header-div {
+    max-height: 50px;
+    min-height: 30px;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.post-text-title-div {
+    min-height: 50px;
+    max-width: 580px;
+    padding-left: 10px;
+}
+
+.post-text-body-div {
+    min-height: 50px;
+    max-width: 580px;
+    padding-left: 10px;
+    font-size: 25px;
+}
+
+.post-text-footer-div {
+    max-height: 50px;
+    min-height: 30px;
+    max-width: 580px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+// --------------------------------------------------------------
+
+.post-chat {
+    // border: 5px solid yellow;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    min-height: 100px;
+}
+
+.post-chat-user-pic-div {
+    display: flex;
+    width: 70px;
+    // border: 2px solid purple;
+}
+
+.post-chat-user-pic {
+    display: flex;
+    height: 64px;
+    width: 64px;
+    min-height: 64px;
+    min-width: 64px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 15px;
+    border-radius: 5px;
+    position: sticky;
+    top: 10%;
+}
+
+.post-chat-main {
+    background-color: white;
+    // border: 1px solid green;
+    min-width: 580px;
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.post-chat-header-div {
+    max-height: 50px;
+    min-height: 30px;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.post-chat-title-div {
+    min-height: 50px;
+    max-width: 580px;
+    padding-left: 10px;
+}
+
+.post-chat-body-div {
+    min-height: 50px;
+    max-width: 580px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.post-chat-footer-div {
+    max-height: 50px;
+    min-height: 30px;
+    max-width: 580px;
+    padding-left: 10px;
+    font-size: 15px;
 }
