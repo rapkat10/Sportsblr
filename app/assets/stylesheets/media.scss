@@ -3,9 +3,95 @@
 // @media only screen and (max-width: 400px) {
 // }
 
-// @media only screen and (max-width: 600px) {
-    
-// }
+@media only screen and (max-width: 600px) {
+
+    .form-box {
+        max-width: 350px;
+    }
+
+    .form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0px;
+    }
+
+    .Sportsblr {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-size: 60px;
+        color: rgba(17, 69, 238, .7);
+        padding-top: 0%;
+        margin: 40px;
+        font-family: sans-serif;
+        font-weight: bolder;
+    }
+
+    .posts-main-div {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        max-width: 350px;
+        z-index: -1;
+    }
+
+    .posts-index-list> * {
+        margin-bottom: 30px;
+        border-radius: 5px;
+        min-height: 300px;
+        font-family: sans-serif;
+        max-width: 350px;
+
+    .post-img-main {
+        background-color: white;
+        // border: 1px solid green;
+        max-width: 350px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+    }
+
+    .post-img {
+        max-width: 350px;
+        min-height: 300px;
+        max-height: 950px;
+        max-width: 350px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .post-quo-main {
+        background-color: white;
+        max-width: 350px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+    }
+
+    .post-link-main {
+        background-color: white;
+        max-width: 350px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+    }
+
+    .post-chat-main {
+        background-color: white;
+        // border: 1px solid green;
+        max-width: 350px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+    }
+
+}
 
 
 // /* Tablet Styles */
