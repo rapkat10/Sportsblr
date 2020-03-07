@@ -5,9 +5,6 @@
     top: 0;
     right: 0;
     left: 0;
-}
-
-.main-nav {
     display: flex;
     justify-content: space-around;
 }
@@ -23,6 +20,7 @@
 .logo-splash {
     margin-top: 10px;
     margin-left: 40px;
+    z-index: 2;
 }
 
 .flex-icon {
@@ -54,10 +52,6 @@
     background-color: #0b396d;
 }
 
-// .account {
-//     display: none;
-// }
-
 .click-it {
     position: fixed;
     top: 0;
@@ -66,18 +60,6 @@
     left: 0;
     z-index: -1;
 }
-
-// .icon-li:hover .account {
-//     display: block;
-//     position: absolute;
-//     bottom: -50%;
-//     right: -23%;
-//     border: 2px solid rgb(228, 223, 223);
-//     background-color: gray;
-//     color: white;
-//     padding: 5px;
-//     cursor: default;
-// }
 
 .fas {
     color: white;
@@ -138,11 +120,3 @@
 .logout-dropdown-button {
     cursor: pointer;
 }
-
-
-
-
-
-
-
-// -------------------------------
