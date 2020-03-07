@@ -7,12 +7,6 @@
     left: 0;
 }
 
- @media only screen and (max-width: 600px) {
-    .form-container {
-        position: relative;
-    }
-
- }
 
 
 .linkto-flex {
@@ -39,21 +33,6 @@
     flex-direction: column;
     align-items: center;
 }
-
- @media only screen and (max-width: 600px) {
-    .form-box {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        left: 10%;
-        right: 10%;
-        top: 10%;
-        bottom: 10%;
-    }
-
- }
-
 
 .form {
    display: flex;
