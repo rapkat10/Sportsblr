@@ -22,7 +22,7 @@ class TextPostsForm extends React.Component {
     render() {
 
         const textForm = <>
-            <input className="title-text"
+            <textarea className="title-text"
                 type="text"
                 value={this.state.title}
                 onChange={this.handleInput("title")}
@@ -44,7 +44,7 @@ class TextPostsForm extends React.Component {
                 onChange={this.handleInput("title")}
                 placeholder="&ldquo;Quote&rdquo;"
             />
-            <textarea className="body-text"
+            <textarea className="qoute-body-text"
                 type="text"
                 value={this.state.body}
                 onChange={this.handleInput("body")}
@@ -53,13 +53,13 @@ class TextPostsForm extends React.Component {
          </>;
 
         const linkForm = <>
-            <input className="link-text"
+            <textarea className="link-text"
                 type="text"
                 value={this.state.title}
                 onChange={this.handleInput("title")}
                 placeholder="Type or Paste a URL"
             />
-            <textarea className="body-text"
+            <textarea className="link-body-text"
                 type="text"
                 value={this.state.body}
                 onChange={this.handleInput("body")}
@@ -68,7 +68,7 @@ class TextPostsForm extends React.Component {
         </>;
 
         const chatForm = <>
-            <input className="title-text"
+            <textarea className="chat-text"
                 type="text"
                 value={this.state.title}
                 onChange={this.handleInput("title")}
@@ -78,7 +78,7 @@ class TextPostsForm extends React.Component {
                 type="text"
                 value={this.state.body}
                 onChange={this.handleInput("body")}
-                placeholder="Write you message!"
+                placeholder={this.props.currentUser.username + ": Write you message!"}
             />
 
         </>;

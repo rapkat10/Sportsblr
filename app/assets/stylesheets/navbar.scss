@@ -35,6 +35,20 @@
     // border: 1px solid red;
 }
 
+.icon-list {
+    min-width: 100px;
+    max-width: 300px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fa-home {
+    color: white;
+    font-size: 20px;
+}
+
 .logo:hover {
     color: red;
     cursor: pointer;
@@ -63,11 +77,11 @@
     // z-index: 1;
 }
 
-.fas {
+.fa-user {
     color: white;
 }
 
-.fas:hover {
+.fas:hover, .fa-heart:hover, .far-heart:hover {
     cursor: pointer;
 }
 

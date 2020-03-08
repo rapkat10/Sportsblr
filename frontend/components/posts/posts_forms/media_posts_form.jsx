@@ -21,12 +21,6 @@ class MediaPostsForm extends React.Component {
     this.handleSubmitAudio = this.handleSubmitAudio.bind(this);
   }
 
-  disableSubmit() {
-    return (e) => {
-      e.target.setAttribute('disabled', 'disabled');
-    };
-  }
-
   handleInput(field) {
     return e => this.setState({
       [field]: e.target.value
@@ -111,6 +105,16 @@ class MediaPostsForm extends React.Component {
 
   render() {
 
+
+    const inputContent = (
+      <textarea className="photo-body-text"
+        type="text"
+        value={this.state.body}
+        onChange={this.handleInput("body")}
+        placeholder="Add a caption, if you like"
+      />
+    )
+
     const photoForm = <div> 
       <input className="upload"
         type="file"
@@ -120,36 +124,28 @@ class MediaPostsForm extends React.Component {
       />
         <label htmlFor="file">
           <div className="upload-file">
-            <p><i className="post-camera fas fa-camera"></i></p>
+            <p><i className="post-media-form fas fa-camera"></i></p>
             <p>Upload photos</p>
             <p><i className="far fa-smile">Take a selfie</i></p>
           </div>
         </label>
-    </div>
+    </div>;
 
-    const inputContent = (
-        <textarea className="photo-body-text"
-          type="text"
-          value={this.state.body}
-          onChange={this.handleInput("body")}
-          placeholder="Add a caption, if you like"
-        />
-    )
-    
     const videoForm = <div>
       <input className="upload"
         type="file"
         name="file"
         id="file"
-        onChange={this.handleFileVideo}
+        onChange={this.handleFileVideo} 
       />
       <label htmlFor="file">
         <div className="upload-file">
-          <p><i className="post-camera fas fa-video"></i></p>
+          <p><i className="post-media-form fas fa-video"></i></p>
           <p>Upload a video</p>
+          <p className="vid">I love videos</p>
         </div>
       </label>
-    </div>
+    </div>;
 
     const audioForm = <div>
       <input className="upload"
@@ -160,11 +156,12 @@ class MediaPostsForm extends React.Component {
       />
       <label htmlFor="file">
         <div className="upload-file">
-          <p><i className="post-camera fas fa-headphones"></i></p>
+          <p><i className="post-media-form fas fa-headphones"></i></p>
           <p>Upload a audio</p>
+          <p className="vid">Lets listen to music</p>
         </div>
       </label>
-    </div>
+    </div>;
 
     let selectedForm;
     let selectedSubmitfunc;
@@ -225,4 +222,5 @@ class MediaPostsForm extends React.Component {
     )
   }
 }
+
 export default withRouter(MediaPostsForm);
