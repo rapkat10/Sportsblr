@@ -88,12 +88,11 @@ class MediaPostsForm extends React.Component {
   handleSubmitVideo(e) {
     e.preventDefault();
     const formData = new FormData();
-    if (this.state.photoFile) {
+    if (this.state.videoFile) {
       formData.append('post[post_type]', "Video Form");
       if (this.state.body) formData.append('post[body]', this.state.body);
       formData.append('post[id]', this.state.post.id)
       formData.append('post[video]', this.state.videoFile);
-      // debugger;
       this.props.action(formData, this.state.post).then(this.props.closeModal());
     }
   }
@@ -101,12 +100,11 @@ class MediaPostsForm extends React.Component {
   handleSubmitAudio(e) {
     e.preventDefault();
     const formData = new FormData();
-    if (this.state.photoFile) {
+    if (this.state.audioFile) {
       formData.append('post[post_type]', "Audio Form");
       if (this.state.body) formData.append('post[body]', this.state.body);
       formData.append('post[id]', this.state.post.id)
       formData.append('post[audio]', this.state.audioFile);
-      // debugger;
       this.props.action(formData, this.state.post).then(this.props.closeModal());
     }
   }

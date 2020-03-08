@@ -1,5 +1,4 @@
 
-
 .main-nav {
     position: fixed;
     top: 0;
@@ -7,6 +6,8 @@
     left: 0;
     display: flex;
     justify-content: space-around;
+
+    // border: 1px solid rgb(238, 255, 0);
 }
 
 .flex-box-nav {
@@ -20,7 +21,6 @@
 .logo-splash {
     margin-top: 10px;
     margin-left: 40px;
-    z-index: 2;
 }
 
 .flex-icon {
@@ -31,6 +31,8 @@
     justify-content: flex-end;
     align-items: center;
     position: relative;
+
+    // border: 1px solid red;
 }
 
 .logo:hover {
@@ -47,9 +49,9 @@
 
 .nav-loggedin {
     height: 60px;
-    // border-bottom: 1px solid rgb(145, 193, 207);
     border-bottom: 1px solid #566a81;
     background-color: #0b396d;
+    // z-index: 1;
 }
 
 .click-it {
@@ -58,7 +60,7 @@
     bottom: 0;
     right: 0;
     left: 0;
-    z-index: -1;
+    // z-index: 1;
 }
 
 .fas {
@@ -72,22 +74,21 @@
 .user-dropdown-div {
     display: block;
     position: absolute;
-    // bottom: -260%;
     bottom: -270%;
     right: -33.5%;
-    border: 2px solid rgb(228, 223, 223);
+    // border: 2px solid rgb(228, 223, 223);
     width: 250px;
     height: 100px;
-    z-index: 2;
+    // z-index: 5;
     background-color: white;
-    // background-color: rgba(0, 0, 0, .1);
     border: 1px solid lightgray;
     border-radius: 3px;
-
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     align-items: flex-start;
+
+    // border: 5px solid  green;
 }
 
 .logout-dropdown-li {

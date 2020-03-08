@@ -9,13 +9,14 @@ import Modal from './modal/modal'
 
 const App = () => (
     <div className="app-div">
-        <Modal /> 
+        {/* <Modal />  */}
         <Switch>
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
             <ProtectedRoute path="/dashboard" component={DashboardContainer} />
             <AuthRoute exact path="/" component={GreetingContainer} />
         </Switch>
+        <Modal />
     </div>
 );
 

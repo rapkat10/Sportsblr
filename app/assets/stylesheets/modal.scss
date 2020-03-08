@@ -1,26 +1,42 @@
+
 .modal-background {
     position: fixed;
     display: flex;
-    justify-content: space-around;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 25, 53, .95);
+}
+.modal-div {
+    position: absolute;
+    top: 8%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-main-div {
+    // border: 1px solid rgb(255, 0, 170);
+    display: flex;
+    margin-top: 30px;
+    max-width: 1000px;
+}
+
+.modal-empty-space {
+    margin-left: 20px;
+    // border: 1px solid yellow;
+    width: 320px;
 }
 
 .modal-box {
-    // border: 3px solid rgb(37, 4, 129);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 22%;
-    margin-top: 80px;
-    display: flex;
-    flex-direction: column;
-    min-width: 660px;
-    max-width: 800px;
-    // padding-left: 10px;
-    overflow-y: auto;
     border-radius: 5px;
+    // border: 2px solid red;
+    max-height: 750px;
+    overflow-y: auto;
 }
+
+
+
+

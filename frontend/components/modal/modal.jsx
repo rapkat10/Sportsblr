@@ -49,8 +49,20 @@ const Modal = ({ modal, closeModal }) => {
     }
     return (
         <div className="modal-background" onClick={closeModal}>
-            <div className="modal-box" onClick={e => e.stopPropagation()}>
-                {component}
+            <div className="modal-div">
+                
+                <div className="modal-main-div">
+
+                    <div className="modal-box" onClick={e => e.stopPropagation()}>
+                        {component}
+                    </div>
+
+                    <div className="modal-empty-space">
+
+                    </div>
+
+                </div>
+
             </div>
         </div>
     );

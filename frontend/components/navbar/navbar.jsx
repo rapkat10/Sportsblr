@@ -36,11 +36,6 @@ class Navbar extends React.Component {
         const rightNav = (
             <>
                 <ul>
-                    {/* <li>
-                        <Link to="/dashboard">
-                            <i className="fa fa-home" />
-                        </Link>
-                    </li> */}
                     <li title="Account" className="icon-li">
                         <i onClick={this.handleIconClick} className="fas fa-user fa-lg"></i>
                     </li>
@@ -50,10 +45,9 @@ class Navbar extends React.Component {
         );
         
         const flexLogo = currentUser ? "flex-logo" : "logo-splash";
-        const leftNav = (
-            <section className={loggedin}>
+        const mainNav = (
+            <div className={loggedin}>
                 <div className="flex-box-nav">
-
                     <div className={flexLogo}>
                         <Link to={logolink}><strong className="logo">S</strong></Link>
                     </div>
@@ -61,14 +55,14 @@ class Navbar extends React.Component {
                         {currentUser ? rightNav : <></>}
                     </div>
                 </div>
-            </section>
+            </div>
         );
 
         return (
-            <nav className="navbar">
-                {leftNav}
+            <>
                 {this.state.clicked ? wholepage : <></>}
-            </nav>
+                {mainNav}
+            </>
         )
     }
 }

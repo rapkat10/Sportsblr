@@ -164,29 +164,119 @@ class Dashboard extends React.Component {
                         </div>
                     </div >
                 )
-            }
+            } else if (post.post_type === "Video Form") {
+            return (
+                <div key={i * i} className="post-photo">
+                    <div className="post-img-user-pic-div">
+                        <img className="post-img-user-pic" src={post.user_imgUrl} />
+                    </div>
+                    <div className="post-img-main">
+                        <div className="post-img-header-div">
+                            {post.users_Username}
+                        </div>
+                        <video className="post-img-div" controls>
+                            <source src={post.video_url} />
+                        </video>
+                        <div className="post-img-body-div">
+                            {post.body}
+                        </div>
+                        <div className="post-img-footer-div">
+                            More features being worked on!
+                            </div>
+                    </div>
+                </div >
+            )
+            } else if (post.post_type === "Audio Form") {
+                return (
+                    <div key={i * i} className="post-photo">
+                        <div className="post-img-user-pic-div">
+                            <img className="post-img-user-pic" src={post.user_imgUrl} />
+                        </div>
+                        <div className="post-img-main">
+                            <div className="post-img-header-div">
+                                {post.users_Username}
+                            </div>
+                            <audio className="post-img-div" controls>
+                                <source src={post.audio_url} />
+                            </audio>
+                            <div className="post-img-body-div">
+                                {post.body}
+                            </div>
+                            <div className="post-img-footer-div">
+                                More features being worked on!
+                            </div>
+                        </div>
+                    </div >
+                )
+            }  
         });
 
         return (
-            <div className="dashboard-div">              
-                <img className="backgroundImage" src={window.dashboard} />
-                <div className="nav-container">
-                    <NavbarContainer />
-                </div>
-                <div className="posts-main-div">
-                    <div className="posts-form-div">
-                        <div className="current-user-pic">
-                            <img className="user-img"
-                                src={img_url} 
-                            />
-                        </div>
-                        <PostsNavContainer />
-                    </div>
+
+            <>
+
+                <div className="dashboard-div clearfix">
+
+                    <img className="backgroundImage" src={window.dashboard} />
+
+
+                    <div className="posts-main-div">
+
                         <div className="posts-index-list">
+
+                            <div className="posts-form-div">
+                                <div className="current-user-pic">
+                                    <img className="user-img"
+                                        src={img_url} />
+                                </div>
+                                <PostsNavContainer />
+                            </div>
+
                             {postsList}
+
                         </div>
+
+                        <div className="recommended-blogs-div">
+                            Recommended Blogs Coming soon....
+                        </div>
+                    </div>
+
                 </div>
-            </div>
+
+                <NavbarContainer />
+
+            </>
+
+        //     <div className="dashboard-div">
+
+        //         <img className="backgroundImage" src={window.dashboard} />
+                
+        //         <div className="nav-container">
+        //             <NavbarContainer />
+        //         </div>
+
+        //         <div className="posts-main-div">
+
+        //             <div className="posts-index-list">
+
+        //                 <div className="posts-form-div">
+        //                     <div className="current-user-pic">
+        //                         <img className="user-img"
+        //                             src={img_url}/>
+        //                     </div>
+        //                     <PostsNavContainer />
+        //                 </div>
+
+        //                 {postsList}
+
+        //             </div>
+
+        //             <div className="recommended-blogs-div">
+        //                 Recommended Blogs Coming soon....
+        //             </div>
+        //         </div>    
+
+        //  </div>
         )
     }
 }
