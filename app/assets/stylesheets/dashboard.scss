@@ -179,10 +179,10 @@
 
 .post-quote {
     // border: 5px solid yellow;
-    font-size: 30px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: space-between;
-    min-height: 100px;
 }
 
 .post-quo-user-pic-div {
@@ -215,44 +215,36 @@
     border-radius: 5px;
 }
 
-.post-quo-header-div {
-    max-height: 50px;
-    min-height: 30px;
-    font-size: 16px;
-    padding-top: 10px;
-    padding-left: 10px;
-    font-weight: bold;
-}
-
 .post-quo-title-div {
-    min-height: 75px;
+    min-height: 45px;
     max-width: 580px;
-    padding-left: 10px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 15px;
 }
 
 .post-quo-body-div {
-    min-height: 75px;
+    // min-height: 75px;
     max-width: 580px;
-    padding-left: 10px;
-    font-size: 25px;
-}
-
-.post-quo-footer-div {
-    max-height: 50px;
-    min-height: 30px;
-    max-width: 580px;
-    padding-left: 10px;
-    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 // -----------------------------------------------------------------
 
 .post-link {
     // border: 5px solid yellow;
-    font-size: 30px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: space-between;
-    min-height: 100px;
 }
 
 .post-link-user-pic-div {
@@ -285,36 +277,27 @@
     border-radius: 5px;
 }
 
-.post-link-header-div {
-    max-height: 50px;
-    min-height: 30px;
-    font-size: 16px;
-    padding-top: 10px;
-    padding-left: 10px;
-    font-weight: bold;
-}
-
 .post-link-title-div {
-    min-height: 50px;
+    // min-height: 45px;
     max-width: 580px;
-    padding-left: 10px;
     font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    
 }
 
 .post-link-body-div {
-    min-height: 20px;
     max-width: 580px;
-    padding-left: 10px;
+    max-width: 580px;
+    padding-left: 20px;
+    padding-right: 30px;
+    padding-top: 10px;
     padding-bottom: 15px;
-    font-size: 25px;
-}
-
-.post-link-footer-div {
-    max-height: 50px;
-    min-height: 30px;
-    max-width: 580px;
-    padding-left: 10px;
-    font-size: 15px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 
@@ -358,34 +341,27 @@
     border-radius: 5px;
 }
 
-.post-text-header-div {
-    max-height: 50px;
-    min-height: 30px;
-    font-size: 16px;
-    padding-top: 10px;
-    padding-left: 10px;
-    font-weight: bold;
-}
 
 .post-text-title-div {
-    min-height: 50px;
+    min-height: 45px;
     max-width: 580px;
-    padding-left: 10px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 15px;
 }
 
 .post-text-body-div {
-    min-height: 50px;
     max-width: 580px;
-    padding-left: 10px;
-    font-size: 25px;
-}
-
-.post-text-footer-div {
-    max-height: 50px;
-    min-height: 30px;
     max-width: 580px;
-    padding-left: 10px;
-    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 // --------------------------------------------------------------
@@ -428,34 +404,26 @@
     border-radius: 5px;
 }
 
-.post-chat-header-div {
-    max-height: 50px;
-    min-height: 30px;
-    font-size: 16px;
-    padding-top: 10px;
-    padding-left: 10px;
-    font-weight: bold;
-}
-
 .post-chat-title-div {
-    min-height: 50px;
+    min-height: 45px;
     max-width: 580px;
-    padding-left: 10px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 15px;
 }
 
 .post-chat-body-div {
-    min-height: 50px;
+   max-width: 580px;
     max-width: 580px;
-    padding-left: 10px;
-    font-size: 18px;
-}
-
-.post-chat-footer-div {
-    max-height: 50px;
-    min-height: 30px;
-    max-width: 580px;
-    padding-left: 10px;
-    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 
