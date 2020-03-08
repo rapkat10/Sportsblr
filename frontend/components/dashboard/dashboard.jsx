@@ -8,13 +8,6 @@ class Dashboard extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { clicked: false };
-        this.handleIconClick = this.handleIconClick.bind(this);
-    }
-
-    handleIconClick() {
-        const value = this.state.clicked ? false : true;
-        this.setState({ clicked: value });
     }
 
     componentDidMount() {
@@ -29,29 +22,10 @@ class Dashboard extends React.Component {
 
         const postsList = posts.reverse().map((post, i) => {
 
-            // const editButton = <span className="logout-dropdown-button">
-            //     Edit
-            // </span>;
-
-            // const deleteButton = <span className="logout-dropdown-button">
-            //     Delete
-            // </span>;
-
-            // const dropdown = <>
-            //     <div className="user-dropdown-div">
-            //         <li className="account-dropdown">{editButton}</li>
-            //         <li className="logout-dropdown-li">{deleteButton}</li>
-            //     </div>
-            // </>;
-
-            // const wholepage = <div onClick={this.handleIconClick} className="click-it"></div>;
-
-
             let settingIcon;
             if (post.user_id === currentUser.id) {
                 settingIcon = <i className="cog-icon fas fa-cog"></i>;
             }
-
 
             const isLiked = "far fa-heart";
                 // : "fa fa-heart";
