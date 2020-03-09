@@ -28,16 +28,18 @@ class PostIndexList extends React.Component {
         const { currentUser, post, deletePost, openModal } = this.props;
         const i = post.id
 
-        const isLiked = "far fa-heart";
-        // : "fa fa-heart";
+        const isLiked = "fa fa-heart";
+        // : "far fa-heart";
 
         let footer;
         if (post.user_id === currentUser.id) {
             footer = <div className="footer-flex-div">
                 <p>More features being worked on!</p>
                 <p></p>
-                <i className={isLiked}></i>
-                <div className="setting-icon-div">
+                <div title="Like">
+                    <i className={isLiked}></i>
+                </div>
+                <div title="Post Options" className="setting-icon-div">
                     <i onClick={this.handleDropdown} className="cog-icon fas fa-cog"></i>
                 </div>
                 {(this.state.drop) ? (
@@ -45,12 +47,12 @@ class PostIndexList extends React.Component {
                         <div onClick={this.handleDropdown} className="close-dropdown"></div>
                         <div className="setting-dropwdown-div">
                             <ul>
-                                <li onClick={() => this.clickEdit()}>
+                                <li title="Edit" onClick={() => this.clickEdit()}>
                                     Edit
-                            </li>
-                                <li onClick={() => deletePost(post.id)}>
+                                </li>
+                                <li title="Delete" onClick={() => deletePost(post.id)}>
                                     Delete
-                            </li>
+                                </li>
                             </ul>
                         </div>
                     </>
@@ -61,7 +63,9 @@ class PostIndexList extends React.Component {
             footer = <div className="footer-flex-div">
                 <p>More features being worked on!</p>
                 <p></p>
-                <i className={isLiked}></i>
+                <div title="Like">
+                    <i className={isLiked}></i>
+                </div>
             </div>
         }
 

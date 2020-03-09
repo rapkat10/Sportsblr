@@ -79,12 +79,16 @@
 .cog-icon {
     color: gray;
     font-size: 20px;
-    // cursor: pointer;
 }
 
 .far-heart, .fa-heart {
     font-size: 20px;
+    color: #ff492f;
 }
+
+// .liked-heart {
+//     color: #ff492f;
+// }
 
 .post-all-footer-div {
     display: flex;
@@ -129,8 +133,8 @@
     cursor: pointer;
 }
 
-.setting-dropwdown-div>ul>li:hover {
-    background-color: lightblue;
+.setting-dropwdown-div>ul>*:hover {
+    background-color: rgb(200, 231, 241);
 }
 
 .close-dropdown {

@@ -5,10 +5,8 @@ import { getPosts } from '../../actions/post_actions';
 
 const mapStateToProps = (state, ownProps) => {
     const currentUserId = state.session.id;
-    // const posts = Object.values(state.entities.posts);
     return {
         currentUser: state.entities.users[currentUserId],
-        // posts
     }
 };
 

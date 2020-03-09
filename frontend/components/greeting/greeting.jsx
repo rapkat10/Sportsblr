@@ -14,7 +14,7 @@ class Greeting extends React.Component {
 
 
     render() {
-        const { currentUser, posts } = this.props;
+        const { currentUser } = this.props;
         const display = <>
             <h1 className="sportsblr">Sportsblr</h1>
             <Link className="get-started" to="/signup">Get Started</Link>        

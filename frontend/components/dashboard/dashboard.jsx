@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import NavbarContainer from '../navbar/navbar_container';
 import PostsNavContainer from '../posts/posts_nav_container';
 import PostsIndexContainer from './post_index/post_index_container';
+import Modal from '../modal/modal';
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);

@@ -6,7 +6,6 @@ import { closeModal } from '../../../actions/modal_actions';
 const mapStateToProps = (state, ownProps) => {
     const formType = ownProps.formType;
     const post = ownProps.post;
-    // debugger;
     const currentUser = state.entities.users[state.session.id];
     return ({
         post: {
