@@ -17,7 +17,8 @@ class Api::PostsController < ApplicationController
     end
 
     def index
-        @posts = allposts
+        # @posts = allposts
+        @posts = Post.all
         render 'api/posts/index'
     end
 
