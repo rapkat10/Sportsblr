@@ -1,6 +1,6 @@
 class Api::PostsController < ApplicationController
 
-    # before_action :require_logged_in, only: [:create, :update, :destroy]
+    before_action :require_logged_in, only: [:create, :update, :destroy]
 
     def filteredposts
         # @posts ||= Post.order(id: :DESC).includes(:user).where().all
@@ -10,7 +10,7 @@ class Api::PostsController < ApplicationController
     end
 
     def allposts
-        @posts ||= Post.all
+        @posts ||= Post.order(id: :DESC).includes(:user).all
     end
 
     def currentpost
@@ -18,7 +18,7 @@ class Api::PostsController < ApplicationController
     end
 
     def index
-        @posts = filteredposts
+        @posts = allposts
         render 'api/posts/index'
     end
 
