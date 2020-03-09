@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import NavbarContainer from '../navbar/navbar_container';
 import PostsNavContainer from '../posts/posts_nav_container';
-import PostsIndex from './posts_index';
+import PostsIndexContainer from './post_index/post_index_container';
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
@@ -15,7 +15,6 @@ class Dashboard extends React.Component {
     render() {
         const { currentUser, posts, logOut } = this.props;
         if (posts.length === 0) return null;
-
         return (<>
             <div className="dashboard-div clearfix">
                 <img className="backgroundImage" src={window.dashboard} />
@@ -28,10 +27,7 @@ class Dashboard extends React.Component {
                             </div>
                             <PostsNavContainer />
                         </div>
-                        <PostsIndex 
-                            currentUser={currentUser}
-                            posts={posts}
-                        />
+                        <PostsIndexContainer />
                     </div>
                     <div className="recommended-blogs-div">
                         Recommended Blogs Coming soon....

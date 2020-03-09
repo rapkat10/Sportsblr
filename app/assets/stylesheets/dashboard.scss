@@ -79,6 +79,7 @@
 .cog-icon {
     color: gray;
     font-size: 20px;
+    // cursor: pointer;
 }
 
 .far-heart, .fa-heart {
@@ -109,7 +110,9 @@
     padding-bottom: 20px;
 }
 
-.Look-for-me {
+
+
+.setting-dropwdown-div {
     max-height: 75px;
     min-width: 120px;
     color: gray;
@@ -121,22 +124,22 @@
     border-radius: 5px;
 }
 
-.Look-for-me > ul > li {
+.setting-dropwdown-div>ul>li {
     padding: 10px;
     cursor: pointer;
 }
 
-.Look-for-me > ul > li:hover {
+.setting-dropwdown-div>ul>li:hover {
     background-color: lightblue;
 }
 
-// .close-dropdown {
-//     position: fixed;
-//     top: 0;
-//     bottom: 0;
-//     right: 0;
-//     left: 0;
-// }
+.close-dropdown {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
 
 
 // ---------------------------------------------------------------

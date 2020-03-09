@@ -8,9 +8,8 @@ export default (state = null, action) => {
     switch (action.type) {
         case OPEN_MODAL:
             return {
-                modal: action.modal, postId: action.postId
+                modal: action.modal, post: action.post
             };
-            // return action.modal;
         case CLOSE_MODAL:
             return null;
         default:

@@ -17,9 +17,7 @@ const mapDispatchToProps = (dispatch) => ({
     logOut: () => dispatch(logOut()),
     openModal: (modal, postId) => dispatch(openModal(modal, postId)),
     getPosts: () => dispatch(getPosts()),
-
     
-    // clearErrors: () => dispatch(clearErrors()),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);

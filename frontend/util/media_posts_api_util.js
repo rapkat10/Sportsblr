@@ -1,6 +1,6 @@
 export const createMediaPost = (formData) => {
     return $.ajax({
-        method: "post",
+        method: "POST",
         url: "/api/posts",
         data: formData,
         contentType: false,
@@ -10,7 +10,7 @@ export const createMediaPost = (formData) => {
 
 export const editMediaPost = (formData, post) => {
     return $.ajax({
-        method: "patch",
+        method: "PATCH",
         url: `/api/posts/${post.id}`,
         data: formData,
         contentType: false,

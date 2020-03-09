@@ -14,7 +14,6 @@ export default (state = {}, action) => {
         case RECEIVE_POSTS:
             return Object.assign({}, state, action.posts)
         case RECEIVE_POST:
-            // debugger;
             return Object.assign({}, state, 
                 {[action.post.id]: action.post}
             );

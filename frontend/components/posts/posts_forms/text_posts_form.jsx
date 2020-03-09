@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-class TextPostsForm extends React.Component {
+class EditTextPostsForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = this.props.post;
@@ -91,6 +91,17 @@ class TextPostsForm extends React.Component {
         if (formType === 'Link Form') selectedform = linkForm;
         if (formType === 'Chat Form') selectedform = chatForm;
 
+
+
+        let submitClassName;
+        if (this.state.title) {
+            submitClassName = "submit-button";
+        } else if (this.state.body) {
+            submitClassName = "submit-button";
+        } else {
+            submitClassName = "noFileUploaded submit-button";
+        }
+
         return (
 
             <div className="post-form-box">
@@ -111,7 +122,7 @@ class TextPostsForm extends React.Component {
                             Close
                         </button>
                         <input 
-                            className="submit-button" 
+                            className={submitClassName} 
                             type="submit" 
                             value="Post" 
                         />
@@ -122,4 +133,4 @@ class TextPostsForm extends React.Component {
     }
 }
 
-export default withRouter(TextPostsForm);
+export default withRouter(EditTextPostsForm);

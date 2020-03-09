@@ -5,7 +5,7 @@ import { openModal } from '../../actions/modal_actions';
 const mapStateToProps = (state) => {
     const currentUserId = state.session.id;
     return {
-        currentUser: state.entities.users[currentUserId]
+        currentUser: state.entities.users[currentUserId],
     }
 };
 

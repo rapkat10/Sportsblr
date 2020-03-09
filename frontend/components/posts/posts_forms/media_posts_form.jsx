@@ -194,6 +194,13 @@ class MediaPostsForm extends React.Component {
       : null;
     }
 
+    let submitClassName;
+    if (selectedPreview) {
+      submitClassName = "submit-button"
+    } else {
+      submitClassName = "noFileUploaded submit-button"
+    }
+
     return (
       <div className="post-form-box">
         <div className="text-form-modal-user-pic-div">
@@ -212,7 +219,7 @@ class MediaPostsForm extends React.Component {
             <button onClick={this.props.closeModal} 
               className="close-button">Close
             </button>
-            <input className="submit-button" 
+            <input className={submitClassName} 
               type="submit" 
               value="Post" 
             /> 
