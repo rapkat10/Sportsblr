@@ -37,7 +37,7 @@ class Navbar extends React.Component {
             <>
                 <ul className="icon-list">
                     <li title="dashboard">
-                        <Link to="/dashboard">
+                        <Link to="/">
                             <i className="fas fa-home fa-lg"></i>
                         </Link>
                     </li>
@@ -54,7 +54,7 @@ class Navbar extends React.Component {
             <div className={loggedin}>
                 <div className="flex-box-nav">
                     <div className={flexLogo}>
-                        <Link to={logolink}><strong className="logo">S</strong></Link>
+                        <Link to="/"><strong className="logo">S</strong></Link>
                     </div>
                     <div className="flex-icon">
                         {currentUser ? rightNav : <></>}

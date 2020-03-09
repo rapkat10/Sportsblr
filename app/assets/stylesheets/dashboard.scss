@@ -96,12 +96,47 @@
 }
 
 .footer-flex-div {
-    min-width: 300px;
+    // min-width: 70px;
+    min-width: 280px;
     max-width: 580px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+
+    padding-right: 10px;
+
+    position: absolute;
+    padding-bottom: 20px;
 }
+
+.Look-for-me {
+    max-height: 75px;
+    min-width: 120px;
+    color: gray;
+    background-color: white;
+    border: 1px solid lightgray;
+    position: absolute;
+    top: 65%;
+    right: -15%;
+    border-radius: 5px;
+}
+
+.Look-for-me > ul > li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.Look-for-me > ul > li:hover {
+    background-color: lightblue;
+}
+
+// .close-dropdown {
+//     position: fixed;
+//     top: 0;
+//     bottom: 0;
+//     right: 0;
+//     left: 0;
+// }
 
 
 // ---------------------------------------------------------------

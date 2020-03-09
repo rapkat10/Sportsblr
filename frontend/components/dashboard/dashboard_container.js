@@ -5,7 +5,7 @@ import { openModal } from '../../actions/modal_actions';
 import { getPosts } from '../../actions/post_actions';
 
 const mapStateToProps = (state) => {
-    const posts = Object.values(state.entities.posts);
+    const posts = Object.values(state.entities.posts).reverse();
     const currentUserId = state.session.id;
     return {
         currentUser: state.entities.users[currentUserId],
