@@ -10,7 +10,8 @@ class Api::PostsController < ApplicationController
     end
 
     def allposts
-        @posts ||= Post.order(id: :DESC).includes(:user).all
+        # @posts ||= Post.order(id: :DESC).includes(:user).all
+        @posts ||= Post.all
     end
 
     def currentpost
