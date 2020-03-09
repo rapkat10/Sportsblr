@@ -9,7 +9,8 @@ class Api::PostsController < ApplicationController
     end
 
     def allposts
-        @posts ||= Post.order(id: :DESC).includes(:user).all
+        # @posts ||= Post.order(id: :DESC).includes(:user).all
+        @posts ||= Post.all
     end
 
     def currentpost
@@ -17,8 +18,7 @@ class Api::PostsController < ApplicationController
     end
 
     def index
-        # @posts = allposts
-        @posts = Post.all
+        @posts = allposts
         render 'api/posts/index'
     end
 
@@ -31,7 +31,6 @@ class Api::PostsController < ApplicationController
         @post = Post.new(post_params)
         # debugger
         @post.user_id = current_user.id
-        @posts = allposts
         if @post.save
             render 'api/posts/show'
         else 
@@ -41,7 +40,6 @@ class Api::PostsController < ApplicationController
 
     def update
         @post = currentpost
-
         if @post.update(post_params)
             render 'api/posts/show'
         else 
