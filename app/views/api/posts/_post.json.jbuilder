@@ -1,5 +1,8 @@
 json.extract! post, :id, :title, :body, :post_type, :user_id
 
+json.likerIds post.getLikersIds(post) 
+json.numLikes post.likes.length 
+
 json.users_Username post.user.username
 json.user_imgUrl url_for(post.user.photo) if post.user.photo.attached?
 

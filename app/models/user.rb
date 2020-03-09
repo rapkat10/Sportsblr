@@ -25,6 +25,16 @@ class User < ApplicationRecord
         foreign_key: :user_id,
         class_name: :Post
 
+    has_many :likes,
+        foreign_key: :user_id,
+        class_name: :Like
+
+    has_many :liked_posts,
+        through: :likes,
+        source: :post
+
+        
+
     has_one_attached :photo
 
     def default_photo
