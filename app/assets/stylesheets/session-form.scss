@@ -129,6 +129,10 @@
     color: white;
 }
 
+.form > button:focus {
+    outline: 0;
+}
+
 .signup-session {
     background-color: #00b8ff;
 }

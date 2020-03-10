@@ -195,6 +195,10 @@
     background-position: center;
 }
 
+video.post-media-div:focus {
+    outline: 0;
+}
+
 .post-media-audio-div {
     min-width: 580px;
     min-height: 70px;
@@ -203,6 +207,11 @@
     background-size: cover;
     background-position: center;
 }
+
+.post-media-audio-div:focus {
+    outline: 0;
+}
+
 
 .post-media-body-div {
     // min-height: 75px;
