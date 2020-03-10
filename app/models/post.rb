@@ -37,4 +37,11 @@ class Post < ApplicationRecord
         end
     end
 
+    def find_like(user_id)
+        like = Like.where(user_id: user_id)
+            .where(post_id: self.id).select(:id).first
+        like ? like.id : nil
+    end
+
 end
+

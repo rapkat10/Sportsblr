@@ -9,6 +9,8 @@ class PostIndexList extends React.Component {
         }
         this.clickEdit = this.clickEdit.bind(this);
         this.handleDropdown = this.handleDropdown.bind(this);
+        this.like = this.like.bind(this);
+        this.unlike = this.unlike.bind(this);
     }
 
     handleDropdown() {
@@ -24,21 +26,50 @@ class PostIndexList extends React.Component {
         this.handleDropdown();
     }
 
+    like(postId) {
+        this.props.createLike(postId)
+            .then(() => this.props.getPosts());
+    }
+
+    unlike(postId, likeId) {
+        this.props.deleteLike(postId, likeId)
+            .then(() => this.props.getPosts());
+    }
+
+
     render() {
         const { currentUser, post, deletePost, openModal } = this.props;
-        const i = post.id
+        const i = post.id;
 
-        const isLiked = "fa fa-heart";
-        // : "far fa-heart";
+        let likerId;
+        post.likerIds.forEach(liker_id => {
+            if (liker_id === currentUser.id) {
+                likerId = liker_id;
+            }
+        })
 
+        let notlikedheart;
+        let likedheart;
+        if (likerId) {
+            likedheart = <div title="Like">
+                <i className="likedheart fa fa-heart"
+                            onClick={() => this.unlike(post.id, post.userlikeId)}>
+                        </i>
+                </div>;
+        } else {
+            notlikedheart = <div title="Like">
+                        <i className="far fa-heart"
+                            onClick={() => this.like(post.id)}>
+                        </i>
+                </div>
+        }
+ 
         let footer;
         if (post.user_id === currentUser.id) {
             footer = <div className="footer-flex-div">
                 <p>More features being worked on!</p>
                 <p></p>
-                <div title="Like">
-                    <i className={isLiked}></i>
-                </div>
+                {likerId ? likedheart : notlikedheart}
                 <div title="Post Options" className="setting-icon-div">
                     <i onClick={this.handleDropdown} className="cog-icon fas fa-cog"></i>
                 </div>
@@ -63,9 +94,7 @@ class PostIndexList extends React.Component {
             footer = <div className="footer-flex-div">
                 <p>More features being worked on!</p>
                 <p></p>
-                <div title="Like">
-                    <i className={isLiked}></i>
-                </div>
+                {likerId ? likedheart : notlikedheart}
             </div>
         }
 
