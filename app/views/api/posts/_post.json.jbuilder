@@ -2,7 +2,7 @@ json.extract! post, :id, :title, :body, :post_type, :user_id
 
 json.likerIds post.getLikersIds(post)
 # json.likerIds post.getLikersIds(post)
-json.userlikeId post.find_like(current_user.id)
+json.userlikeId post.find_like(current_user.id) if current_user
 json.numLikes post.likes.length 
 
 json.users_Username post.user.username
