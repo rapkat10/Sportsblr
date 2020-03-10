@@ -6,10 +6,10 @@ class Api::PostsController < ApplicationController
         # @posts ||= Post.order(id: :DESC).includes(:user).where().all
         # implement when doing follows feature, will fetch only followed
         # posts!
+        @posts ||= Post.order(id: :DESC).includes(:user).all
     end
 
     def allposts
-        # @posts ||= Post.order(id: :DESC).includes(:user).all
         @posts ||= Post.all
     end
 
@@ -18,7 +18,7 @@ class Api::PostsController < ApplicationController
     end
 
     def index
-        @posts = allposts
+        @posts = filteredposts
         render 'api/posts/index'
     end
 
