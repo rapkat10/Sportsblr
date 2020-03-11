@@ -33,7 +33,23 @@ class User < ApplicationRecord
         through: :likes,
         source: :post
 
-        
+    has_many :followings,
+        foreign_key: :follower_id,
+        class_name: :Follow
+
+    has_many :followed_users, # array of users who you follow
+        through: :followings,
+        source: :followed
+
+
+    has_many :followers,
+        foreign_key: :followed_id,
+        class_name: :Follow
+
+    has_many :followers_users, # array of users who follows you
+        through: :followers,
+        source: :follower
+
 
     has_one_attached :photo
 
@@ -45,13 +61,34 @@ class User < ApplicationRecord
         end
     end
 
-    has_many :posts,
-        foreign_key: :user_id,
-        class_name: :Post
+    def unfollowed_users
+        User.where.not(id: self.id)
+            .where.not(id: Follow.select(:followed_id)
+            .where(follower_id: self.id)).limit(4)
+    end
 
-    has_many :posts,
-        foreign_key: :user_id,
-        class_name: :Post
+     def find_follow(follower_id)
+        follow = Follow.where(follower_id: follower_id).first
+        follow ? follow.id : nil
+    end
+
+    def getfollowerIds(user)
+        user.followers_users.map do |user|
+            user.id
+        end
+    end
+
+    def getfollowingIds(user)
+        user.followed_users.map do |user|
+            user.id
+        end
+    end
+
+    def getPostIds(user)
+        user.posts.map do |post|
+            post.id
+        end
+    end
 
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)
