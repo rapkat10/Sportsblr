@@ -54,10 +54,17 @@ class User < ApplicationRecord
     has_one_attached :photo
 
     def default_photo
+        profile_pics = [
+            "user1.jpeg", "user2.jpeg", "user3.jpeg",
+            "user4.jpeg", "user5.jpeg", "user6.jpeg",
+            "user7.jpeg", "user8.jpeg", "user9.jpeg",
+            "user10.jpeg", "user11.jpg", "user12.jpg"
+        ]
+        random = profile_pics.sample
         if !self.photo.attached?
-            file = File.open('app/assets/images/default_user_pic.jpg')
+            file = File.open("app/assets/images/#{random}")
             self.photo.attach(io: file,
-            filename: 'default_user_pic.jpg', content_type: 'image/jpg')
+            filename: 'favicon.png')
         end
     end
 

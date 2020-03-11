@@ -8,6 +8,8 @@
 
 User.delete_all
 Post.delete_all
+Like.delete_all
+Follow.delete_all
 
 demo = User.create!( 
     email: 'demo@sportsblr.com',
@@ -27,7 +29,6 @@ leyla = User.create!(
     password: 'hunter10'
 )
 
-    
 file1 = File.open('app/assets/images/default_user_pic.jpg')
 demo.photo.attach(io: file1, filename: 'default_user_pic.jpg')
 
@@ -36,6 +37,7 @@ rapkat.photo.attach(io: file2, filename: 'soccerball.jpg')
 
 file3 = File.open('app/assets/images/motorcycle.jpg')
 leyla.photo.attach(io: file3, filename: 'motorcycle.jpg')
+
 
 post1 = Post.create!(
     title: "Champions league Final Game is soon!", 
@@ -64,4 +66,110 @@ post4 = Post.create!(
     post_type: "Quote Form",
     user_id: demo.id
 )
+
+
+# Like1 = Like.create!(
+#     post_id: post1.id,
+#     user_id: demo.id
+# )
+
+# # Like2 = Like.create!(
+# #     post_id: post1.id,
+# #     user_id: demo.id
+# # )
+
+# Like3 = Like.create!(
+#     post_id: post1.id,
+#     user_id: leyla.id
+# )
+
+# Like4 = Like.create!(
+#     post_id: post1.id,
+#     user_id: rapkat.id
+# )
+# Like5 = Like.create!(
+#     post_id: post2.id,
+#     user_id: demo.id
+# )
+
+# Like6 = Like.create!(
+#     post_id: post2.id,
+#     user_id: demo.id
+# )
+
+# Like7 = Like.create!(
+#     post_id: post3.id,
+#     user_id: leyla.id
+# )
+
+# Like9 = Like.create!(
+#     post_id: post4.id,
+#     user_id: rapkat.id
+# )
+
+
+follow1 = Follow.create!(
+    follower_id: demo.id,
+    followed_id: rapkat.id
+)
+
+
+follow2 = Follow.create!(
+    follower_id: leyla.id,
+    followed_id: rapkat.id
+)
+
+follow3 = Follow.create!(
+    follower_id: demo.id,
+    followed_id: leyla.id
+)
+
+##################################
+
+
+user1 = User.create!( 
+    email: 'user1',
+    username: 'Messi10',
+    password: 'hunter10'
+)
+
+user2 = User.create!( 
+    email: 'user2',
+    username: 'Lebron23',
+    password: 'hunter10'
+)
+
+user3 = User.create!( 
+    email: 'user3',
+    username: 'Ronaldo_CR7',
+    password: 'hunter10'
+)
+
+user4 = User.create!( 
+    email: 'user4',
+    username: 'JJ_Watt99',
+    password: 'hunter10'
+)
+
+user5 = User.create!( 
+    email: 'user5',
+    username: 'Ronaldinho10',
+    password: 'hunter10'
+)
+
+file4 = File.open('app/assets/images/messi.jpg')
+user1.photo.attach(io: file4, filename: 'messi.jpg')
+
+file5 = File.open('app/assets/images/lebron.png')
+user2.photo.attach(io: file5, filename: 'lebron.png')
+
+file6 = File.open('app/assets/images/ronaldo.jpg')
+user3.photo.attach(io: file6, filename: 'ronaldo.jpg')
+
+file7 = File.open('app/assets/images/jjwat.jpeg')
+user4.photo.attach(io: file7, filename: 'jjwat.jpeg')
+
+file8 = File.open('app/assets/images/ronaldinho.jpg')
+user5.photo.attach(io: file8, filename: 'ronaldinho.jpg')
+
 
