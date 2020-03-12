@@ -16,7 +16,7 @@ class Dashboard extends React.Component {
 
     render() {
         const { currentUser, posts } = this.props;
-        // if (posts.length === 0) return null; //?
+        if (posts.length === 0) return null; 
         return (<>
             <div className="dashboard-div clearfix">
                 <img className="backgroundImage" src={window.dashboard} />

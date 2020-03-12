@@ -7,7 +7,6 @@ class CanFollowIndex extends React.Component {
     }
 
     componentDidMount() {
-        // this.props.getfollowFilteredPosts("followedFilter");
         this.props.getCanFollows(this.props.currentUser.id);
     }
 

@@ -38,10 +38,6 @@ class PostIndexList extends React.Component {
         });
     }
 
-    componentDidMount() {
-        this.props.getfollowFilteredPosts("followedFilter");
-    }
-
     render() {
         const { currentUser, post, deletePost, openModal } = this.props;
         const i = post.id;

@@ -5,11 +5,7 @@ class PostsIndex extends React.Component {
     constructor(props) {
         super(props);
     }
-
-    componentDidMount() {
-        this.props.getfollowFilteredPosts("followedFilter");
-    }
-
+    
     render() {
 
         const { posts, getfollowFilteredPosts, deletePost, 

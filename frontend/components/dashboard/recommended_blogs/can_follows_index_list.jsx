@@ -13,7 +13,7 @@ class CanFollowIndexList extends React.Component {
             this.props.user.id
             ).then(() => this.props.getCanFollows(
                 this.props.currentUser.id))
-                .then(() => this.props.getfollowFilteredPosts("followedFilter"));
+                    .then(() => this.props.getfollowFilteredPosts("followedFilter"));
     }
 
     render() {

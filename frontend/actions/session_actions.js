@@ -3,11 +3,7 @@ export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 export const CLEAR_SESSION_ERRORS = 'CLEAR_SESSION_ERRORS';
 
-import {
-    createUser,
-    login,
-    logout
-} from '../util/session_api_util';
+import { createUser, login, logout } from '../util/session_api_util';
 
 const receiveCurrentUser = (currentUser) => ({
     type: RECEIVE_CURRENT_USER,
@@ -39,7 +35,6 @@ export const create_User = user => dispatch => (createUser(user)
         dispatch(receiveErrors(errors.responseJSON))
     ))
 );
-
 
 export const logIn = user => dispatch => (login(user)
     .then(user => (

@@ -1,8 +1,7 @@
 import { 
     RECEIVE_POSTS, 
     RECEIVE_POST, 
-    REMOVE_POST,
-    CLEAR_POSTS
+    REMOVE_POST
 } from '../actions/post_actions';
 
 

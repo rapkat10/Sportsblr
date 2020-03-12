@@ -3,9 +3,6 @@ import { connect } from 'react-redux';
 import { editMediaPost } from '../../../actions/post_actions';import { closeModal } from '../../../actions/modal_actions';
 import EditMediaPostsForm from './edit_media_posts_form'
 
-import { getfollowFilteredPosts } from '../../../actions/post_actions'; //?
-
-
 const mapStateToProps = (state, ownProps) => {
   const formType = ownProps.formType;
   const post = ownProps.post;
@@ -29,9 +26,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
   return {
     action: (post, postId) => dispatch(editMediaPost(post, postId)),
-    closeModal: () => dispatch(closeModal()),
-    // getfollowFilteredPosts: (followedFilter) =>
-    //     dispatch(getfollowFilteredPosts(followedFilter)) //?
+    closeModal: () => dispatch(closeModal())
   };
 };
 

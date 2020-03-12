@@ -3,9 +3,6 @@ import EditTextPostsForm from './edit_text_posts_form';
 import { updatePost } from '../../../actions/post_actions';
 import { closeModal } from '../../../actions/modal_actions';
 
-import { getfollowFilteredPosts } from '../../../actions/post_actions'; //?
-
-
 const mapStateToProps = (state, ownProps) => {
     const formType = ownProps.formType;
     const post = ownProps.post;
@@ -26,9 +23,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
     return ({
         action: (post) => dispatch(updatePost(post)),
-        closeModal: () => dispatch(closeModal()),
-        // getfollowFilteredPosts: (followedFilter) =>
-        //     dispatch(getfollowFilteredPosts(followedFilter)) //?
+        closeModal: () => dispatch(closeModal())
     });
 }
 

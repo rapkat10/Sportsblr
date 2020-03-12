@@ -2,8 +2,6 @@ import {connect} from 'react-redux';
 import SessionForm from './session_form';
 import { logIn, clearSessionErrors } from '../../actions/session_actions';
 
-import { getfollowFilteredPosts } from '../../actions/post_actions'; //?
-
 const mapStateToProps = ({ errors }) => {
     return {
         formType: 'login',
@@ -14,8 +12,6 @@ const mapStateToProps = ({ errors }) => {
 const mapDispatchToProps = (dispatch) => ({
     clearSessionErrors: (errors) => dispatch(clearSessionErrors(errors)),
     logIn: (user) => dispatch(logIn(user)),
-    getfollowFilteredPosts: (followedFilter) =>
-        dispatch(getfollowFilteredPosts(followedFilter)), //? 
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);

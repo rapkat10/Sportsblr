@@ -79,6 +79,16 @@ file5 = File.open('app/assets/images/motorcycle.jpg')
 post5.photo.attach(io: file5, filename: 'motorcycle.jpg')
 
 
+post6 = Post.create!(
+    body: "",
+    post_type: "Photo Form",
+    user_id: leyla.id
+)
+
+file6 = File.open('app/assets/images/sunday.jpeg')
+post6.photo.attach(io: file6, filename: 'sunday.jpeg')
+
+
 Like1 = Like.create!(
     post_id: post1.id,
     user_id: demo.id

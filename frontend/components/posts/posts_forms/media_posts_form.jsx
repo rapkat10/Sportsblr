@@ -74,7 +74,10 @@ class MediaPostsForm extends React.Component {
       if (this.state.body) formData.append('post[body]', this.state.body);
       formData.append('post[id]', this.state.post.id)
       formData.append('post[photo]', this.state.photoFile);
-      this.props.action(formData, this.state.post).then(this.props.closeModal());
+      this.props.action(formData, this.state.post)
+        .then(window.location.reload(false), this.props.closeModal());
+        
+      // .then(this.props.closeModal(), window.location.reload(false));
 
     }
   }
@@ -103,12 +106,7 @@ class MediaPostsForm extends React.Component {
     }
   }
 
-  componentDidMount() {
-    this.props.getfollowFilteredPosts("followedFilter");
-  }
-
   render() {
-
 
     const inputContent = (
       <textarea className="photo-body-text"

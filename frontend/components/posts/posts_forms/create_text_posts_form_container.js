@@ -3,9 +3,6 @@ import TextPostsForm from './text_posts_form';
 import { createPost } from '../../../actions/post_actions';
 import { closeModal } from '../../../actions/modal_actions';
 
-import { getfollowFilteredPosts } from '../../../actions/post_actions'; //?
-
-
 const mapStateToProps = (state, ownProps) => {
     const formType = ownProps.formType;
     const currentUser = state.entities.users[state.session.id];
@@ -24,9 +21,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
     return ({
         action: (post) => dispatch(createPost(post)),
-        closeModal: () => dispatch(closeModal()),
-        // getfollowFilteredPosts: (followedFilter) =>
-        //     dispatch(getfollowFilteredPosts(followedFilter)) //?
+        closeModal: () => dispatch(closeModal())
     });
 }
 

@@ -4,8 +4,6 @@ export const RECEIVE_POSTS = "RECEIVE_ALL_POSTS";
 export const RECEIVE_POST = "RECEIVE_POST";
 export const REMOVE_POST = "REMOVE_POST";
 
-export const CLEAR_POSTS = 'CLEAR_POSTS';
-
 const receivePosts = (posts) => {
     return {
         type: RECEIVE_POSTS,
@@ -13,7 +11,7 @@ const receivePosts = (posts) => {
     }
 }
 
-export const receivePost = (post) => {
+const receivePost = (post) => {
     return {
         type: RECEIVE_POST,
         post
