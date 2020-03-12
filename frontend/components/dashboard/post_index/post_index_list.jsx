@@ -28,12 +28,14 @@ class PostIndexList extends React.Component {
 
     like(postId) {
         this.props.createLike(postId)
-            .then(() => this.props.getPosts());
+            .then(() => this.props.getfollowFilteredPosts("followedFilter"));
+            // .then(() => this.props.getPosts());
     }
 
     unlike(postId, likeId) {
         this.props.deleteLike(postId, likeId)
-            .then(() => this.props.getPosts());
+            .then(() => this.props.getfollowFilteredPosts("followedFilter"));
+            // .then(() => this.props.getPosts());
     }
 
 

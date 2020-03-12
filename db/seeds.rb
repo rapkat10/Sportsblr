@@ -11,16 +11,17 @@ Post.delete_all
 Like.delete_all
 Follow.delete_all
 
-demo = User.create!( 
-    email: 'demo@sportsblr.com',
-    username: 'DemoUser',
-    password: 'password'
-)
 
 rapkat = User.create!( 
     email: 'rapkat99@sportsblr.com',
     username: 'rapkat99',
     password: 'hunter12'
+)
+
+demo = User.create!( 
+    email: 'demo@sportsblr.com',
+    username: 'DemoUser',
+    password: 'password'
 )
 
 leyla = User.create!( 
@@ -109,19 +110,8 @@ post4 = Post.create!(
 
 
 follow1 = Follow.create!(
-    follower_id: demo.id,
-    followed_id: rapkat.id
-)
-
-
-follow2 = Follow.create!(
     follower_id: leyla.id,
-    followed_id: rapkat.id
-)
-
-follow3 = Follow.create!(
-    follower_id: demo.id,
-    followed_id: leyla.id
+    followed_id: demo.id
 )
 
 ##################################

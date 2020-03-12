@@ -43,6 +43,12 @@ export const getPosts = () => dispatch => {
     });
 };
 
+export const getfollowFilteredPosts = (followedFilter) => dispatch => {
+    return PostsApiUtil.getfollowFilteredPosts(followedFilter).then((posts) => {
+        return dispatch(receivePosts(posts));
+    });
+};
+
 export const getPost = (id) => dispatch => {
     return PostsApiUtil.getPost(id).then((post) => {
         return dispatch(receivePost(post));

@@ -2,25 +2,31 @@ class Api::PostsController < ApplicationController
 
     before_action :require_logged_in, only: [:create, :update, :destroy]
 
-    def filteredposts
-        # @posts ||= Post.order(id: :DESC).includes(:user).where().all
-        # implement when doing follows feature, will fetch only followed
-        # posts!
-        @posts ||= Post.order(id: :DESC).includes(:user).all
+    def followedFilterPosts
+        # following_ids = current_user.getfollowingIds(current_user)
+        following_ids = current_user.followed_users.map { |user| user.id }
+        Post.where(user_id: current_user.id)
+            .or(Post.where(:user_id => following_ids))
     end
 
     def allposts
-        # @posts ||= Post.order(id: :DESC).includes(:user).all
-        @posts ||= Post.all
+        Post.all
+        # Post.order(id: :DESC).includes(:user).all
     end
 
     def currentpost
-        @post ||= Post.find_by(id: params[:id])
+        Post.find_by(id: params[:id])
     end
 
     def index
-        @posts = allposts
-        render 'api/posts/index'
+        # debugger
+        if params[:followedFilter]
+            @posts = followedFilterPosts
+            render 'api/posts/index'
+        else 
+            @posts = allposts
+            render 'api/posts/index'
+        end
     end
 
     def show

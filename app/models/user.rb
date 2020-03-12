@@ -20,6 +20,7 @@ class User < ApplicationRecord
 
     after_initialize :ensure_session_token
     after_create :default_photo
+    after_create :followAFew
 
     has_many :posts,
         foreign_key: :user_id,
@@ -65,6 +66,17 @@ class User < ApplicationRecord
             file = File.open("app/assets/images/#{random}")
             self.photo.attach(io: file,
             filename: 'favicon.png')
+        end
+    end
+
+    def followAFew
+        # debugger
+        rapkat = User.find_by(username: "rapkat99")
+        if rapkat
+            Follow.create!(
+                follower_id: self.id,
+                followed_id: rapkat.id
+            )
         end
     end
 

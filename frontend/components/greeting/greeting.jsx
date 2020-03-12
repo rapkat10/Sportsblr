@@ -9,7 +9,7 @@ class Greeting extends React.Component {
     }
 
     componentDidMount() {
-        this.props.getPosts();
+        // this.props.getPosts();
     }
 
 

@@ -1,7 +1,17 @@
-export const getPosts = () => {
+// export const getPosts = () => {
+//     return $.ajax({
+//         url: "/api/posts",
+//         method: "GET"
+//     })
+// }
+
+export const getfollowFilteredPosts = (followedFilter) => {
     return $.ajax({
         url: "/api/posts",
-        method: "GET"
+        method: "GET",
+        data: {
+            followedFilter
+        }
     })
 }
 

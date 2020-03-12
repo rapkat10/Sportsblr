@@ -4,17 +4,19 @@ import PostIndexList from './post_index_list';
 class PostsIndex extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { nextUserId: null };
     }
 
     componentDidMount() {
-        this.props.getPosts();
+        // this.props.getPosts();
+        this.props.getfollowFilteredPosts("followedFilter");
     }
 
     render() {
+
         const { posts, getPosts, deletePost, 
             currentUser, openModal,
-            createLike, deleteLike } = this.props;
+            createLike, deleteLike,
+            createFollow, deleteFollow, getCanFollows } = this.props;
 
         const postsList = posts.map((post, i) => {
             return <PostIndexList 
@@ -26,6 +28,9 @@ class PostsIndex extends React.Component {
                 openModal={openModal}
                 createLike={createLike}
                 deleteLike={deleteLike}
+                createFollow={createFollow}
+                deleteFollow={deleteFollow}
+                getCanFollows={getCanFollows}
             />;
         });
 
