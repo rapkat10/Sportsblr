@@ -1,10 +1,7 @@
 class Api::FollowsController < ApplicationController
 
-    # before_action :require_logged_in
-
     def index
         @canFollowUsers = current_user.unfollowed_users 
-        #array of users you can follow
         render 'api/follows/index'
     end
 

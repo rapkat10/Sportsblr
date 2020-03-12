@@ -1,18 +1,10 @@
  
 import { connect } from 'react-redux';
 import PostsIndex from './posts_index';
-import {
-  getfollowFilteredPosts,
-  getPosts,
-  deletePost
-} from '../../../actions/post_actions';
+import { getfollowFilteredPosts, deletePost } from '../../../actions/post_actions';
 import { openModal } from '../../../actions/modal_actions';
 import { createLike, deleteLike } from '../../../actions/like_actions';
-import {
-  createFollow,
-  deleteFollow,
-  getCanFollows
-} from '../../../actions/follow_actions';
+import { createFollow, deleteFollow, getCanFollows } from '../../../actions/follow_actions';
 
 const mapStateToProps = (state) => {
   const posts = Object.values(state.entities.posts).reverse();
@@ -25,7 +17,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    getPosts: () => dispatch(getPosts()),
     deletePost: (postId) => dispatch(deletePost(postId)),
     openModal: (modal, postId) => dispatch(openModal(modal, postId)),
     createLike: (postId) => dispatch(createLike(postId)),

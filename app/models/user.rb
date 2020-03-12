@@ -70,7 +70,6 @@ class User < ApplicationRecord
     end
 
     def followAFew
-        # debugger
         rapkat = User.find_by(username: "rapkat99")
         if rapkat
             Follow.create!(

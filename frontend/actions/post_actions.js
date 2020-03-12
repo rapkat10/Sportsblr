@@ -27,16 +27,6 @@ const removePost = (id) => {
     }
 }
 
-// const clearPostsAction = () => {
-//     return {
-//         type: CLEAR_POSTS
-//     };
-// };
-
-// export const clearPosts = () => dispatch => {
-//     return dispatch(clearPostsAction());
-// };
-
 export const getPosts = () => dispatch => {
     return PostsApiUtil.getPosts().then((posts) => {
         return dispatch(receivePosts(posts));

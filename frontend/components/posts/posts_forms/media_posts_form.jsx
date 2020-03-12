@@ -74,8 +74,8 @@ class MediaPostsForm extends React.Component {
       if (this.state.body) formData.append('post[body]', this.state.body);
       formData.append('post[id]', this.state.post.id)
       formData.append('post[photo]', this.state.photoFile);
-      // debugger;
       this.props.action(formData, this.state.post).then(this.props.closeModal());
+
     }
   }
 
@@ -101,6 +101,10 @@ class MediaPostsForm extends React.Component {
       formData.append('post[audio]', this.state.audioFile);
       this.props.action(formData, this.state.post).then(this.props.closeModal());
     }
+  }
+
+  componentDidMount() {
+    this.props.getfollowFilteredPosts("followedFilter");
   }
 
   render() {

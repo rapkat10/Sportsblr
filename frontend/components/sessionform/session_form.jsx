@@ -21,19 +21,25 @@ class SessionForm extends React.Component {
             email: "demo@sportsblr.com",
             password: "password",
             username: "DemoUser"
-        });
+        }).then(() => {
+            this.props.getfollowFilteredPosts("followedFilter"); //?
+        });;
     }
 
     handleSignup(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.createUser(user);
+        this.props.createUser(user).then(() => {
+            this.props.getfollowFilteredPosts("followedFilter"); //?
+        });
     }
 
     handleLogin(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.logIn(user);
+        this.props.logIn(user).then(() => {
+            this.props.getfollowFilteredPosts("followedFilter"); //?
+        });
     }
 
 

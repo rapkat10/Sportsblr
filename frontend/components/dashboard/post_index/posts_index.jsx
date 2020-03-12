@@ -7,13 +7,12 @@ class PostsIndex extends React.Component {
     }
 
     componentDidMount() {
-        // this.props.getPosts();
         this.props.getfollowFilteredPosts("followedFilter");
     }
 
     render() {
 
-        const { posts, getPosts, deletePost, 
+        const { posts, getfollowFilteredPosts, deletePost, 
             currentUser, openModal,
             createLike, deleteLike,
             createFollow, deleteFollow, getCanFollows } = this.props;
@@ -22,7 +21,7 @@ class PostsIndex extends React.Component {
             return <PostIndexList 
                 key={post.id} 
                 post={post}
-                getPosts={getPosts}
+                getfollowFilteredPosts={getfollowFilteredPosts}
                 deletePost={deletePost}
                 currentUser={currentUser}
                 openModal={openModal}

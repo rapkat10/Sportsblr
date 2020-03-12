@@ -19,7 +19,7 @@ class CanFollowIndex extends React.Component {
             getCanFollows, 
             getfollowFilteredPosts } = this.props;
 
-        const followItems = canFollows.map((user) => {
+        const followlists = canFollows.map((user) => {
             return <CanFollowIndexList
                     key={user.id} 
                     user={user}
@@ -32,7 +32,7 @@ class CanFollowIndex extends React.Component {
 
         return (
             <>
-                {followItems}
+                {followlists}
             </>
 
         );

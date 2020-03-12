@@ -62,51 +62,51 @@ post3 = Post.create!(
     user_id: rapkat.id
 )
 
+
 post4 = Post.create!(
     title: "A wise man once said.....",
     post_type: "Quote Form",
     user_id: demo.id
 )
 
+post5 = Post.create!(
+    body: "Vroom Vroom",
+    post_type: "Photo Form",
+    user_id: rapkat.id
+)
 
-# Like1 = Like.create!(
-#     post_id: post1.id,
-#     user_id: demo.id
-# )
+file5 = File.open('app/assets/images/motorcycle.jpg')
+post5.photo.attach(io: file5, filename: 'motorcycle.jpg')
 
-# # Like2 = Like.create!(
-# #     post_id: post1.id,
-# #     user_id: demo.id
-# # )
 
-# Like3 = Like.create!(
-#     post_id: post1.id,
-#     user_id: leyla.id
-# )
+Like1 = Like.create!(
+    post_id: post1.id,
+    user_id: demo.id
+)
 
-# Like4 = Like.create!(
-#     post_id: post1.id,
-#     user_id: rapkat.id
-# )
-# Like5 = Like.create!(
-#     post_id: post2.id,
-#     user_id: demo.id
-# )
+Like3 = Like.create!(
+    post_id: post1.id,
+    user_id: leyla.id
+)
 
-# Like6 = Like.create!(
-#     post_id: post2.id,
-#     user_id: demo.id
-# )
+Like4 = Like.create!(
+    post_id: post1.id,
+    user_id: rapkat.id
+)
+Like5 = Like.create!(
+    post_id: post2.id,
+    user_id: demo.id
+)
 
-# Like7 = Like.create!(
-#     post_id: post3.id,
-#     user_id: leyla.id
-# )
+Like7 = Like.create!(
+    post_id: post3.id,
+    user_id: leyla.id
+)
 
-# Like9 = Like.create!(
-#     post_id: post4.id,
-#     user_id: rapkat.id
-# )
+Like9 = Like.create!(
+    post_id: post4.id,
+    user_id: rapkat.id
+)
 
 
 follow1 = Follow.create!(

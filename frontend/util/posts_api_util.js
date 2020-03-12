@@ -1,9 +1,9 @@
-// export const getPosts = () => {
-//     return $.ajax({
-//         url: "/api/posts",
-//         method: "GET"
-//     })
-// }
+export const getPosts = () => {
+    return $.ajax({
+        url: "/api/posts",
+        method: "GET"
+    })
+}
 
 export const getfollowFilteredPosts = (followedFilter) => {
     return $.ajax({

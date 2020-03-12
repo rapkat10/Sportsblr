@@ -3,15 +3,13 @@ class Api::PostsController < ApplicationController
     before_action :require_logged_in, only: [:create, :update, :destroy]
 
     def followedFilterPosts
-        # following_ids = current_user.getfollowingIds(current_user)
-        following_ids = current_user.followed_users.map { |user| user.id }
+        following_ids = current_user.getfollowingIds(current_user)
         Post.where(user_id: current_user.id)
-            .or(Post.where(:user_id => following_ids))
+            .or(Post.where(:user_id => following_ids)).order(id: :DESC)
     end
 
     def allposts
-        Post.all
-        # Post.order(id: :DESC).includes(:user).all
+        Post.order(id: :DESC).includes(:user).all
     end
 
     def currentpost
@@ -19,7 +17,6 @@ class Api::PostsController < ApplicationController
     end
 
     def index
-        # debugger
         if params[:followedFilter]
             @posts = followedFilterPosts
             render 'api/posts/index'

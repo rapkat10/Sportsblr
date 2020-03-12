@@ -27,17 +27,20 @@ class PostIndexList extends React.Component {
     }
 
     like(postId) {
-        this.props.createLike(postId)
-            .then(() => this.props.getfollowFilteredPosts("followedFilter"));
-            // .then(() => this.props.getPosts());
+        this.props.createLike(postId).then(() => {
+            this.props.getfollowFilteredPosts("followedFilter")
+        });
     }
 
     unlike(postId, likeId) {
-        this.props.deleteLike(postId, likeId)
-            .then(() => this.props.getfollowFilteredPosts("followedFilter"));
-            // .then(() => this.props.getPosts());
+        this.props.deleteLike(postId, likeId).then(() => {
+            this.props.getfollowFilteredPosts("followedFilter");
+        });
     }
 
+    componentDidMount() {
+        this.props.getfollowFilteredPosts("followedFilter");
+    }
 
     render() {
         const { currentUser, post, deletePost, openModal } = this.props;

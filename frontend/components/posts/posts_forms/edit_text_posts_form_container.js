@@ -1,7 +1,10 @@
 import { connect } from 'react-redux';
 import EditTextPostsForm from './edit_text_posts_form';
-import { updatePost, getPosts } from '../../../actions/post_actions';
+import { updatePost } from '../../../actions/post_actions';
 import { closeModal } from '../../../actions/modal_actions';
+
+import { getfollowFilteredPosts } from '../../../actions/post_actions'; //?
+
 
 const mapStateToProps = (state, ownProps) => {
     const formType = ownProps.formType;
@@ -23,8 +26,9 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
     return ({
         action: (post) => dispatch(updatePost(post)),
-        getPosts: () => dispatch(getPosts()),
-        closeModal: () => dispatch(closeModal())
+        closeModal: () => dispatch(closeModal()),
+        // getfollowFilteredPosts: (followedFilter) =>
+        //     dispatch(getfollowFilteredPosts(followedFilter)) //?
     });
 }
 

@@ -11,13 +11,12 @@ class Dashboard extends React.Component {
     }
 
     componentDidMount() {
-        // this.props.getPosts();
         this.props.getfollowFilteredPosts("followedFilter");
     }
 
     render() {
-        const { currentUser, posts, logOut } = this.props;
-        if (posts.length === 0) return null;
+        const { currentUser, posts } = this.props;
+        // if (posts.length === 0) return null; //?
         return (<>
             <div className="dashboard-div clearfix">
                 <img className="backgroundImage" src={window.dashboard} />

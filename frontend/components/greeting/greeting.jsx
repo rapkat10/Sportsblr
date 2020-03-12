@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavbarContainer from '../navbar/navbar_container';
 
 class Greeting extends React.Component {
 
@@ -8,13 +7,8 @@ class Greeting extends React.Component {
         super(props);
     }
 
-    componentDidMount() {
-        // this.props.getPosts();
-    }
-
-
     render() {
-        const { currentUser } = this.props;
+
         const display = <>
             <h1 className="sportsblr">Sportsblr</h1>
             <Link className="get-started" to="/signup">Get Started</Link>        
