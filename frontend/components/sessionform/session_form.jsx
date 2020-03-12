@@ -21,7 +21,7 @@ class SessionForm extends React.Component {
             email: "demo@sportsblr.com",
             password: "password",
             username: "DemoUser"
-        }).then(() => window.location.reload(false));
+        });//.then(() => window.location.reload(false));
     }
 
     handleSignup(e) {
@@ -33,8 +33,8 @@ class SessionForm extends React.Component {
     handleLogin(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.logIn(user)
-            .then(() => window.location.reload(false));
+        this.props.logIn(user);
+            // .then(() => window.location.reload(false));
     }
 
     handleInput(type) {

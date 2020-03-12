@@ -7,11 +7,23 @@ import { createLike, deleteLike } from '../../../actions/like_actions';
 import { createFollow, deleteFollow, getCanFollows } from '../../../actions/follow_actions';
 
 const mapStateToProps = (state) => {
-  const posts = Object.values(state.entities.posts).reverse();
   const currentUserId = state.session.id;
+  const currentUser = state.entities.users[currentUserId];
+  const posts = Object.values(state.entities.posts).reverse();
+
+  const followingUsersIds = currentUser.followingIds;
+  let filteredPosts= [];
+  posts.forEach(post => {
+    if (followingUsersIds.includes(post.user_id)) {
+      filteredPosts.push(post)
+    } else if (currentUserId === post.user_id) {
+      filteredPosts.push(post)
+    };
+  })
+
   return {
-    currentUser: state.entities.users[currentUserId],
-    posts
+    currentUser,
+    posts: filteredPosts
   }
 };
 

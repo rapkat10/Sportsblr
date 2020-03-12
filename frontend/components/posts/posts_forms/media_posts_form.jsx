@@ -75,10 +75,7 @@ class MediaPostsForm extends React.Component {
       formData.append('post[id]', this.state.post.id)
       formData.append('post[photo]', this.state.photoFile);
       this.props.action(formData, this.state.post)
-        .then(window.location.reload(false), this.props.closeModal());
-        
-      // .then(this.props.closeModal(), window.location.reload(false));
-
+        .then(this.props.closeModal());
     }
   }
 

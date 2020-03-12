@@ -11,6 +11,7 @@ class PostIndexList extends React.Component {
         this.handleDropdown = this.handleDropdown.bind(this);
         this.like = this.like.bind(this);
         this.unlike = this.unlike.bind(this);
+        
     }
 
     handleDropdown() {
@@ -27,15 +28,11 @@ class PostIndexList extends React.Component {
     }
 
     like(postId) {
-        this.props.createLike(postId).then(() => {
-            this.props.getfollowFilteredPosts("followedFilter")
-        });
+        this.props.createLike(postId);
     }
 
     unlike(postId, likeId) {
-        this.props.deleteLike(postId, likeId).then(() => {
-            this.props.getfollowFilteredPosts("followedFilter");
-        });
+        this.props.deleteLike(postId, likeId);
     }
 
     render() {

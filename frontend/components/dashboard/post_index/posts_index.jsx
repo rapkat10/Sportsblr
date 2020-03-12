@@ -8,16 +8,15 @@ class PostsIndex extends React.Component {
     
     render() {
 
-        const { posts, getfollowFilteredPosts, deletePost, 
+        const { posts, deletePost, 
             currentUser, openModal,
             createLike, deleteLike,
             createFollow, deleteFollow, getCanFollows } = this.props;
-
+        
         const postsList = posts.map((post, i) => {
             return <PostIndexList 
                 key={post.id} 
                 post={post}
-                getfollowFilteredPosts={getfollowFilteredPosts}
                 deletePost={deletePost}
                 currentUser={currentUser}
                 openModal={openModal}
