@@ -11,6 +11,7 @@ class Greeting extends React.Component {
 
         const display = <>
             <h1 className="sportsblr">Sportsblr</h1>
+            <p className="slogan">Dedication + Motivation = success</p>
             <Link className="get-started" to="/signup">Get Started</Link>        
             <Link className="log-in" to="/login">Log In</Link>
         </>
