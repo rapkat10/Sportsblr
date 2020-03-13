@@ -65,7 +65,7 @@ post3 = Post.create!(
 
 post4 = Post.create!(
     title: "A wise man once said.....",
-    body: "Unknown"
+    body: "Unknown",
     post_type: "Quote Form",
     user_id: demo.id
 )
@@ -123,7 +123,7 @@ Like5 = Like.create!(
     user_id: leyla.id
 )
 
-Like7 = Like.create!(
+Like6 = Like.create!(
     post_id: post4.id,
     user_id: rapkat.id
 )
