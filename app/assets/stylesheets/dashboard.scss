@@ -32,6 +32,89 @@
     color: white;
 }
 
+.RCB {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border-bottom: 2px solid #566a81;
+
+}
+
+.RCB-div {
+    // border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    padding: 7px;
+    border-bottom: 1px solid hsla(0, 0%, 100%, .25);
+}
+
+.canfollow-user-img-div {
+    // border: 1px solid purple;
+    min-width: 230px;
+    max-width: 250px;
+    min-height: 45px;
+    max-height: 45px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.can-follow-user-img {
+    min-height: 40px;
+    max-height: 40px;
+    min-width: 40px;
+    max-width: 40px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+
+.can-follow-username {
+    padding-left: 10px;
+    
+}
+
+.follow-button-div {
+    display: flex;
+    align-items: center;
+    // border: 1px solid green;
+}
+
+.follow-button {
+    border-radius: 10px;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.follow-button:hover {
+    background-color: white;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.follow-button:focus {
+    outline: 0;
+}
+
+.fa-plus-square {
+    font-size: 30px;
+    height: 0px;
+    color: rgb(189, 181, 181);
+    background-color: black;
+}
+
+.fa-plus-square:hover {
+    font-size: 30px;
+    height: 0px;
+    color: #00b8ff;
+    background-color: white;
+}
+
+
 .posts-form-div {
     display: flex;
     justify-content: flex-end;
@@ -49,6 +132,7 @@
     background-position: center;
     margin-right: 15px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .posts-index-list {
@@ -74,6 +158,10 @@
     font-size: 15px;
     padding-left: 20px;
     font-weight: bold;
+}
+
+.post--header-div > p {
+    cursor: pointer;
 }
 
 .cog-icon {
@@ -145,23 +233,71 @@
     left: 0;
 }
 
-
-// ---------------------------------------------------------------
-.post-media {
-    // border: 5px solid yellow;
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: space-between;
-}
-
-.post-media-user-pic-div {
+.post--user-pic-div {
     display: flex;
     width: 70px;
     // border: 2px solid purple;
+
+    position: relative;
 }
 
-.post-media-user-pic {
+.user-post-info-dropdown-div {
+    position: absolute;
+    top: 17%;
+    left: -70%;
+    min-height: 50px;
+    max-height: 50px;
+    min-width: 250px;
+    background-color: rgb(132, 169, 179);
+    // border: 2px solid red;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.dropdown-username-div {
+    // border: 1px solid green;
+    padding: 5px;
+    font-size: 16px;
+    font-family: Arial,
+    Helvetica,
+    sans-serif;
+    font-weight: bold;
+    color: white;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.unfollow-buttn-div {
+    // border: 1px solid green;
+    padding: 5px;
+}
+
+.user-dropdown-icon {
+    padding-right: 10px;
+    color: white;
+    font-size: 22px;
+}
+
+.unfollow-buttn-div>button {
+    font-size: 16px;
+    cursor: pointer;
+    background-color: white;
+    color: rgb(132, 169, 179);
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+}
+
+.unfollow-buttn-div>button:focus {
+    outline: 0;
+}
+
+.post--user-pic {
     display: flex;
     height: 64px;
     width: 64px;
@@ -173,6 +309,16 @@
     border-radius: 5px;
     position: sticky;
     top: 10%;
+    cursor: pointer;
+}
+
+// ---------------------------------------------------------------
+.post-media {
+    // border: 5px solid yellow;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
 }
 
 .post-media-main {
@@ -235,26 +381,6 @@ video.post-media-div:focus {
     justify-content: space-between;
 }
 
-.post-quo-user-pic-div {
-    display: flex;
-    width: 70px;
-    // border: 2px solid purple;
-}
-
-.post-quo-user-pic {
-    display: flex;
-    height: 64px;
-    width: 64px;
-    min-height: 64px;
-    min-width: 64px;
-    background-size: cover;
-    background-position: center;
-    margin-right: 15px;
-    border-radius: 5px;
-    position: sticky;
-    top: 10%;
-}
-
 .post-quo-main {
     background-color: white;
     // border: 1px solid green;
@@ -295,26 +421,6 @@ video.post-media-div:focus {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: space-between;
-}
-
-.post-link-user-pic-div {
-    display: flex;
-    width: 70px;
-    // border: 2px solid purple;
-}
-
-.post-link-user-pic {
-    display: flex;
-    height: 64px;
-    width: 64px;
-    min-height: 64px;
-    min-width: 64px;
-    background-size: cover;
-    background-position: center;
-    margin-right: 15px;
-    border-radius: 5px;
-    position: sticky;
-    top: 10%;
 }
 
 .post-link-main {
@@ -361,26 +467,6 @@ video.post-media-div:focus {
     min-height: 100px;
 }
 
-.post-text-user-pic-div {
-    display: flex;
-    width: 70px;
-    // border: 2px solid purple;
-}
-
-.post-text-user-pic {
-    display: flex;
-    height: 64px;
-    width: 64px;
-    min-height: 64px;
-    min-width: 64px;
-    background-size: cover;
-    background-position: center;
-    margin-right: 15px;
-    border-radius: 5px;
-    position: sticky;
-    top: 10%;
-}
-
 .post-text-main {
     background-color: white;
     // border: 1px solid green;
@@ -422,26 +508,6 @@ video.post-media-div:focus {
     display: flex;
     justify-content: space-between;
     min-height: 100px;
-}
-
-.post-chat-user-pic-div {
-    display: flex;
-    width: 70px;
-    // border: 2px solid purple;
-}
-
-.post-chat-user-pic {
-    display: flex;
-    height: 64px;
-    width: 64px;
-    min-height: 64px;
-    min-width: 64px;
-    background-size: cover;
-    background-position: center;
-    margin-right: 15px;
-    border-radius: 5px;
-    position: sticky;
-    top: 10%;
 }
 
 .post-chat-main {
