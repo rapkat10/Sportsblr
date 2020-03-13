@@ -81,7 +81,7 @@ class PostIndexList extends React.Component {
         let footer;
         if (post.user_id === currentUser.id) {
             footer = <div className="footer-flex-div">
-                <p>More features being worked on!</p>
+                <p className="msg">More features being worked on!</p>
                 <p></p>
                 {likerId ? likedheart : notlikedheart}
                 <div title="Post Options" className="setting-icon-div">
@@ -106,7 +106,7 @@ class PostIndexList extends React.Component {
             </div>
         } else {
             footer = <div className="footer-flex-div">
-                <p>More features being worked on!</p>
+                <p className="msg">More features being worked on!</p>
                 <p></p>
                 {likerId ? likedheart : notlikedheart}
             </div>
