@@ -5,7 +5,7 @@ import { getfollowFilteredPosts } from '../../../actions/post_actions';
 import { createFollow, getCanFollows } from '../../../actions/follow_actions';
 
 const mapStateToProps = (state) => {
-    const canFollows = Object.values(state.entities.follows.canFollows);
+    const canFollows = Object.values(state.entities.canFollows);
     const currentUserId = state.session.id;
     return {
         currentUser: state.entities.users[currentUserId],

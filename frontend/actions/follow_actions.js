@@ -1,7 +1,7 @@
 import * as FollowApiUtil from '../util/follows_api_util';
 export const RECEIVE_CANFOLLOWS = 'RECEIVE_CANFOLLOWS';
-export const RECEIVE_FOLLOW = 'RECEIVE_FOLLOW';
-export const REMOVE_FOLLOW = 'REMOVE_FOLLOW';
+
+import { receivePosts } from './post_actions';
 
 const receiveCanFollows = (canFollows) => {
     return {
@@ -10,40 +10,23 @@ const receiveCanFollows = (canFollows) => {
     };
 };
 
-
-const receiveFollow = (follow) => {
-    return {
-        type: RECEIVE_FOLLOW,
-        follow
-    };
-};
-
-const removeFollow = (followId) => {
-    return {
-        type: REMOVE_FOLLOW,
-        followId
-    };
-};
-
-
 export const createFollow = (userId, followedUserId) => {
     return dispatch => {
         return FollowApiUtil.createFollow(userId, followedUserId)
-            .then((follow) => dispatch(receiveFollow(follow)));
+            .then((posts) => dispatch(receivePosts(posts)));
     };
 };
 
 export const deleteFollow = (userId, followId) => {
     return dispatch => {
-        return FollowAPIUtil.unfollowUser(userId, followId)
-            .then(() => dispatch(removeFollow(followId)));
+        return FollowApiUtil.deleteFollow(userId, followId)
+            .then((posts) => dispatch(receivePosts(posts)));
     };
 };
 
 export const getCanFollows = (userId) => {
     return dispatch => {
         FollowApiUtil.getCanFollows(userId)
-            .then((canFollows) =>
-                dispatch(receiveCanFollows(canFollows)));
+            .then((canFollows) => dispatch(receiveCanFollows(canFollows)));
     };
 };

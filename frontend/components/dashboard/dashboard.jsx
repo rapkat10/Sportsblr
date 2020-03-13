@@ -15,7 +15,6 @@ class Dashboard extends React.Component {
     }
 
     render() {
-        
         const { currentUser, posts } = this.props;
         if (posts.length === 0) return null; 
         return (<>
@@ -25,7 +24,7 @@ class Dashboard extends React.Component {
                     <div className="posts-index-list">
                         <div className="posts-form-div">
                             <div className="current-user-pic">
-                                <img className="user-img"
+                                <img title={currentUser.username} className="user-img"
                                     src={currentUser.img_url} />
                             </div>
                             <PostsNavContainer />
@@ -33,7 +32,7 @@ class Dashboard extends React.Component {
                         <PostsIndexContainer />
                     </div>
                     <div className="recommended-blogs-div">
-                        Recommended Blogs Coming soon....
+                        <h1 className="RCB">Recommended Blogs</h1>
                         <CanFollowsContainer />
                     </div>
                 </div>

@@ -10,23 +10,25 @@ class CanFollowIndexList extends React.Component {
     follow() {
         this.props.createFollow(
             this.props.currentUser.id, 
-            this.props.user.id
-            ).then(() => this.props.getCanFollows(
-                this.props.currentUser.id))
-                    .then(() => this.props.getfollowFilteredPosts("followedFilter"));
+            this.props.followingUser.id
+        ).then(() => this.props.getCanFollows(this.props.currentUser.id));
     }
 
     render() {
-
-        const { user, createFollow, currentUser } = this.props;
+        const { followingUser } = this.props;
 
         return (
-            <div>
-                {user.username}
-                <button
-                    onClick={() => this.follow()}>
-                    <i className="fa fa-plus-square"></i>
-                </button>
+            <div className="RCB-div">
+                <div className="canfollow-user-img-div">
+                    <img className="can-follow-user-img" src={followingUser.img_url} />
+                    <p className="can-follow-username">{followingUser.username}</p>
+                </div>
+                <div className="follow-button-div">
+                    <button className="follow-button"
+                        onClick={() => this.follow()}>
+                        <i title="Follow" className="fas fa-plus-square"></i>
+                    </button>
+                </div>
             </div>
         );
     }

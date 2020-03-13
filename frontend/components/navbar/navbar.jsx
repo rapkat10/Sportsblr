@@ -42,7 +42,7 @@ class Navbar extends React.Component {
                         </Link>
                     </li>
                     <li title="Account" className="icon-li">
-                        <i onClick={this.handleIconClick} className="fas fa-user fa-lg"></i>
+                        <i onClick={this.handleIconClick} className="logout-icon-fa fas fa-user fa-lg"></i>
                     </li>
                     {this.state.clicked ? dropdown : <></>}
                 </ul>

@@ -3,7 +3,6 @@ import {
     LOGOUT_CURRENT_USER
 } from '../actions/session_actions';
 
-
 const _nullsession = {
     id: null
 };
