@@ -41,21 +41,21 @@ Users can securely create an account, log-in and log-out. Users can also choose 
 <img src="https://github.com/rapkat10/Sportsblr/blob/master/app/assets/images/screenshots/dashboard1.png" width=400 height=400 align=center>
 
 ## Technologies
-* ### Ruby on Rails
-* ### PostgreSQL
-* ### AWS S3
-* ### Ajax
-* ### Javascript
-* ### React
-* ### Redux
-* ### Heroku
-* ### Github
+* #### Ruby on Rails
+* #### PostgreSQL
+* #### AWS S3
+* #### Ajax
+* #### Javascript
+* #### React
+* #### Redux
+* #### Heroku
+* #### Github
 
 
 
 ## Future Features
-* ### Comments
-* ### Users show page
-* ### Liked posts page
-* ### Followed users list
-* ### Explore page
+* #### Comments
+* #### Users show page
+* #### Liked posts page
+* #### Followed users list
+* #### Explore page
