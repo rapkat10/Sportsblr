@@ -6,30 +6,34 @@
     right: 0;
     display: flex;
     justify-content: center;
+
+    // border: 1px solid red;
 }
 
 .clearfix {
     zoom: 1;
 }
 
-// .clearfix:after {
-//     clear: both;
-// }
-
 .posts-main-div {
-    // border: 1px solid rgb(255, 0, 170);
     margin-top: 30px;
     display: flex;
     max-width: 1000px;
+    
+    // border: 1px solid rgb(255, 0, 170);
 }
 
 .recommended-blogs-div {
     margin-left: 50px;
-    // border: 1px solid yellow;
     height: 700px;
     width: 320px;
     font-size: 17px;
     color: white;
+
+    // border: 1px solid yellow;
+}
+
+.recommended-blogs---div {
+    // border: 1px solid red;
 }
 
 .RCB {
@@ -136,16 +140,19 @@
 }
 
 .posts-index-list {
-    // border: 2px solid red;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    
+    // border: 2px solid red;
 }
 
 .posts-index-list > * {
     margin-bottom: 20px;
     border-radius: 5px;
     font-family: sans-serif;
+
+    // border: 1px solid green;
 }
 
 
@@ -236,14 +243,39 @@
 .post--user-pic-div {
     display: flex;
     width: 70px;
-    // border: 2px solid purple;
 
+    // border: 2px solid purple;
+}
+
+.user-img----div {
+    display: flex;
+    min-height: 64px;
+    max-height: 64px;
+    min-width: 64px;
+    max-width: 64px;
+    margin-right: 15px;
+    position: sticky;
+    top: 10%;
+    cursor: pointer;
+    
+    // border: 1px solid green;
+}
+
+.post--user-pic {
+    min-height: 64px;
+    max-height: 64px;
+    min-width: 64px;
+    max-width: 64px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
     position: relative;
 }
 
+
 .user-post-info-dropdown-div {
     position: absolute;
-    top: 17%;
+    bottom: -100%;
     left: -70%;
     min-height: 50px;
     max-height: 50px;
@@ -295,21 +327,6 @@
 
 .unfollow-buttn-div>button:focus {
     outline: 0;
-}
-
-.post--user-pic {
-    display: flex;
-    height: 64px;
-    width: 64px;
-    min-height: 64px;
-    min-width: 64px;
-    background-size: cover;
-    background-position: center;
-    margin-right: 15px;
-    border-radius: 5px;
-    position: sticky;
-    top: 10%;
-    cursor: pointer;
 }
 
 // ---------------------------------------------------------------

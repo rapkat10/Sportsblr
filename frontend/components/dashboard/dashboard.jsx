@@ -32,8 +32,10 @@ class Dashboard extends React.Component {
                         <PostsIndexContainer />
                     </div>
                     <div className="recommended-blogs-div">
-                        <h1 className="RCB">Recommended Blogs</h1>
-                        <CanFollowsContainer />
+                        <div className="recommended-blogs---div">
+                            <h1 className="RCB">Recommended Blogs</h1>
+                            <CanFollowsContainer />
+                        </div>
                     </div>
                 </div>
             </div>

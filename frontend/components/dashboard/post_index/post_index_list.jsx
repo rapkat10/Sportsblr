@@ -134,8 +134,14 @@ class PostIndexList extends React.Component {
             return (
                 <div key={i * i} className="post-media">
                     <div className="post--user-pic-div">
-                        <img onClick={this.handleUnfollowDropdown} title={post.users_Username} className="post--user-pic" src={post.user_imgUrl} />
-                        {userPostInfoDropdown}
+                        <div className="user-img----div">
+                            <img onClick={this.handleUnfollowDropdown} 
+                                title={post.users_Username} 
+                                className="post--user-pic" 
+                                src={post.user_imgUrl} 
+                            />
+                            {userPostInfoDropdown}
+                        </div>
                     </div>
                     <div className="post-media-main">
                         <div className="post--header-div">
@@ -157,8 +163,14 @@ class PostIndexList extends React.Component {
             return (
                 <div key={i * i} className=" post-quote">
                     <div className="post--user-pic-div">
-                        <img onClick={this.handleUnfollowDropdown} title={post.users_Username} className="post--user-pic" src={post.user_imgUrl} />
-                        {userPostInfoDropdown}
+                        <div className="user-img----div">
+                            <img onClick={this.handleUnfollowDropdown}
+                                title={post.users_Username}
+                                className="post--user-pic"
+                                src={post.user_imgUrl}
+                            />
+                            {userPostInfoDropdown}
+                        </div>
                     </div>
                     <div className="post-quo-main">
                         <div className="post--header-div">
@@ -180,8 +192,14 @@ class PostIndexList extends React.Component {
             return (
                 <div key={i * i} className="post-link">
                     <div className="post--user-pic-div">
-                        <img onClick={this.handleUnfollowDropdown} title={post.users_Username} className="post--user-pic" src={post.user_imgUrl} />
-                        {userPostInfoDropdown}                    
+                        <div className="user-img----div">
+                            <img onClick={this.handleUnfollowDropdown}
+                                title={post.users_Username}
+                                className="post--user-pic"
+                                src={post.user_imgUrl}
+                            />
+                            {userPostInfoDropdown}
+                        </div>                  
                     </div>
                     <div className="post-link-main">
                         <div className="post--header-div">
@@ -205,8 +223,14 @@ class PostIndexList extends React.Component {
             return (
                 <div key={i * i} className="post-text">
                     <div className="post--user-pic-div">
-                        <img onClick={this.handleUnfollowDropdown} title={post.users_Username} className="post--user-pic" src={post.user_imgUrl} />
-                        {userPostInfoDropdown}
+                        <div className="user-img----div">
+                            <img onClick={this.handleUnfollowDropdown}
+                                title={post.users_Username}
+                                className="post--user-pic"
+                                src={post.user_imgUrl}
+                            />
+                            {userPostInfoDropdown}
+                        </div>
                     </div>
                     <div className="post-text-main">
                         <div className="post--header-div">
@@ -228,8 +252,14 @@ class PostIndexList extends React.Component {
             return (
                 <div key={i * i} className="post-chat">
                     <div className="post--user-pic-div">
-                        <img onClick={this.handleUnfollowDropdown} title={post.users_Username} className="post--user-pic" src={post.user_imgUrl} />
-                        {userPostInfoDropdown}
+                        <div className="user-img----div">
+                            <img onClick={this.handleUnfollowDropdown}
+                                title={post.users_Username}
+                                className="post--user-pic"
+                                src={post.user_imgUrl}
+                            />
+                            {userPostInfoDropdown}
+                        </div>
                     </div>
                     <div className="post-chat-main">
                         <div className="post--header-div">
@@ -251,8 +281,14 @@ class PostIndexList extends React.Component {
             return (
                 <div key={i * i} className="post-media">
                     <div className="post--user-pic-div">
-                        <img onClick={this.handleUnfollowDropdown} title={post.users_Username} className="post--user-pic" src={post.user_imgUrl} />
-                        {userPostInfoDropdown}
+                        <div className="user-img----div">
+                            <img onClick={this.handleUnfollowDropdown}
+                                title={post.users_Username}
+                                className="post--user-pic"
+                                src={post.user_imgUrl}
+                            />
+                            {userPostInfoDropdown}
+                        </div>
                     </div>
                     <div className="post-media-main">
                         <div className="post--header-div">
@@ -274,8 +310,14 @@ class PostIndexList extends React.Component {
             return (
                 <div key={i * i} className="post-media">
                     <div className="post--user-pic-div">
-                        <img onClick={this.handleUnfollowDropdown} title={post.users_Username} className="post--user-pic" src={post.user_imgUrl} />
-                        {userPostInfoDropdown}
+                        <div className="user-img----div">
+                            <img onClick={this.handleUnfollowDropdown}
+                                title={post.users_Username}
+                                className="post--user-pic"
+                                src={post.user_imgUrl}
+                            />
+                            {userPostInfoDropdown}
+                        </div>
                     </div>
                     <div className="post-media-main">
                         <div className="post--header-div">

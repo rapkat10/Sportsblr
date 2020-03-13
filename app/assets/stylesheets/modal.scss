@@ -7,6 +7,10 @@
     right: 0;
     left: 0;
     background-color: rgba(0, 25, 53, .95);
+    
+    // border: 1px solid red;
+    overflow-x: auto;
+    overflow-y: auto;
 }
 .modal-div {
     position: absolute;
@@ -15,27 +19,32 @@
     right: 0;
     display: flex;
     justify-content: center;
+
+    // border: 1px solid red;
 }
 
 .modal-main-div {
-    // border: 1px solid rgb(255, 0, 170);
     display: flex;
     margin-top: 30px;
     max-width: 1000px;
+
+    // border: 1px solid rgb(238, 18, 165);
+    overflow-x: auto;
 }
 
 .modal-empty-space {
     margin-left: 20px;
-    // border: 1px solid yellow;
     width: 320px;
+    // border: 1px solid yellow;
 }
 
 .modal-box {
     border-radius: 5px;
-    // border: 2px solid red;
     max-height: 750px;
-
-    overflow-x: hidden;
+    
+    // border: 2px solid red;
+    width: 690px;
+    overflow-x: auto;
     overflow-y: auto;
 }
 

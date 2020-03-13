@@ -65,6 +65,7 @@ post3 = Post.create!(
 
 post4 = Post.create!(
     title: "A wise man once said.....",
+    body: "Unknown"
     post_type: "Quote Form",
     user_id: demo.id
 )
@@ -88,32 +89,41 @@ post6 = Post.create!(
 file6 = File.open('app/assets/images/sunday.jpeg')
 post6.photo.attach(io: file6, filename: 'sunday.jpeg')
 
+post7 = Post.create!(
+    body: "",
+    post_type: "Photo Form",
+    user_id: leyla.id
+)
+
+file7 = File.open('app/assets/images/motorcycle1.jpg')
+post7.photo.attach(io: file7, filename: 'motorcycle1.jpg')
+
 
 Like1 = Like.create!(
     post_id: post1.id,
     user_id: demo.id
 )
 
-Like3 = Like.create!(
+Like2 = Like.create!(
     post_id: post1.id,
     user_id: leyla.id
 )
 
-Like4 = Like.create!(
+Like3 = Like.create!(
     post_id: post1.id,
     user_id: rapkat.id
 )
-Like5 = Like.create!(
+Like4 = Like.create!(
     post_id: post2.id,
     user_id: demo.id
 )
 
-Like7 = Like.create!(
+Like5 = Like.create!(
     post_id: post3.id,
     user_id: leyla.id
 )
 
-Like9 = Like.create!(
+Like7 = Like.create!(
     post_id: post4.id,
     user_id: rapkat.id
 )
@@ -133,11 +143,37 @@ user1 = User.create!(
     password: 'hunter10'
 )
 
+file8 = File.open('app/assets/images/messi.jpg')
+user1.photo.attach(io: file8, filename: 'messi.jpg')
+
+post8 = Post.create!(
+    body: "",
+    post_type: "Photo Form",
+    user_id: user1.id
+)
+
+file9 = File.open('app/assets/images/messi.jpg')
+post8.photo.attach(io: file9, filename: 'messi.jpg')
+
+
 user2 = User.create!( 
     email: 'user2',
     username: 'Lebron23',
     password: 'hunter10'
 )
+
+file10 = File.open('app/assets/images/lebron.png')
+user2.photo.attach(io: file10, filename: 'lebron.png')
+
+post9 = Post.create!(
+    body: "",
+    post_type: "Photo Form",
+    user_id: user2.id
+)
+
+file11 = File.open('app/assets/images/lebron.png')
+post9.photo.attach(io: file11, filename: 'lebron.png')
+
 
 user3 = User.create!( 
     email: 'user3',
@@ -145,11 +181,38 @@ user3 = User.create!(
     password: 'hunter10'
 )
 
+
+file12 = File.open('app/assets/images/ronaldo.jpg')
+user3.photo.attach(io: file12, filename: 'ronaldo.jpg')
+
+post10 = Post.create!(
+    body: "",
+    post_type: "Photo Form",
+    user_id: user3.id
+)
+
+file13 = File.open('app/assets/images/ronaldo.jpg')
+post10.photo.attach(io: file13, filename: 'ronaldo.jpg')
+
+
 user4 = User.create!( 
     email: 'user4',
     username: 'JJ_Watt99',
     password: 'hunter10'
 )
+
+file14 = File.open('app/assets/images/jjwat.jpeg')
+user4.photo.attach(io: file14, filename: 'jjwat.jpeg')
+
+post11 = Post.create!(
+    body: "",
+    post_type: "Photo Form",
+    user_id: user4.id
+)
+
+file15 = File.open('app/assets/images/jjwat.jpeg')
+post11.photo.attach(io: file15, filename: 'jjwat.jpeg')
+
 
 user5 = User.create!( 
     email: 'user5',
@@ -157,19 +220,16 @@ user5 = User.create!(
     password: 'hunter10'
 )
 
-file4 = File.open('app/assets/images/messi.jpg')
-user1.photo.attach(io: file4, filename: 'messi.jpg')
+file16 = File.open('app/assets/images/ronaldinho.jpg')
+user5.photo.attach(io: file16, filename: 'ronaldinho.jpg')
 
-file5 = File.open('app/assets/images/lebron.png')
-user2.photo.attach(io: file5, filename: 'lebron.png')
+post12 = Post.create!(
+    body: "",
+    post_type: "Photo Form",
+    user_id: user5.id
+)
 
-file6 = File.open('app/assets/images/ronaldo.jpg')
-user3.photo.attach(io: file6, filename: 'ronaldo.jpg')
-
-file7 = File.open('app/assets/images/jjwat.jpeg')
-user4.photo.attach(io: file7, filename: 'jjwat.jpeg')
-
-file8 = File.open('app/assets/images/ronaldinho.jpg')
-user5.photo.attach(io: file8, filename: 'ronaldinho.jpg')
+file17 = File.open('app/assets/images/ronaldinho.jpg')
+post12.photo.attach(io: file17, filename: 'ronaldinho.jpg')
 
 
