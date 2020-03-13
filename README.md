@@ -6,7 +6,7 @@
 
 ![splash_page](https://github.com/rapkat10/Sportsblr/blob/master/app/assets/images/screenshots/splashPage.png)
 
-Sportsblr is an online platform for all kinds of sports fans to interact with one another. You can post various types of content(Text, Photo, Quote, Link, Chat, Audio, Video), like/unlike other posts, and follow/unfollow other users. 
+#### Sportsblr is an online platform for all kinds of sports fans to interact with one another. You can post various types of content(Text, Photo, Quote, Link, Chat, Audio, Video), like/unlike other posts, and follow/unfollow other users. 
 
 ## Features
 
