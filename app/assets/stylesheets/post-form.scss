@@ -143,6 +143,10 @@
     background-repeat: no-repeat;
 }
 
+.media-prev:focus {
+    outline: none;
+}
+
 .title-text {
     font-size: 35px;
     width: 500px;
