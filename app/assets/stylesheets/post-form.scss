@@ -193,7 +193,8 @@ input:focus {
 
 .link-text {
     font-size: 14px;
-    width: 560px;
+    min-width: 558px;
+    max-width: 558px;
     border: none;
     border-top: 1px dashed grey;
     border-bottom: 1px dashed grey;
