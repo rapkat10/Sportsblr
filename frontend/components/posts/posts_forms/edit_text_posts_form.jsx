@@ -107,6 +107,7 @@ class EditTextPostsForm extends React.Component {
                     {selectedform}
                     <div className="post-form-footer">
                         <button
+                            type="button"
                             onClick={this.props.closeModal}
                             className="close-button">
                             Close

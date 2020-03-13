@@ -208,8 +208,11 @@ class EditMediaPostsForm extends React.Component {
                     {selectedForm}
                     {inputContent}
                     <div className="post-form-footer">
-                        <button onClick={this.props.closeModal}
-                            className="close-button">Close
+                        <button 
+                            type="button"
+                            onClick={this.props.closeModal}
+                            className="close-button">
+                            Close
                         </button>
                         <input className="submit-button"
                             type="submit"
