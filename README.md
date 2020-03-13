@@ -1,6 +1,5 @@
 # README
 
-# README
 # Sportsblr
 
 [Live Site](https://sportsblr.herokuapp.com/)
@@ -15,8 +14,8 @@ Sportsblr is an online platform for all kinds of sports fans to interact with on
    * Create Account, Log In, Log Out, and Demo Log In
 Users can securely create an account, log-in and log-out. Users can also choose to log-in as a Demo User.
 
-<img src="https://github.com/rapkat10/Sportsblr/blob/master/app/assets/images/screenshots/signUp.png" width=480 height=400 align=right>
-<img src="https://github.com/rapkat10/Sportsblr/blob/master/app/assets/images/screenshots/signIn.png" width=480 height=400 align=center>
+<img src="https://github.com/rapkat10/Sportsblr/blob/master/app/assets/images/screenshots/signUp.png" width=420 height=400 align=right>
+<img src="https://github.com/rapkat10/Sportsblr/blob/master/app/assets/images/screenshots/signIn.png" width=420 height=400 align=center>
 
 * ### Posts
    * Logged in Users can post [ Text, Photo, Quote, Link, Chat, Audio, Video ]
@@ -31,14 +30,15 @@ Users can securely create an account, log-in and log-out. Users can also choose 
 * ### Follows
    * Logged in Users can [ Follow, Unfollow ] other Users
 
-<img src="https://github.com/rapkat10/Sportsblr/blob/master/app/assets/images/screenshots/unfollowdropdown.png" width=480 height=400 align=center>
-<img src="https://github.com/rapkat10/Sportsblr/blob/master/app/assets/images/screenshots/recommendedBlogs.png" width=480 height=400 align=right>
+<img src="https://github.com/rapkat10/Sportsblr/blob/master/app/assets/images/screenshots/unfollowdropdown.png" width=370 height=400 align=right>
+<img src="https://github.com/rapkat10/Sportsblr/blob/master/app/assets/images/screenshots/recommendedBlogs.png" width=370 height=400 align=center>
+
 
 * ### Feed
    * Logged in Users will see posts on dashboard feed
 
-<img src="https://github.com/rapkat10/Sportsblr/blob/master/app/assets/images/screenshots/dashboard2.png" width=480 height=400 align=center>
-<img src="https://github.com/rapkat10/Sportsblr/blob/master/app/assets/images/screenshots/dashboard1.png" width=480 height=400 align=right>
+<img src="https://github.com/rapkat10/Sportsblr/blob/master/app/assets/images/screenshots/dashboard2.png" width=400 height=400 align=right>
+<img src="https://github.com/rapkat10/Sportsblr/blob/master/app/assets/images/screenshots/dashboard1.png" width=400 height=400 align=center>
 
 ## Technologies
 * ### Ruby on Rails
