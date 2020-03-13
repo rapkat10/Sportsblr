@@ -50,15 +50,15 @@
 }
 
 .RCB-div {
-    // border: 1px solid red;
     display: flex;
     justify-content: space-between;
     padding: 7px;
     border-bottom: 1px solid hsla(0, 0%, 100%, .25);
+    
+    // border: 1px solid red;
 }
 
 .canfollow-user-img-div {
-    // border: 1px solid purple;
     min-width: 230px;
     max-width: 250px;
     min-height: 45px;
@@ -66,6 +66,8 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    
+    // border: 1px solid purple;
 }
 
 .can-follow-user-img {
