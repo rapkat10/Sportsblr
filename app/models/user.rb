@@ -86,7 +86,7 @@ class User < ApplicationRecord
     end
 
      def find_follow(follower_id)
-        follow = Follow.where(follower_id: follower_id).first
+        follow = Follow.where(follower_id: follower_id).last
         follow ? follow.id : nil
     end
 
