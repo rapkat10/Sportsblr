@@ -35,6 +35,37 @@
     // border: 1px solid red;
 }
 
+.about-links {
+    min-width: 100px;
+    max-width: 300px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 15px;
+
+    // border: 1px solid green;
+}
+
+.fa-linkedin,
+.fa-github,
+.fa-compass,
+.fa-home {
+    font-size: 25px;
+    color: white;
+}
+
+.explore {
+    max-width: 300px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 15px;
+
+    // border: 1px solid green;
+}
+
 .icon-list {
     min-width: 100px;
     max-width: 300px;
@@ -42,6 +73,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    // border: 1px solid green;
 }
 
 .fa-home {
@@ -90,19 +123,22 @@
     position: absolute;
     bottom: -270%;
     right: -33.5%;
-    // border: 2px solid rgb(228, 223, 223);
     width: 250px;
     height: 100px;
-    // z-index: 5;
     background-color: white;
     border: 1px solid lightgray;
     border-radius: 3px;
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
 
     // border: 5px solid  green;
+}
+
+.user-dropdown--div {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
 }
 
 .logout-dropdown-li {
@@ -134,4 +170,36 @@
 
 .logout-dropdown-button {
     cursor: pointer;
+}
+
+
+.dropdown-likes-section {
+    width: 250px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // border: 1px solid red;
+}
+
+.dropdown-likes-section:hover {
+    background-color: rgb(183, 224, 240);
+}
+
+.likes-dropdown {
+    font-size: 14px;
+    color: grey;
+    padding-left: 12px;
+}
+
+.likes-heart {
+    font-size: 14px;
+    padding-right: 10px;
+}
+
+.likes-count {
+    font-size: 14px;
+    color: grey;
+    padding-right: 20px;
 }

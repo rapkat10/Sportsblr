@@ -1,8 +1,17 @@
 import * as PostsApiUtil from '../util/posts_api_util';
 import * as MediaApiUtil from '../util/media_posts_api_util';
-export const RECEIVE_POSTS = "RECEIVE_ALL_POSTS";
+export const RECEIVE_POSTS = "RECEIVE_POSTS";
+export const RECEIVE_FOLLOW_POSTS = "RECEIVE_FOLLOW_POSTS";
 export const RECEIVE_POST = "RECEIVE_POST";
 export const REMOVE_POST = "REMOVE_POST";
+
+export const receiveFollowFilteredPosts = (res) => {
+    return {
+        type: RECEIVE_FOLLOW_POSTS,
+        postsFollowFiltered: res.posts,
+        users: res.users
+    }
+}
 
 export const receivePosts = (res) => {
     return {
@@ -34,7 +43,7 @@ export const getPosts = () => dispatch => {
 
 export const getfollowFilteredPosts = (followedFilter) => dispatch => {
     return PostsApiUtil.getfollowFilteredPosts(followedFilter).then((posts) => {
-        return dispatch(receivePosts(posts));
+        return dispatch(receiveFollowFilteredPosts(posts));
     });
 };
 

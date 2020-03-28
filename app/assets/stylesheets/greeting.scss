@@ -46,6 +46,11 @@
     margin-top: 10px;
     margin-left: 40px;
     z-index: 1;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+
+    // border: 1px solid red;
 }
 
 .splash-logo:hover {

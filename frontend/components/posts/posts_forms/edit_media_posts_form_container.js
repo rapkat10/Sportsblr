@@ -1,6 +1,6 @@
-import React from 'react';
 import { connect } from 'react-redux';
-import { editMediaPost } from '../../../actions/post_actions';import { closeModal } from '../../../actions/modal_actions';
+import { editMediaPost } from '../../../actions/post_actions';
+import { closeModal } from '../../../actions/modal_actions';
 import EditMediaPostsForm from './edit_media_posts_form'
 
 const mapStateToProps = (state, ownProps) => {

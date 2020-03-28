@@ -1,7 +1,7 @@
 import React from 'react';
-import CanFollowIndexList from './can_follows_index_list';
+import LikesCanFollowIndexList from './likes_can_follows_index_list';
 
-class CanFollowIndex extends React.Component {
+class LikesCanFollowIndex extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -18,7 +18,7 @@ class CanFollowIndex extends React.Component {
             getfollowFilteredPosts } = this.props;
         const canFollowsLimit = canFollows.slice(0, 4);
         const followlists = canFollowsLimit.map((followingUser) => {
-            return <CanFollowIndexList
+            return <LikesCanFollowIndexList
                     key={followingUser.id} 
                     followingUser={followingUser}
                     currentUser={currentUser}
@@ -38,4 +38,4 @@ class CanFollowIndex extends React.Component {
 
 }
 
-export default CanFollowIndex;
+export default LikesCanFollowIndex;

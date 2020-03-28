@@ -75,7 +75,10 @@ class EditMediaPostsForm extends React.Component {
             if (this.state.body) formData.append('post[body]', this.state.body);
             formData.append('post[id]', this.state.post.id)
             formData.append('post[photo]', this.state.photoFile);
-            this.props.action(formData, this.state.post).then(this.props.closeModal());
+            this.props.action(formData, this.state.post)
+                .then(
+                    this.props.closeModal()
+                );
         }
     }
 
@@ -87,7 +90,10 @@ class EditMediaPostsForm extends React.Component {
             if (this.state.body) formData.append('post[body]', this.state.body);
             formData.append('post[id]', this.state.post.id)
             formData.append('post[video]', this.state.videoFile);
-            this.props.action(formData, this.state.post).then(this.props.closeModal());
+            this.props.action(formData, this.state.post)
+                .then(
+                    this.props.closeModal()
+                );
         }
     }
 
@@ -99,7 +105,10 @@ class EditMediaPostsForm extends React.Component {
             if (this.state.body) formData.append('post[body]', this.state.body);
             formData.append('post[id]', this.state.post.id)
             formData.append('post[audio]', this.state.audioFile);
-            this.props.action(formData, this.state.post).then(this.props.closeModal());
+            this.props.action(formData, this.state.post)
+                .then(
+                    this.props.closeModal()
+                );
         }
     }
 

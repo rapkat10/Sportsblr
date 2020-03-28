@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-class CanFollowIndexList extends React.Component {
+class LikesCanFollowIndexList extends React.Component {
     constructor(props) {
         super(props);
         this.follow = this.follow.bind(this);
@@ -38,4 +37,4 @@ class CanFollowIndexList extends React.Component {
     }
 }
 
-export default CanFollowIndexList;
+export default LikesCanFollowIndexList;

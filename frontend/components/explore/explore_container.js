@@ -1,14 +1,13 @@
 import {connect} from 'react-redux';
-import Dashboard from './dashboard';
+import Explore from './explore';
 import { logOut } from '../../actions/session_actions';
 import { openModal } from '../../actions/modal_actions';
-import { getfollowFilteredPosts } from '../../actions/post_actions';
+import { getPosts } from '../../actions/post_actions';
 
 const mapStateToProps = (state) => {
     const currentUserId = state.session.id;
     const currentUser = state.entities.users[currentUserId];
-    const posts = Object.values(state.entities.postsFollowFiltered).reverse();
-
+    const posts = Object.values(state.entities.posts).reverse();
     return {
         currentUser,
         posts
@@ -18,9 +17,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => ({
     logOut: () => dispatch(logOut()),
     openModal: (modal, postId) => dispatch(openModal(modal, postId)),
-    getfollowFilteredPosts: (followedFilter) => 
-        dispatch(getfollowFilteredPosts(followedFilter))
-    
+    getPosts: () => dispatch(getPosts())
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
+export default connect(mapStateToProps, mapDispatchToProps)(Explore);

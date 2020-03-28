@@ -1,6 +1,6 @@
 import React from 'react';
 
-class PostIndexList extends React.Component {
+class LikesPostIndexList extends React.Component {
 
     constructor(props) {
         super(props);
@@ -19,7 +19,7 @@ class PostIndexList extends React.Component {
 
     handleDropdown() {
         const value = this.state.drop ? false : true;
-        this.setState({drop: value})
+        this.setState({ drop: value })
     }
 
     handleUnfollowDropdown() {
@@ -31,7 +31,7 @@ class PostIndexList extends React.Component {
         this.props.openModal(
             [`Edit ${this.props.post.post_type}`,
             this.props.post]
-            );
+        );
         this.handleDropdown();
     }
 
@@ -54,7 +54,7 @@ class PostIndexList extends React.Component {
 
     render() {
 
-        const { currentUser, post, deletePost, 
+        const { currentUser, post, deletePost,
             openModal, getfollowFilteredPosts } = this.props;
         const i = post.id;
 
@@ -70,17 +70,17 @@ class PostIndexList extends React.Component {
         if (likerId) {
             likedheart = <div title="Like">
                 <i className="likedheart fa fa-heart"
-                            onClick={() => this.unlike(post.id, post.userlikeId)}>
-                        </i>
-                </div>;
+                    onClick={() => this.unlike(post.id, post.userlikeId)}>
+                </i>
+            </div>;
         } else {
             notlikedheart = <div title="Like">
-                        <i className="far fa-heart"
-                            onClick={() => this.like(post.id)}>
-                        </i>
-                </div>
+                <i className="far fa-heart"
+                    onClick={() => this.like(post.id)}>
+                </i>
+            </div>
         }
- 
+
         let footer;
         if (post.user_id === currentUser.id) {
             footer = <div className="footer-flex-div">
@@ -98,14 +98,14 @@ class PostIndexList extends React.Component {
                                 <li title="Edit" onClick={() => this.clickEdit()}>
                                     Edit
                                 </li>
-                                <li title="Delete" onClick={() => 
+                                <li title="Delete" onClick={() =>
                                     deletePost(post.id)}>
                                     Delete
                                 </li>
                             </ul>
                         </div>
                     </>
-                    )
+                )
                     : <></>}
             </div>
         } else {
@@ -127,9 +127,9 @@ class PostIndexList extends React.Component {
                         </div>
                         <div className="unfollow-buttn-div">
                             <i className="user-dropdown-icon fas fa-user fa-lg"></i>
-                            <button onClick={() => this.unfollow()}>Unfollow</button> 
+                            <button onClick={() => this.unfollow()}>Unfollow</button>
                         </div>
-                    </div> 
+                    </div>
                 </>
                 : <></>;
         }
@@ -139,10 +139,10 @@ class PostIndexList extends React.Component {
                 <div key={i * i} className="post-media">
                     <div className="post--user-pic-div">
                         <div className="user-img----div">
-                            <img onClick={this.handleUnfollowDropdown} 
-                                title={post.users_Username} 
-                                className="post--user-pic" 
-                                src={post.user_imgUrl} 
+                            <img onClick={this.handleUnfollowDropdown}
+                                title={post.users_Username}
+                                className="post--user-pic"
+                                src={post.user_imgUrl}
                             />
                             {userPostInfoDropdown}
                         </div>
@@ -203,7 +203,7 @@ class PostIndexList extends React.Component {
                                 src={post.user_imgUrl}
                             />
                             {userPostInfoDropdown}
-                        </div>                  
+                        </div>
                     </div>
                     <div className="post-link-main">
                         <div className="post--header-div">
@@ -344,4 +344,4 @@ class PostIndexList extends React.Component {
 }
 
 
-export default PostIndexList;
+export default LikesPostIndexList;

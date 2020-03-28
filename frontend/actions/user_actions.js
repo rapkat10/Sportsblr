@@ -25,7 +25,7 @@ export const getUsers = () => {
 
 export const getUser = (userId) => {
     return dispatch => {
-        return UserAPIUtil.getUser(userId)
+        return UserApiUtil.getUser(userId)
             .then((user) => dispatch(receiveUser(user)));
     };
 };

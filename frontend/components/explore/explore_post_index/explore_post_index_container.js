@@ -1,30 +1,22 @@
- 
-import { connect } from 'react-redux';
-import PostsIndex from './posts_index';
+ import { connect } from 'react-redux';
+import ExplorePostsIndex from './explore_posts_index';
 import { getfollowFilteredPosts, deletePost } from '../../../actions/post_actions';
 import { openModal } from '../../../actions/modal_actions';
 import { createLike, deleteLike } from '../../../actions/like_actions';
 import { createFollow, deleteFollow, getCanFollows } from '../../../actions/follow_actions';
 import { getUser } from '../../../actions/user_actions';
 
+
 const mapStateToProps = (state) => {
   const currentUserId = state.session.id;
   const currentUser = state.entities.users[currentUserId];
-  const posts = Object.values(state.entities.postsFollowFiltered).reverse();
+  const posts = Object.values(state.entities.posts).reverse();
+  const canFollows = Object.values(state.entities.canFollows);
 
-  const followingUsersIds = currentUser.followingIds;
-  let filteredPosts= [];
-  posts.forEach(post => {
-    if (followingUsersIds.includes(post.user_id)) {
-      filteredPosts.push(post)
-    } else if (currentUserId === post.user_id) {
-      filteredPosts.push(post)
-    };
-  })
-  
   return {
     currentUser,
-    posts: filteredPosts
+    posts,
+    canFollows
   }
 };
 
@@ -43,4 +35,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(PostsIndex);
+export default connect(mapStateToProps, mapDispatchToProps)(ExplorePostsIndex);

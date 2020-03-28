@@ -5,7 +5,9 @@ import LoginFormContainer from './sessionform/login_form_container';
 import SignupFormContainer from './sessionform/signup_form_container'
 import DashboardContainer from './dashboard/dashboard_container';
 import GreetingContainer from "./greeting/greeting_container";
-import Modal from './modal/modal'
+import ExploreContainer from "./explore/explore_container";
+import LikesContainer from "./likes/likes_container"
+import Modal from './modal/modal';
 
 const App = () => (
     <div className="app-div">
@@ -13,6 +15,8 @@ const App = () => (
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
             <ProtectedRoute path="/dashboard" component={DashboardContainer} />
+            <ProtectedRoute path="/explore" component={ExploreContainer} />
+            <ProtectedRoute path="/likes" component={LikesContainer} />
             <AuthRoute exact path="/" component={GreetingContainer} />
         </Switch>
         <Modal />

@@ -17,7 +17,10 @@ class EditTextPostsForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.action(this.state).then(this.props.closeModal());
+        this.props.action(this.state)
+            .then(
+                this.props.closeModal()
+            );
     }
 
     render() {

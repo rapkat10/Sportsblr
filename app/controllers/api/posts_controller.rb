@@ -8,6 +8,12 @@ class Api::PostsController < ApplicationController
             .or(Post.where(:user_id => following_ids)).order(id: :DESC)
     end
 
+    def likedFilterPosts
+        # following_ids = current_user.getfollowingIds(current_user)
+        # Post.where(user_id: current_user.id)
+        #     .or(Post.where(:user_id => following_ids)).order(id: :DESC)
+    end
+
     def allposts
         Post.order(id: :DESC).includes(:user).all
     end
@@ -20,7 +26,10 @@ class Api::PostsController < ApplicationController
         if params[:followedFilter]
             @posts = followedFilterPosts
             render 'api/posts/index'
-        else 
+        elsif params[:likedFilter]
+            @posts = likedFilterPosts
+            render 'api/posts/index'
+        else
             @posts = allposts
             render 'api/posts/index'
         end
@@ -33,7 +42,6 @@ class Api::PostsController < ApplicationController
 
     def create
         @post = Post.new(post_params)
-        # debugger
         @post.user_id = current_user.id
         if @post.save
             render 'api/posts/show'

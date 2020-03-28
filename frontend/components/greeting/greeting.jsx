@@ -20,6 +20,19 @@ class Greeting extends React.Component {
             <>
                 <div className="splash-logo-div">
                     <Link to="/"><strong className="splash-logo">S</strong></Link>
+                    <ul className="about-links">
+                        <li title="linkedIn">
+                            <a href="https://www.linkedin.com/in/rapkat-amin-33b82b1a4/"
+                                target="_blank">
+                                <i className="fab fa-linkedin fa-2x"></i>
+                            </a>
+                        </li>
+                        <li title="GitHub">
+                            <a href="https://github.com/rapkat10" target="_blank">
+                                <i className="fab fa-github fa-2x"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div className="splash-home">
                     <img className="backgroundImage" src={window.snowboardURL} />

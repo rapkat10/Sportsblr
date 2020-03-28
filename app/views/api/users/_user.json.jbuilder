@@ -6,4 +6,6 @@ json.followerIds user.getfollowerIds(user)
 json.followingIds user.getfollowingIds(user)
 json.followId user.find_follow(current_user.id) if current_user
 
+json.liked_posts user.liked_posts
+
 json.postIds user.getPostIds(user)

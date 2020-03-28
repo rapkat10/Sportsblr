@@ -1,7 +1,7 @@
  
 import { connect } from 'react-redux';
-import PostsIndex from './posts_index';
-import { getfollowFilteredPosts, deletePost } from '../../../actions/post_actions';
+import LikesPostsIndex from './likes_posts_index';
+import { deletePost } from '../../../actions/post_actions';
 import { openModal } from '../../../actions/modal_actions';
 import { createLike, deleteLike } from '../../../actions/like_actions';
 import { createFollow, deleteFollow, getCanFollows } from '../../../actions/follow_actions';
@@ -10,21 +10,25 @@ import { getUser } from '../../../actions/user_actions';
 const mapStateToProps = (state) => {
   const currentUserId = state.session.id;
   const currentUser = state.entities.users[currentUserId];
-  const posts = Object.values(state.entities.postsFollowFiltered).reverse();
-
-  const followingUsersIds = currentUser.followingIds;
-  let filteredPosts= [];
-  posts.forEach(post => {
-    if (followingUsersIds.includes(post.user_id)) {
-      filteredPosts.push(post)
-    } else if (currentUserId === post.user_id) {
-      filteredPosts.push(post)
-    };
-  })
+  const liked_posts = Object.values(currentUser.liked_posts).reverse();
+  const posts = Object.values(state.entities.posts).reverse();
   
+  let likedPostsIds = [];
+  liked_posts.forEach(post => {
+    likedPostsIds.push(post.id);
+  })
+
+  let likeFilteredPosts = [];
+
+  posts.forEach(post => {
+    if (likedPostsIds.includes(post.id)) {
+      likeFilteredPosts.push(post)
+    }
+  })
+
   return {
     currentUser,
-    posts: filteredPosts
+    posts: likeFilteredPosts
   }
 };
 
@@ -37,10 +41,8 @@ const mapDispatchToProps = dispatch => {
     deleteLike: (postId, likeId) => dispatch(deleteLike(postId, likeId)),
     createFollow: (userId, followedUserId) => dispatch(createFollow(userId, followedUserId)),
     deleteFollow: (userId, followId) => dispatch(deleteFollow(userId, followId)),
-    getCanFollows: (userId) => dispatch(getCanFollows(userId)),
-    getfollowFilteredPosts: (followedFilter) =>
-      dispatch(getfollowFilteredPosts(followedFilter)),
+    getCanFollows: (userId) => dispatch(getCanFollows(userId))
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(PostsIndex);
+export default connect(mapStateToProps, mapDispatchToProps)(LikesPostsIndex);

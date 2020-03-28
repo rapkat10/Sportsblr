@@ -82,7 +82,7 @@ class User < ApplicationRecord
     def unfollowed_users
         User.where.not(id: self.id)
             .where.not(id: Follow.select(:followed_id)
-            .where(follower_id: self.id)).limit(4)
+            .where(follower_id: self.id))
     end
 
      def find_follow(follower_id)

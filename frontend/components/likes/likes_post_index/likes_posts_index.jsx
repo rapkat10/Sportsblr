@@ -1,20 +1,22 @@
 import React from 'react';
-import PostIndexList from './post_index_list';
+import LikesPostIndexList from './likes_post_index_list';
 
-class PostsIndex extends React.Component {
+class LikesPostsIndex extends React.Component {
     constructor(props) {
         super(props);
     }
-
+    
     render() {
+
         const { posts, deletePost, 
             currentUser, openModal,
             createLike, deleteLike,
-            createFollow, deleteFollow, getCanFollows,
-            getfollowFilteredPosts, getUser } = this.props;
+            createFollow, deleteFollow, 
+            getCanFollows, canFollows,
+            getUser } = this.props;
         
         const postsList = posts.map((post, i) => {
-            return <PostIndexList 
+            return <LikesPostIndexList 
                 key={post.id} 
                 post={post}
                 deletePost={deletePost}
@@ -25,14 +27,15 @@ class PostsIndex extends React.Component {
                 createFollow={createFollow}
                 deleteFollow={deleteFollow}
                 getCanFollows={getCanFollows}
-                getfollowFilteredPosts={getfollowFilteredPosts}
+                canFollows={canFollows}
                 getUser={getUser}
             />;
         });
+
         return (
             <>{postsList}</>
         );
     }
 }
 
-export default PostsIndex;
+export default LikesPostsIndex;
