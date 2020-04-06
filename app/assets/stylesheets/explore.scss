@@ -128,10 +128,16 @@
   position: absolute;
   padding-bottom: 20px;
 }
+
+.explore-likes-count {
+  padding-left: 5px;
+}
+
 .explore-msg {
   padding-left: 5px;
   font-size: 12px;
 }
+
 .explore-msg:hover {
   cursor: default;
 }

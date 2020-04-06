@@ -91,8 +91,8 @@ class ExplorePostIndexList extends React.Component {
         let footer;
         if (post.user_id === currentUser.id) {
             footer = <div className="explore-footer-flex-div">
+                <p className="explore-likes-count">{post.numLikes} Likes</p>
                 <p className="explore-msg">More features being worked on!</p>
-                <p></p>
                 {likerId ? likedheart : notlikedheart}
                 <div title="Post Options" className="setting-icon-div">
                     <i onClick={this.handleDropdown} className="cog-icon fas fa-cog"></i>
@@ -116,8 +116,8 @@ class ExplorePostIndexList extends React.Component {
             </div>
         } else {
             footer = <div className="explore-footer-flex-div">
+                <p className="explore-likes-count">{post.numLikes} Likes</p>
                 <p className="explore-msg">More features being worked on!</p>
-                <p></p>
                 {likerId ? likedheart : notlikedheart}
             </div>
         }

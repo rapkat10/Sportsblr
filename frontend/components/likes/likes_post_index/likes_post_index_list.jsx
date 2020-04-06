@@ -134,6 +134,11 @@ class LikesPostIndexList extends React.Component {
                 : <></>;
         }
 
+        const footerDiv = <div className="post-all-footer-div">
+            <p className="post-likes-count">{post.numLikes} Likes</p>
+            {footer}
+        </div>
+
         if (post.post_type === "Photo Form") {
             return (
                 <div key={i * i} className="post-media">
@@ -157,9 +162,8 @@ class LikesPostIndexList extends React.Component {
                         <div className="post-media-body-div">
                             {post.body}
                         </div>
-                        <div className="post-all-footer-div">
-                            {footer}
-                        </div>
+
+                        {footerDiv}
                     </div>
                 </div >
             )
@@ -186,9 +190,8 @@ class LikesPostIndexList extends React.Component {
                         <div className="post-quo-body-div">
                             ~{post.body}~
                         </div>
-                        <div className="post-all-footer-div">
-                            {footer}
-                        </div>
+
+                        {footerDiv}
                     </div>
                 </div >
             )
@@ -217,9 +220,8 @@ class LikesPostIndexList extends React.Component {
                         <div className="post-link-body-div">
                             {post.body}
                         </div>
-                        <div className="post-all-footer-div">
-                            {footer}
-                        </div>
+
+                        {footerDiv}
                     </div>
                 </div >
             )
@@ -246,9 +248,8 @@ class LikesPostIndexList extends React.Component {
                         <div className="post-text-body-div">
                             {post.body}
                         </div>
-                        <div className="post-all-footer-div">
-                            {footer}
-                        </div>
+
+                        {footerDiv}
                     </div>
                 </div >
             )
@@ -275,9 +276,8 @@ class LikesPostIndexList extends React.Component {
                         <div className="post-chat-body-div">
                             {post.users_Username}: {post.body}
                         </div>
-                        <div className="post-all-footer-div">
-                            {footer}
-                        </div>
+
+                        {footerDiv}
                     </div>
                 </div >
             )
@@ -304,9 +304,8 @@ class LikesPostIndexList extends React.Component {
                         <div className="post-media-body-div">
                             {post.body}
                         </div>
-                        <div className="post-all-footer-div">
-                            {footer}
-                        </div>
+
+                        {footerDiv}
                     </div>
                 </div >
             )
@@ -333,9 +332,8 @@ class LikesPostIndexList extends React.Component {
                         <div className="post-media-body-div">
                             {post.body}
                         </div>
-                        <div className="post-all-footer-div">
-                            {footer}
-                        </div>
+                        
+                        {footerDiv}
                     </div>
                 </div >
             )
