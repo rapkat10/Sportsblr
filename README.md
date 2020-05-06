@@ -2,7 +2,7 @@
 
 # Sportsblr
 
-[Live Site](https://sportsblr.herokuapp.com/)
+[Live Site](https://sportsblr.herokuapp.com)
 
 ![splash_page](https://github.com/rapkat10/Sportsblr/blob/master/app/assets/images/screenshots/splashPage.png)
 
