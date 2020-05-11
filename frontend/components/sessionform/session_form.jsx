@@ -86,10 +86,12 @@ class SessionForm extends React.Component {
 
         return (
             <div className="form-container">
-                <img className="backgroundImage" src={window.basketball} />
-                <NavbarContainer />
-                <div className="linkto-flex">
-                    {linkTo}
+                <img className="backgroundImage" src={window.track} />
+                <div className="session-form--navbar">
+                    <NavbarContainer />
+                    <div className="linkto-flex">
+                        {linkTo}
+                    </div>
                 </div>
                 <div className="form-box"> 
                     <form className="form">

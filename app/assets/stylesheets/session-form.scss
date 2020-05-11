@@ -1,20 +1,17 @@
-
 .form-container {
-    position: relative;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
 }
 
+.session-form--navbar {
+    position: relative;
+}
 
 
 .linkto-flex {
     position: absolute;
     display: flex;
     max-width: 120px;
-    top: 3%;
-    right: 5%;
+    top: 40%;
+    right: 3%;
 }
 
 .link-to {
@@ -32,6 +29,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    height: 85vh;
 }
 
 .form {
@@ -39,7 +37,6 @@
    justify-content: center;
    flex-direction: column;
    align-items: center;
-   margin-right: 160px;
 }
 
 .Sportsblr {
@@ -49,7 +46,6 @@
     align-items: center;
     font-size: 60px;
     color: rgba(17, 69, 238, .7);
-    padding-top: 50%;
     margin: 40px;
     font-family: sans-serif;
     font-weight: bolder;
