@@ -23,5 +23,3 @@ bundle.js.map
 npm-debug.log
 
 config/master.key
-
-db/seeds.rb
