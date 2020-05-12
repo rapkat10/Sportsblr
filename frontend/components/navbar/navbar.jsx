@@ -7,6 +7,7 @@ class Navbar extends React.Component {
         super(props);
         this.state = { clicked: false };
         this.handleIconClick = this.handleIconClick.bind(this);
+        this.username;
     }
 
     handleIconClick() {
@@ -21,6 +22,7 @@ class Navbar extends React.Component {
         let liked_posts;
         if (currentUser) {
             liked_posts = currentUser.liked_posts.length;
+            this.username = currentUser.username;
         }
         const button = <span className="logout-dropdown-button"
             onClick={logOut}> Log out
@@ -78,7 +80,7 @@ class Navbar extends React.Component {
                             <i className="fas fa-home fa-lg"></i>
                         </Link>
                     </li>
-                    <li title="Account" className="icon-li">
+                    <li title={this.username} className="icon-li">
                         <i onClick={this.handleIconClick} 
                             className="logout-icon-fa fas fa-user fa-lg">
                         </i>

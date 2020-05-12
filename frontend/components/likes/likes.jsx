@@ -20,8 +20,8 @@ class Likes extends React.Component {
         <img className="backgroundImage" src={window.dashboard} />
 
         <div className="posts-main-div">
-
           <div className="posts-index-list">
+            <h1 className="likes-page-title">{currentUser.liked_posts.length} likes</h1>
             <LikesPostsIndexContainer />
           </div>
 
